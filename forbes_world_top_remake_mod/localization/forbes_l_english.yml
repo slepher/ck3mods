@@ -1,0 +1,12 @@
+﻿l_english:
+ FORBES:0 "Forbes"
+ FORBES_WORLD_TOP:0 "Forbes World Top"
+ FORBES_LOCAL_TOP:0 "Forbes Local Top"
+ FEDERAL_SPECIAL_CONTRACT:0 "Federal Special Contract"
+ FORBES_REALM_SIZE_TOP:0 "Realm Size Top"
+ FORBES_MILITARY_STRENGTH_TOP:0 "Military Strength Top"
+ FORBES_OVERHELD_TITLE:0 "Overheld Title"
+ FORBES_INFIDEL_VASSAL:0 "Infidel Vassals"
+ FORBES_TITLE_CLAIMER:0 "Title Claimers"
+ IS_VASSAL_CONTRACT_BLOCKED_FROM_MODIFICATION_THIRD_1:0 "[Character.GetShortUINamePossessive] [obligations|E] have already been changed"
+ I_CAN_PUNISH_DESCRIPTION_1:0 "#T Known Criminal#!\n\n[Character.GetShortUINameNoTooltip] is a known [criminal|E], allowing me to punish [Character.GetHerHim] without being viewed as a [tyrant|E]."

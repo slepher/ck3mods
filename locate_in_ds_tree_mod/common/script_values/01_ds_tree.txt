@@ -1,0 +1,48 @@
+﻿character_width = {
+	value = 0
+	if = {
+		limit = {
+			child_character_width > 1
+		}
+		add = child_character_width
+	}
+	else = {
+		add = 1
+	}
+}
+
+child_character_width = {
+	value = 0
+	if = {
+		limit = {
+			dynasty = root
+		}
+		every_child = {
+			even_if_dead = yes
+			add = character_width
+		}
+	}
+}
+
+character_left_width = {
+	value = 0
+	every_child = {
+		even_if_dead = yes
+		limit = {
+			age < scope:ancestor_child.age
+		}
+		add = 1
+	}
+}
+
+
+character_left_character_width = {
+	value = 0
+	every_child = {
+		even_if_dead = yes
+		limit = {
+			age < scope:ancestor_child.age
+		}
+		add = character_width
+	}
+}

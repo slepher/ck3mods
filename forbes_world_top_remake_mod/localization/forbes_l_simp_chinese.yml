@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+ FORBES:0 "福布斯"
+ FORBES_WORLD_TOP:0 "福布斯全球富豪榜"
+ FORBES_LOCAL_TOP:0 "福布斯本地富豪榜"
+ FEDERAL_SPECIAL_CONTRACT:0 "封臣特殊契约"
+ FORBES_REALM_SIZE_TOP:0 "领土排行榜"
+ FORBES_MILITARY_STRENGTH_TOP:0 "外部心腹大患"
+ FORBES_OVERHELD_TITLE:0 "内部心腹大患"
+ FORBES_INFIDEL_VASSAL:0 "异教封臣"
+ FORBES_TITLE_CLAIMER:0 "头衔宣称者"
+ IS_VASSAL_CONTRACT_BLOCKED_FROM_MODIFICATION_THIRD_1:0 "[Character.GetShortUINamePossessive]的[obligations|E]已变更过"
+ I_CAN_PUNISH_DESCRIPTION_1:0 "#T 人尽皆知的罪犯#!\n\n[Character.GetShortUINameNoTooltip]的[criminal|E]人尽皆知，这允许我惩罚[Character.GetHerHim]而不会被视为[tyrant|E]。"

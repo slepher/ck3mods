@@ -1,0 +1,600 @@
+types FobesTypes {
+	type forbes_character_item = widget {
+        size = { 200 94 }
+        divider = {
+            parentanchor = bottom|hcenter
+            size = { 100% 3 }
+        }
+        hbox = {
+            layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+            portrait_head_small_cached = {}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				margin_top = 5
+
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					# Name and age
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						margin = { 0 3 }
+						margin_left = 5
+						margin_right = 5
+
+						background = {
+							using = Background_Area_Characterlist
+						}
+
+						background = {
+							using = Background_Area_Dark
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_fade_vertical_up.dds"
+								blend_mode = alphamultiply
+								alpha = 1
+								rotate_uv = -90
+							}
+						}
+
+						hbox = {
+							margin_left = 3
+							layoutpolicy_horizontal = expanding
+							maximumsize = { 338 -1 }
+
+							text_single = {
+								using = Font_Size_Medium
+								layoutpolicy_horizontal = expanding
+								align = nobaseline
+								text = "[Character.GetUINameNoTooltip]"
+								autoresize = no
+								fontsize_min = 14
+							}
+
+							block "character_relation"
+							{
+								hbox = {
+									visible = "[And(Character.HasRelationTo( GetPlayer ), Not(Character.IsPlayer))]"
+									text_single = {
+										text = "•"
+										align = nobaseline
+										margin = { 5 0 }
+									}
+
+									text_single = {
+										name = "character_relation"
+										text = "[Character.GetRelationToString( GetPlayer )]"
+										default_format = "#low"
+										align = nobaseline
+										fontsize_min = 14
+										max_width = 180
+									}
+								}
+							}
+
+							expand = {}
+						}
+
+
+
+						hbox = {
+							
+							hbox = {
+								visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)4')]"
+
+								text_single = {
+									name = "realm_size"
+									text = "[Character.RealmSize]"
+									tooltip = "REALM_WINDOW_SIZE_TT"
+									align = center|nobaseline
+								}
+
+								icon = {
+									texture = "gfx/interface/icons/icon_domain.dds"
+									size = { 14 14 }
+								}
+							}
+
+							hbox = {
+								visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)5')]"
+
+								text_single = {
+									name = "military_total_strength"
+									text = "[FixedPointToInt(GuiScope.SetRoot(Character.MakeScope).ScriptValue('military_strength'))]"
+									align = center|nobaseline
+								}
+
+								icon = {
+									name = "icon_combat_strength"
+									size = { 14 14 }
+									texture = "gfx/interface/icons/icon_soldier.dds"
+								}					
+							}
+
+							hbox = {
+								visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)6')]"
+
+								text_single = {
+									text = "[FixedPointToInt(Character.MakeScope.Var('vassal_overheld_title').GetValue )]"
+									align = nobaseline|hcenter
+								}
+
+								icon = {
+									name = "powerful_vassal"
+									size = { 14 14 }
+					
+									texture = "gfx/interface/icons/portraits/powerful_vassal_small.dds"
+									framesize = { 28 28 }
+									frame = "[Character.GetPowerfulVassalFrame]"
+									tooltip = "[Character.GetPowerfulVassalTooltip]"
+								}						
+							}
+
+							hbox = {
+								tooltip = "[Character.GetGoldTooltipWithBalance]"
+								
+								margin_right = 2
+								spacing = 2
+								
+								text_single = {
+									text = "[Character.GetGold|0]"
+									align = nobaseline|hcenter
+								}
+								
+								icon = {
+									name = "icon_gold"
+									size = { 23 23 }
+									texture = "gfx/interface/icons/icon_gold.dds"
+								}
+							}
+
+							hbox = {
+								using = character_age_or_death_text
+
+								blockoverride "list_layout" {
+									minimumsize = { 31 0 }
+									expand = {}
+								}
+								margin_right = 2
+							}
+
+
+						}
+					}
+
+					### BOTTOM ROW ###
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+
+						# Dynasty
+						widget = {
+							size = { 45 40 }
+
+							coa_house_small = {
+								datacontext = "[Character.GetHouse]"
+								parentanchor = center
+								scale = 0.7
+							}
+						}
+
+						vbox = {
+							datacontext = "[Scope.GetCharacter]"
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								layoutpolicy_vertical = expanding
+
+								# Religion
+								hbox = {
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									margin_left = 8
+									spacing = 5
+
+									background = {
+										using = Background_Area_Dark
+										alpha = 0.5
+										margin = { 0 2 }
+									}
+
+									icon = {
+										name = "faith_button"
+										size = { 38 38 }
+										datacontext = "[Character.GetFaith]"
+										tooltipwidget = { faith_tooltip = {} }
+										using = tooltip_se
+
+										texture = "[Faith.GetIcon]"
+									}
+
+									hbox = {
+										datacontext = "[Character.GetCulture]"
+										spacing = 3
+
+										tooltipwidget = {
+											culture_tooltip = {}
+										}
+										using = tooltip_se
+
+										icon = {
+											name = "culture"
+											texture = "gfx/interface/icons/icon_culture.dds"
+											size = { 24 24 }
+										}
+
+										text_single = {
+											text = "[Culture.GetNameNoTooltip]"
+											autoresize = yes
+											align = nobaseline
+										}
+									}
+									expand = {}
+
+									hbox = {
+										visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)3')]"
+										vbox = {
+											text_single = {
+												visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_blocked_modification').GetValue, '(CFixedPoint)1')]"
+												text = "@warning_icon!"
+												tooltip = "IS_VASSAL_CONTRACT_BLOCKED_FROM_MODIFICATION_THIRD_1"
+											}
+											text_single = {
+												visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_has_hook').GetValue, '(CFixedPoint)1')]"
+												text = "@weak_hook_icon!"
+												tooltip = "retract_vassal_interaction_extra_icon"
+											}
+											# text_single = {
+											#     visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_imprisoned').GetValue, '(CFixedPoint)1')]"
+											#     text = "@weak_hook_icon!"
+											#     tooltip = "retract_vassal_interaction_extra_icon"
+											# }
+											text_single = {
+												visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_can_imprison').GetValue, '(CFixedPoint)1')]"
+												text = "@crime_icon!"
+												tooltip = "I_CAN_PUNISH_DESCRIPTION_1"
+											}
+										}
+
+										obligations_vbox = {
+										}
+									}
+
+								}
+
+								# obligions
+								
+							}
+						}
+					}
+				}
+            }
+        }
+    }
+
+    type obligations_vbox = vbox {
+		min_width = 80
+        text_single = {
+			align = right|vcenter
+            visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(Character.MakeScope).ScriptValue('special_obligation_religious_rights'), '(CFixedPoint)1')]"
+            text = "religious_rights"
+            tooltip = "religious_rights_protected_desc"
+        }
+        text_single = {
+			align = right|vcenter
+            visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(Character.MakeScope).ScriptValue('special_obligation_coinage_rights'), '(CFixedPoint)1')]"
+            text = "coinage_rights"
+            tooltip = "coinage_rights_granted_desc"
+        }
+        text_single = {
+			align = right|vcenter
+            visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(Character.MakeScope).ScriptValue('special_obligation_war_declaration_rights'), '(CFixedPoint)1')]"
+            text = "war_declaration_rights"
+            tooltip = "war_declaration_rights_allowed_desc"
+        }
+        text_single = {
+			align = right|vcenter
+            visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(Character.MakeScope).ScriptValue('special_obligation_fortification_rights'), '(CFixedPoint)1')]"
+            text = "fortification_rights"
+            tooltip = "fortification_rights_granted_desc"
+        }
+        text_single = {
+			align = right|vcenter
+            visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(Character.MakeScope).ScriptValue('special_obligation_council_rights'), '(CFixedPoint)1')]"
+            text = "council_rights"
+            tooltip = "council_rights_guaranteed_desc"
+        }
+        text_single = {
+			align = right|vcenter
+            visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(Character.MakeScope).ScriptValue('special_obligation_title_revocation_rights'), '(CFixedPoint)1')]"
+            text = "title_revocation_rights"
+            tooltip = "title_revocation_rights_protected_desc"
+        }
+    }
+
+	type header_text_single = text_single {
+            name = "header_text"
+            parentanchor = top|hcenter
+            position = { 0 5 }
+
+            maximumsize = { 400 -1 }
+
+            using = Font_Type_Flavor
+            using = Font_Size_Big
+	}
+}
+
+window = {
+	name = "forbes_gui_window"
+	size = { 750 90% }
+	parentanchor = top|right
+	position = { -20 90 }
+	allow_outside = yes
+	layer = middle
+
+	using = Window_Background
+	using = Window_Decoration_Flat
+	using = Window_Size_CharacterList
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+    }
+
+	vbox = {
+		using = Window_Margins
+
+		header_pattern = {
+			layoutpolicy_horizontal = expanding
+
+			blockoverride "header_text"
+			{
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)1')]"
+					text = "FORBES_WORLD_TOP"
+				}
+
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)2')]"
+					text = "FORBES_LOCAL_TOP"
+				}
+
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)3')]"
+					text = "FEDERAL_SPECIAL_CONTRACT"
+				}
+
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)4')]"
+					text = "FORBES_REALM_SIZE_TOP"
+				}
+
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)5')]"
+					text = "FORBES_MILITARY_STRENGTH_TOP"
+				}
+
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)6')]"
+					text = "FORBES_OVERHELD_TITLE"
+				}
+
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)7')]"
+					text = "FORBES_INFIDEL_VASSAL"
+				}
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)8')]"
+					text = "FORBES_TITLE_CLAIMER"
+				}
+			}
+
+			blockoverride "button_close"
+			{
+                datacontext = "[GetScriptedGui('clear_forbes_list')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				onclick = "[ExecuteConsoleCommand('gui.clearwidgets forbes_gui_window')]"
+				onclick = "[GetVariableSystem.Clear('forbes_list_opened')]"
+			}
+        }
+        
+        hbox = {
+            name = "sort_buttons"
+            margin_left = 5
+            margin_right = 20
+            margin_top = 5
+            spacing = 5
+            layoutpolicy_horizontal = expanding
+
+			button_standard = {
+                name = "filters_forbes_local"
+                size = { 25 25 }
+                margin_left = 5
+				datacontext = "[GetScriptedGui('generate_local_forbes_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)2')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "FORBES_LOCAL_TOP"
+				using = tooltip_nw
+				
+				button_prison_ransom = {
+					alwaystransparent = yes
+					parentanchor = center
+                    size = { 20 20 }
+				}
+			}
+			
+            button_standard = {
+                name = "filters_forbes_global"
+                size = { 25 25 }
+                margin_left = 5
+                datacontext = "[GetScriptedGui('generate_global_forbes_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)1')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "FORBES_WORLD_TOP"
+                using = tooltip_nw
+    
+                button_search = {
+                    alwaystransparent = yes
+                    parentanchor = center
+                    size = { 20 20 }
+                }
+			}
+			
+			button_standard = {
+                name = "filters_realm_size"
+                size = { 25 25 }
+                margin_left = 5
+                datacontext = "[GetScriptedGui('generate_realm_size_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)4')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "FORBES_REALM_SIZE_TOP"
+				using = tooltip_nw
+				
+				button_icon = {
+					alwaystransparent = yes
+					parentanchor = center
+					size = { 20 20 }
+					texture = "gfx/interface/icons/flat_icons/mapmode_duchy.dds"
+				}
+            }
+			
+			button_standard = {
+                name = "filters_strength"
+                size = { 25 25 }
+                margin_left = 5
+                datacontext = "[GetScriptedGui('generate_military_strength_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)5')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "FORBES_MILITARY_STRENGTH_TOP"
+                using = tooltip_nw
+    
+				button_icon = {
+					alwaystransparent = yes
+                    parentanchor = center
+					size = { 20 20 }
+					texture = "gfx/interface/icons/flat_icons/army_raise_assigned.dds"
+				}
+			}
+
+			button_standard = {
+                name = "filters_special_contract"
+                size = { 25 25 }
+                margin_left = 5
+                datacontext = "[GetScriptedGui('generate_special_obligation_vassals_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)3')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "FEDERAL_SPECIAL_CONTRACT"
+                using = tooltip_nw
+    
+				button_feudal_contract = {
+					alwaystransparent = yes
+                    parentanchor = center
+					size = { 20 20 }
+				}
+			}
+			
+			button_standard = {
+                name = "filters_overheld_titles"
+                size = { 25 25 }
+                margin_left = 5
+                datacontext = "[GetScriptedGui('generate_overheld_title_vassals_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)6')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "FORBES_OVERHELD_TITLE"
+                using = tooltip_nw
+    
+                button_title = {
+                    alwaystransparent = yes
+                    parentanchor = center
+                    size = { 20 20 }
+                }
+			}
+
+			button_standard = {
+                name = "filters_infidel"
+                size = { 25 25 }
+                margin_left = 5
+                datacontext = "[GetScriptedGui('generate_forbes_infidel_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)7')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "FORBES_INFIDEL_VASSAL"
+                using = tooltip_nw
+    
+                button_icon = {
+                    alwaystransparent = yes
+                    parentanchor = center
+					size = { 20 20 }
+					texture = "gfx/interface/icons/flat_icons/mapmode_religion.dds"
+                }
+			}
+
+			# button_standard = {
+            #     name = "filters_claim_values"
+            #     size = { 25 25 }
+            #     margin_left = 5
+            #     datacontext = "[GetScriptedGui('generate_forbes_claim_values_list')]"
+			# 	down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)8')]"
+    		# 	onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+            #     tooltip = "FORBES_TITLE_CLAIMER"
+            #     using = tooltip_nw
+    
+            #     button_icon = {
+            #         alwaystransparent = yes
+            #         parentanchor = center
+			# 		size = { 20 20 }
+			# 		texture = "gfx/interface/icons/event_types/type_faith.dds"
+            #     }
+			# }
+
+			expand = {}
+        }
+
+        vbox = {
+            name = "forbes_box"
+            spacing = 3
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            
+            scrollbox = {
+				layoutpolicy_vertical = expanding
+				layoutpolicy_horizontal = expanding
+	
+                blockoverride "scrollbox_content" {
+                    vbox = {
+                        name = "characters_grid"
+                        datamodel = "[GetPlayer.MakeScope.GetList('forbes_list')]"
+                        layoutpolicy_horizontal = expanding
+    
+                        item = {
+                            forbes_character_item = {
+                                datacontext = "[Scope.GetCharacter]"
+                                size = { 650 110 }
+                                layoutpolicy_horizontal = expanding
+                            }
+                        }
+                    }
+                }
+                blockoverride "scrollbox_empty"
+                {
+                    block "scrollbox_empty_visibility"
+                    {
+                        layoutpolicy_vertical = expanding
+                        visible = "[IsDataModelEmpty( GetPlayer.MakeScope.GetList('forbes_list') )]"
+                        text = "NO_CHARACTERS_TO_SELECT"
+                    }
+                }
+            }
+        }
+	}
+}

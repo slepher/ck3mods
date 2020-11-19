@@ -1,0 +1,210 @@
+﻿get_forbes_mode = {
+	value = 0
+	add = var:forbes_mode
+}
+
+special_obligation_levels = {
+	value = 0
+	if = {
+		limit = {
+			vassal_contract_has_modifiable_obligations = yes
+		}
+		if = {
+			limit = {
+				vassal_contract_obligation_level:religious_rights != 0
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				vassal_contract_obligation_level:fortification_rights != 0
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				vassal_contract_obligation_level:coinage_rights != 0
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				vassal_contract_obligation_level:war_declaration_rights != 0
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				vassal_contract_obligation_level:council_rights != 0
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				vassal_contract_obligation_level:title_revocation_rights != 0
+			}
+			add = 1
+		}
+	}
+}
+
+held_county = {
+	value = 0
+	every_held_title = {
+		limit = {
+			tier = tier_county
+		}
+		add = 1
+	}
+}
+
+held_duchy = {
+	value = 0
+	every_held_title = {
+		limit = {
+			tier = tier_duchy
+		}
+		add = 1
+	}
+}
+
+held_kingdom = {
+	value = 0
+	every_held_title = {
+		limit = {
+			tier = tier_kingdom
+		}
+		add = 1
+	}
+}
+
+overheld_title = {
+	value = 0
+	if = {
+		limit = {
+			held_county > 1
+		}
+		add = held_county
+		subtract = 1
+	}
+	if = {
+		limit = {
+			held_duchy > 1
+		}
+		add = held_duchy
+		subtract = 1
+	}
+	if = {
+		limit = {
+			held_kingdom > 1
+		}
+		add = held_kingdom
+		subtract = 1
+	}
+}
+
+military_strength = {
+	value = 0
+	add = max_military_strength
+}
+
+claim_values = {
+	value = 0
+	every_claim = {
+		limit = {
+			NOT = {
+				holder = {
+					OR = {
+						target_is_same_character_or_above = root
+						target_is_vassal_or_below = root
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				tier = tier_empire
+			}
+			add = 1000
+		}
+		else_if = {
+			limit = {
+				tier = tier_kingdom
+			}
+			add = 100
+		}
+		else_if = {
+			limit = {
+				tier = tier_duchy
+			}
+			add = 10
+		}
+		else_if = {
+			limit = {
+				tier = tier_county
+			}
+			add = 1
+		}
+	}
+}
+
+
+special_obligation_religious_rights = {
+	value = 0
+	if = {
+		limit = {
+			vassal_contract_obligation_level:religious_rights != 0
+		}
+		add = 1
+	}
+}
+
+special_obligation_fortification_rights = {
+	value = 0
+	if = {
+		limit = {
+			vassal_contract_obligation_level:fortification_rights != 0
+		}
+		add = 1
+	}
+}
+
+special_obligation_coinage_rights = {
+	value = 0
+	if = {
+		limit = {
+			vassal_contract_obligation_level:coinage_rights != 0
+		}
+		add = 1
+	}
+}
+
+special_obligation_war_declaration_rights = {
+	value = 0
+	if = {
+		limit = {
+			vassal_contract_obligation_level:war_declaration_rights != 0
+		}
+		add = 1
+	}
+}
+
+special_obligation_council_rights = {
+	value = 0
+	if = {
+		limit = {
+			vassal_contract_obligation_level:council_rights != 0
+		}
+		add = 1
+	}
+}
+
+special_obligation_title_revocation_rights = {
+	value = 0
+	if = {
+		limit = {
+			vassal_contract_obligation_level:title_revocation_rights != 0
+		}
+		add = 1
+	}
+}

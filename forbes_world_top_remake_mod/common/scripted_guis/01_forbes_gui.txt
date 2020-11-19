@@ -1,0 +1,262 @@
+﻿generate_global_forbes_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		set_variable = {
+			name = forbes_mode
+			value = 1
+		}
+		generate_forbes_list = yes
+	}
+}
+
+generate_local_forbes_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		set_variable = {
+			name = forbes_mode
+			value = 2
+		}
+		generate_forbes_list = yes
+	}
+}
+
+generate_special_obligation_vassals_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		set_variable = {
+			name = forbes_mode
+			value = 3
+		}
+		generate_forbes_list = yes
+	}
+}
+
+generate_realm_size_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		set_variable = {
+			name = forbes_mode
+			value = 4
+		}
+		generate_forbes_list = yes
+	}
+}
+
+generate_military_strength_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		set_variable = {
+			name = forbes_mode
+			value = 5
+		}
+		generate_forbes_list = yes
+	}
+}
+
+generate_overheld_title_vassals_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		set_variable = {
+			name = forbes_mode
+			value = 6
+		}
+		generate_forbes_list = yes
+	}
+}
+
+generate_forbes_infidel_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		set_variable = {
+			name = forbes_mode
+			value = 7
+		}
+		generate_forbes_list = yes
+	}
+}
+
+generate_forbes_claim_values_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		set_variable = {
+			name = forbes_mode
+			value = 8
+		}
+		generate_forbes_list = yes
+	}
+}
+
+
+open_forbes_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		if = {
+			limit = { 
+				root = { 
+					NOT = { has_variable = forbes_mode } 
+				} 
+			} 
+			set_variable = {
+				name = forbes_mode
+				value = 2
+			}
+		}
+		generate_forbes_list = yes
+	}
+}
+
+clear_forbes_list = {
+	scope = player
+
+	is_shown = {
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		clear_forbes_list = yes
+	}
+}
+
+forbes_list_title = {
+	scope = player
+	is_shown = {
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		clear_forbes_list = yes
+	}
+}

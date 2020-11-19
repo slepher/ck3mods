@@ -1,0 +1,244 @@
+﻿generate_forbes_list = {
+	clear_variable_list = forbes_list
+	if = { limit = { root = { NOT = { has_variable = forbes_list } } } set_variable = { name = forbes_list } }
+	if = { 
+		limit = {
+			var:forbes_mode = 3
+		}
+		every_vassal = {
+			limit = { 
+				special_obligation_levels > 0
+			}
+			save_temporary_scope_as = to_add
+			scope:to_add = {
+				if = {
+					limit = {
+						vassal_contract_is_blocked_from_modification = yes
+					}
+					set_variable = {
+						name = contract_blocked_modification
+						value = 1
+					}
+					set_variable = {
+						name = contract_has_hook
+						value = 0
+					}
+					set_variable = {
+						name = contract_imprisoned
+						value = 0
+					}
+					set_variable = {
+						name = contract_can_imprison
+						value = 0
+					}
+				}
+				else = {
+					set_variable = {
+						name = contract_blocked_modification
+						value = 0
+					}
+					if = {
+						limit = {
+							root = {
+								has_usable_hook = scope:to_add
+							}
+						}
+						set_variable = {
+							name = contract_has_hook
+							value = 1
+						}
+					} 
+					else = {
+						set_variable = {
+							name = contract_has_hook
+							value = 0
+						}
+					}
+					if = {
+						limit = {
+							scope:to_add = {
+								is_imprisoned = yes
+							}
+						}
+						set_variable = {
+							name = contract_imprisoned
+							value = 1
+						}
+						set_variable = {
+							name = contract_can_imprison
+							value = 0
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								root = {
+									has_imprisonment_reason = scope:to_add
+								}
+							}
+							set_variable = {
+								name = contract_can_imprison
+								value = 1
+							}
+						} 
+						else = {
+							set_variable = {
+								name = contract_can_imprison
+								value = 0
+							}
+						}
+					}
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = forbes_list
+					target = scope:to_add
+				}
+			}
+		}
+	}
+	else_if {
+		limit = {
+			OR = {
+				var:forbes_mode = 4
+			}
+		}
+		ordered_independent_ruler = {
+			order_by = realm_size
+			max = 100
+			check_range_bounds = no
+			save_temporary_scope_as = to_add
+			root = {
+				add_to_variable_list = {
+					name = forbes_list
+					target = scope:to_add
+				}
+			}
+		}
+	}
+	else_if {
+		limit = {
+			OR = {
+				var:forbes_mode = 5
+			}
+		}
+		ordered_ruler = {
+			order_by = max_military_strength
+			max = 100
+			check_range_bounds = no
+			save_temporary_scope_as = to_add
+			root = {
+				add_to_variable_list = {
+					name = forbes_list
+					target = scope:to_add
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:forbes_mode = 6
+		}
+		ordered_vassal = {
+			limit = {
+				overheld_title > 0
+			}
+			order_by = overheld_title
+			max = 100
+			check_range_bounds = no
+			set_variable = {
+				name = vassal_overheld_title
+				value = overheld_title
+			}
+			save_temporary_scope_as = to_add
+			root = {
+				add_to_variable_list = {
+					name = forbes_list
+					target = scope:to_add
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:forbes_mode = 7
+		}
+		ordered_vassal_or_below = {
+			limit = {
+				NOT = { faith = root.faith }
+				any_held_title = {
+					tier >= tier_county
+				}
+			}
+			order_by = realm_size
+			max = 100
+			check_range_bounds = no
+			save_temporary_scope_as = to_add
+			root = {
+				add_to_variable_list = {
+					name = forbes_list
+					target = scope:to_add
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:forbes_mode = 8
+		}
+		every_courtier_or_guest = {
+			limit = {
+				claim_values > 0
+			}
+			add_to_temporary_list = valued_claim_character
+		}
+		ordered_vassal_or_below = {
+			limit = {
+				claim_values > 0
+			}
+			add_to_temporary_list = valued_claim_character
+		}
+		ordered_in_list = {
+			list = valued_claim_character
+			order_by = claim_values
+			max = 100
+			check_range_bounds = no
+			root = {
+				add_to_variable_list = {
+					name = forbes_list
+					target = scope:to_add
+				}
+			}
+		}
+	}
+	else = {
+		ordered_living_character = {
+			limit = { 
+				gold > 100
+				OR = {
+					AND = {
+						root.var:forbes_mode = 2
+						in_diplomatic_range = root
+					}
+					root.var:forbes_mode = 1
+				}
+			}
+			order_by = gold
+			max = 100
+			check_range_bounds = no
+			save_temporary_scope_as = to_add
+			root = {
+				add_to_variable_list = {
+					name = forbes_list
+					target = scope:to_add
+				}
+			}
+		}
+				
+	}
+}
+
+clear_forbes_list {
+	clear_variable_list = forbes_list
+}

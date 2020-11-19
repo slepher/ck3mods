@@ -1,0 +1,12 @@
+﻿l_korean:
+ FORBES:0 "Forbes"
+ FORBES_WORLD_TOP:0 "Forbes World Top"
+ FORBES_LOCAL_TOP:0 "Forbes Local Top"
+ FEDERAL_SPECIAL_CONTRACT:0 "Federal Special Contract"
+ FORBES_REALM_SIZE_TOP:0 "Realm Size Top"
+ FORBES_MILITARY_STRENGTH_TOP:0 "Military Strength Top"
+ FORBES_OVERHELD_TITLE:0 "Overheld Title"
+ FORBES_INFIDEL_VASSAL:0 "Infidel Vassals"
+ FORBES_TITLE_CLAIMER:0 "Title Claimers"
+ IS_VASSAL_CONTRACT_BLOCKED_FROM_MODIFICATION_THIRD_1:0 "[Character.GetShortUINamePossessive] [obligations|E]는 이미 변경됨"
+ I_CAN_PUNISH_DESCRIPTION_1:0 "#T 범죄자 발각#!\n\n[Character.GetShortUINameNoTooltip](이)가 [criminal|E]라는 사실이 알려졌습니다. 이에 따라, [tyrant|E]으로 취급받지 않으면서 [Character.GetHerHim]를 처벌할 수 있게 되었습니다."

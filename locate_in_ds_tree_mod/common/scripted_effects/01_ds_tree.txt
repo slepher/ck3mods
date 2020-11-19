@@ -1,0 +1,80 @@
+﻿up_character_location = {
+	root = {
+		set_variable = {
+			name = width
+			value = 0
+		}
+		set_variable = {
+			name = depth
+			value = 0
+		}
+	}
+	scope:current_character = {
+		save_temporary_scope_as = ancestor
+		# add_to_temporary_list = parent_node_list
+	}
+	debug_log = "start check"
+	debug_log_scopes = yes
+	while = {
+		limit = {
+			scope:ancestor = {
+				any_parent = {
+					even_if_dead = yes
+					dynasty = root
+					# NOT = { is_in_list = parent_node_list }
+				}
+			}
+		}
+		debug_log = "go to parent"
+		debug_log_scopes = yes
+		root = {
+			change_variable = {
+				name = depth
+				add = 1
+			}
+		}
+		scope:ancestor = {
+			save_temporary_scope_as = ancestor_child
+			set_variable = {
+				name = test_width
+				value = 0
+			}
+		}
+		scope:ancestor = {
+			random_parent = {
+				even_if_dead = yes
+				limit = {
+					dynasty = root
+					# NOT = { is_in_list = parent_node_list }
+				}
+				# add_to_temporary_list = parent_node_list
+				save_temporary_scope_as = ancestor
+			}
+		}
+		scope:ancestor = {
+			root = {
+				change_variable = {
+					name = width
+					add = scope:ancestor.character_left_character_width
+				}
+			}
+		}
+		scope:ancestor_child = {
+			set_variable = {
+				name = test_width
+				value = scope:ancestor.character_left_width
+			}
+		}
+	}
+	debug_log = "end check"
+	scope:current_character = {
+		set_variable = {
+			name = width
+			value = root.var:width
+		}
+		set_variable = {
+			name = depth
+			value = root.var:depth
+		}
+	}
+}
