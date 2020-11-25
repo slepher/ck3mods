@@ -177,70 +177,27 @@ types DynastyTreeView
 							parentanchor = hcenter
 						}
 
-						widget = {
+						dynasty_character_backgroud = {
 							name = "background_dynasty_head"
 							visible = "[And( Character.IsDynastyHead, Not( Character.IsFounderOfDynasty ))]"
-							size = { 140 150 }
-
-							background = {
-								margin = { 10 5 }
-								margin_bottom = 42
-
-								texture = "gfx/interface/component_overlay/overlay_noise.dds"
-								using = Mask_Rough_Edges
+							blockoverride "backgroud_color" {
 								using = Color_Blue
-								alpha = 0.8
-
-								modify_texture = {
-									name = "overlay"
-									texture = "gfx/interface/component_overlay/overlay_window.dds"
-									spriteType = Corneredstretched
-									spriteborder = { 0 0 }
-									blend_mode = overlay
-								}
-							}
-
-							background = {
-								margin = { 7 2 }
-								margin_bottom = 40
-								using = Background_Frame
 							}
 						}
 
-						widget = {
+						dynasty_character_backgroud = {
 							name = "background_house_head"
 							visible = "[And( Character.IsHouseHead, Not( Character.IsDynastyHead ))]"
-							size = { 140 150 }
-
-							background = {
-								margin = { 10 5 }
-								margin_bottom = 42
-
-								texture = "gfx/interface/component_overlay/overlay_noise.dds"
-								using = Mask_Rough_Edges
+							blockoverride "backgroud_color" {
 								using = Color_Purple
-								alpha = 0.8
-
-								modify_texture = {
-									name = "overlay"
-									texture = "gfx/interface/component_overlay/overlay_window.dds"
-									spriteType = Corneredstretched
-									spriteborder = { 0 0 }
-									blend_mode = overlay
-								}
 							}
+						}
 
-							background = {
-								margin = { 10 5 }
-								margin_bottom = 42
-								using = Background_Area_Dark_Border
-								alpha = 0.2
-							}
-
-							background = {
-								margin = { 7 2 }
-								margin_bottom = 40
-								using = Background_Frame
+						dynasty_character_backgroud = {
+							name = "background_from_character"
+							visible = "[And( And(DynastyTreeItem.IsSelectedCharacter, Not(Character.IsFounderOfDynasty) ), Not( Or(Character.IsDynastyHead, Character.IsHouseHead) ) )]"
+							blockoverride "backgroud_color" {
+								using = Color_Red
 							}
 						}
 
@@ -405,6 +362,43 @@ types DynastyTreeView
 				from = "[DynastyTreeItem.GetLineStartPoint]"
 				to = "[DynastyTreeItem.GetLineEndPoint]"
 			}
+		}
+	}
+
+	type dynasty_character_backgroud = widget {
+		size = { 140 150 }
+
+		background = {
+			margin = { 10 5 }
+			margin_bottom = 42
+
+			texture = "gfx/interface/component_overlay/overlay_noise.dds"
+			using = Mask_Rough_Edges
+			block "backgroud_color" {
+				using = Color_Red
+			}
+			alpha = 0.8
+
+			modify_texture = {
+				name = "overlay"
+				texture = "gfx/interface/component_overlay/overlay_window.dds"
+				spriteType = Corneredstretched
+				spriteborder = { 0 0 }
+				blend_mode = overlay
+			}
+		}
+
+		background = {
+			margin = { 10 5 }
+			margin_bottom = 42
+			using = Background_Area_Dark_Border
+			alpha = 0.2
+		}
+
+		background = {
+			margin = { 7 2 }
+			margin_bottom = 40
+			using = Background_Frame
 		}
 	}
 }
