@@ -23,10 +23,11 @@ window = {
 	state = {
 		name = _show
 		using = Animation_FadeIn_Quick
-		# datacontext = "[GetScriptedGui('clear_forbes_list')]"
-		# on_finish = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"		
-		# on_finish = "[ExecuteConsoleCommand('gui.clearwidgets forbes_gui_window')]"
-		# on_finish = "[GetVariableSystem.Clear('forbes_list_opened')]"
+		datacontext = "[GetScriptedGui('clear_forbes_list')]"
+		on_finish = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"		
+		on_finish = "[ExecuteConsoleCommand('gui.clearwidgets forbes_gui_window')]"
+		on_finish = "[GetVariableSystem.Clear('forbes_list_opened')]"
+		
 		position = { 0 0 }
 
 		start_sound = {
@@ -66,7 +67,7 @@ window = {
 						size = { 256 232 }
 
 						using = Master_Button_Modify_Texture
-						
+
 						blockoverride "master_color_frame" {
 							frame = 4
 						}
@@ -127,27 +128,24 @@ window = {
 							size = { 10 10 }
 						}
 
-						textbox = {
-							align = top|left
+						hbox = {
+							layoutpolicy_horizontal = expanding
+							maximumsize = { 275 -1 }
+							margin = { 10 5 }
+							spacing = 5
 
 							text_multi = {
 								layoutpolicy_horizontal = expanding
-								maximumsize = { 332 -1 }
-								margin_left = 5
+								max_width = 275
+								min_width = 275
+								margin = { 0 5 }
 								autoresize = yes
-								resizeparent = yes
 								text = "FRONTEND_INVITE"
+							}
 
-								text_occluder = {
-									size = { 40 40 }
-									parentanchor = bottom|right
-
-									button_copy = {
-										parentanchor = center
-										onclick = "[CopyServerID]"
-										tooltip = "FRONTEND_COPY_CLIPBUFFER_TT"
-									}
-								}
+							button_copy = {
+								onclick = "[CopyServerID]"
+								tooltip = "FRONTEND_COPY_CLIPBUFFER_TT"
 							}
 						}
 					}
@@ -264,7 +262,7 @@ window = {
 								fontsize = 13
 
 								text = "ACCOUNT"
-								default_format = "#low"
+								default_format = "#clickable"
 							}
 						}
 
@@ -282,7 +280,7 @@ window = {
 								fontsize = 13
 
 								text = "SETTINGS"
-								default_format = "#low"
+								default_format = "#clickable"
 							}
 						}
 
@@ -302,7 +300,7 @@ window = {
 								fontsize = 13
 
 								text = "ACHIEVEMENTS_LABEL"
-								default_format = "#low"
+								default_format = "#clickable"
 							}
 						}
 
@@ -320,7 +318,7 @@ window = {
 									align = center
 									fontsize = 13
 
-									default_format = "#low"
+									default_format = "#clickable"
 									text = "GAME_RULES"
 								}
 							}
@@ -339,12 +337,12 @@ window = {
 									tooltip = IRONMAN_DISBLED
 								}
 								achievements_enabled_icon = {
-									visible = "[And( And( IsIronmanEnabled, IsGameChecksumOk ), Not( JominiGameRules.HasRuleWithFlag( 'blocks_achievements' ) ) )]"
+									visible = "[CanGetAchievements]"
 									size = { 25 25 }
 									tooltip = ACHIEVEMENTS_ENABLED
 								}
 								achievements_disabled_icon = {
-									visible = "[Not( And( And( IsIronmanEnabled, IsGameChecksumOk ), Not( JominiGameRules.HasRuleWithFlag( 'blocks_achievements' ) ) ) )]"
+									visible = "[Not( CanGetAchievements )]"
 									size = { 25 25 }
 									tooltip = ACHIEVEMENTS_DISABLED
 								}
@@ -352,26 +350,10 @@ window = {
 						}
 					}
 				}
-
-				hbox = {
-					layoutpolicy_horizontal = expanding
-					margin_top = 20
-
-					button = {
-						name = "copy_build_version"
-						size = { 300 20 }
-						alpha = 0.4
-
-						tooltip = "[GetBuildVersionDescriptionWithClickToCopy]"
-						onclick = "[CopyBuildVersionInfoToClipboard]"
-
-						text_single = {
-							name = "build_version"
-							parentanchor = hcenter
-							text = "VERSION_SHORT"
-							default_format = "#low"
-							align = center
-						}
+				clickable_version_number = {
+					blockoverride "version_text" {
+						text = "VERSION_SHORT"
+						align = center
 					}
 				}
 			}
