@@ -1123,35 +1123,7 @@ icon = {
 		state = {
 			name = _mouse_hierarchy_leave
 			on_finish = "[GetVariableSystem.Clear( 'extra_buttons_expand' )]"
-        }
-        
-        button_standard = {
-            name = "forbes_button"
-            text = "FORBES"
-            datacontext = "[GetScriptedGui('open_forbes_list')]"
-            onclick = "[GetVariableSystem.Set('to_open_forbes_list', 'true')]"
-
-            tooltip = "FORBES"
-
-            state = {
-                name = "to_open_forbes_list"
-                trigger_on_create = no
-                trigger_when = "[And(GetVariableSystem.Exists('to_open_forbes_list'), Not(GetVariableSystem.Exists('forbes_list_opened')))]"
-                on_start = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-                on_start = "[ExecuteConsoleCommand('gui.createwidget gui/forbes.gui forbes_gui_window')]"
-                on_start = "[GetVariableSystem.Set('forbes_list_opened', 'true')]"
-                on_finish = "[GetVariableSystem.Clear('to_open_forbes_list')]"
-                on_finish = "[GetVariableSystem.Toggle( 'extra_buttons_expand' )]"
-            }
-
-            state = {
-                name = "opened_forbes_list"
-                trigger_on_create = no
-                trigger_when = "[And(GetVariableSystem.Exists('to_open_forbes_list'), GetVariableSystem.Exists('forbes_list_opened'))]"
-                on_finish = "[GetVariableSystem.Clear('to_open_forbes_list')]"
-                on_finish = "[GetVariableSystem.Toggle( 'extra_buttons_expand' )]"
-            }
-        }
+		}
 
 		button_standard = {
 			name = "find_character_button"

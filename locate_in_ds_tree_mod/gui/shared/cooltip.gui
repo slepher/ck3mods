@@ -730,18 +730,6 @@ types GameTooltipTypes
 								text = "HOUSE_VIEW_NAME_WITH_HOUSE"
 								max_width = 100
 								autoresize = yes
-                            }
-
-							button_dynasty_tree = {
-								name = "button_dynasty_tree"
-								visible = "[Character.GetHouse.IsValid]"							
-								onclick = "[OpenDynastyTreeViewFromCharacter(Character.GetID)]"
-								onclick = "[CharacterInteractionMenuWindow.Close]"
-	
-								size = { 25 25 }
-	
-								tooltip = "DYNASTY_VIEW_TT_DYNASTY_TREE"
-								using = tooltip_ne
 							}
 						}
 					}

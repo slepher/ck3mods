@@ -788,24 +788,7 @@ window = {
 								frame = "[Character.GetSexualityFrame]"
 								texture = "gfx/interface/icons/character_status/sexuality_icons_female.dds"
 								tooltip = "SEXUALITY_TT"
-                            }
-                            
-                            text_single = {
-                                visible = "[Not(Character.IsFemale)]"
-                                max_width = 432
-                                fontsize_min = 13
-                                text = "gender_male"
-                                align = nobaseline|hcenter
-                    
-                            }
-                    
-                            text_single = {
-                                visible = "[Character.IsFemale]"
-                                max_width = 432
-                                fontsize_min = 13
-                                text = "gender_female"
-                                align = nobaseline|hcenter
-                            }
+							}
 
 							expand = {}
 						}					}

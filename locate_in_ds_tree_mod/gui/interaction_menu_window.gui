@@ -1,4 +1,4 @@
-﻿
+
 #### THE WINDOW
 
 window = {
@@ -86,7 +86,7 @@ window = {
 
 						button_barbershop = {
 							name = "customize_portrait"
-							#visible = "[Character.CanCustomizePortrait]"
+							visible = "[Character.CanCustomizePortrait]"
 							onclick = "[Character.OnCustomizePortrait]"
 							onclick = "[CharacterInteractionMenuWindow.Close]"
 							size = { 25 25 }
@@ -101,16 +101,6 @@ window = {
 							size = { 25 25 }
 
 							tooltip = "GOTO_CHARACTER"
-							using = tooltip_ne
-						}
-
-						button_dynasty_tree = {
-							name = "button_dynasty_tree"
-							visible = "[Character.GetHouse.IsValid]"
-							onclick = "[OpenDynastyTreeViewFromCharacter(Character.GetID)]"
-							onclick = "[CharacterInteractionMenuWindow.Close]"
-							size = { 25 25 }
-							tooltip = "Locate in Dynasty Tree"
 							using = tooltip_ne
 						}
 					}
