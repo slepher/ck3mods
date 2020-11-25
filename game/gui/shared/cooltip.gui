@@ -80,6 +80,7 @@ template character_opinion_tooltip {
 						texture = "gfx/interface/component_tiles/solid_black_label.dds"
 						spritetype = Corneredtiled
 						spriteborder = { 20 20 }
+						texture_density = 2
 						margin = { 3 1 }
 					}
 
@@ -152,8 +153,6 @@ template character_trait_tooltip {
 	object_tooltip_pop_out = {
 		blockoverride "header_additions" {
 			hbox = {
-				margin_right = 5
-				margin_top = -10
 				icon = {
 					size = { 52 52 }
 					texture = "[Trait.GetIcon( Character.Self )]"
@@ -170,8 +169,7 @@ template character_trait_tooltip {
 		}
 		blockoverride "description_text" {
 			block "actual_description_text" {
-				text = "[Trait.GetFullDescription( Character.Self )]"
-
+				text = "[Trait.GetFullDescription( Character.Self, Faith.Self )]"
 			}
 		}
 	}
@@ -180,6 +178,7 @@ template character_trait_tooltip {
 container = {
 	alwaystransparent = no
 	name = "TraitTooltipDefault"
+	datacontext = "[Character.GetFaith]"
 	using = character_trait_tooltip
 }
 
@@ -299,137 +298,143 @@ container = {
 
 types GameTooltipTypes
 {
-	type object_tooltip_pop_out = flowcontainer {
+	type object_tooltip_pop_out = widget {
 		name = "ObjectTooltipDefault"
-		direction = vertical
-		ignoreinvisible = yes
 		using = GeneralTooltipSetup
 		alwaystransparent = no
 
-		container = {
-			widget = {
-				name = "background"
-				using = DefaultTooltipBackground
-				size = { 100% 100% }
-				alwaystransparent = no
-			}
+		using = DefaultTooltipBackground
 
-			flowcontainer = {
-				ignoreinvisible = yes
-				direction = vertical
-				margin = { 20 5 }
+		vbox = {
+			set_parent_size_to_minimum = yes
+			margin = { 20 5 }
 
-				widget = {
-					layoutpolicy_horizontal = expanding
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				minimumsize = { 400 80 }
 
-					background = {
-						using = Background_Area
-						margin = { 15 0 }
+				# background = {
+				# 	using = Background_Area
+				# 	margin = { 15 0 }
+				# }
+
+				background = {
+					name = "header"
+					texture = "gfx/interface/component_tiles/tile_title_big_top_01.dds"
+					spriteType = Corneredstretched
+					margin = { 15 0 }
+					texture_density = 2
+
+					modify_texture = {
+						name = "mask"
+						texture = "gfx/interface/component_masks/mask_title_big_top.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 160 0 }
+						blend_mode = alphamultiply
+						alpha = 0.5
 					}
+				}
 
-					hbox = {
+				block "header_tt" {}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					block "header_additions" {}
+
+					vbox = {
+						name = "FancyHeader"
 						layoutpolicy_horizontal = expanding
-						minimumsize = { 400 80 }
-						set_parent_size_to_minimum = yes
+						alwaystransparent = no
+						margin = { 10 0 }
 
-						block "header_tt" {}
-
-						hbox = {
+						text_single = {
 							layoutpolicy_horizontal = expanding
-							block "header_additions" {}
+							autoresize = yes
+							name = "title"
 
-							vbox = {
-								layoutpolicy_horizontal = expanding
-								name = "FancyHeader"
-								alwaystransparent = no
-								ignoreinvisible = yes
-								margin = { 10 0 }								
-
-								text_single = {
-									layoutpolicy_horizontal = expanding
-									autoresize = yes
-									name = "title"
-									
-									fontsize_min = 14
-									using = Font_Size_Medium
-									block "title_text" {}
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-								}
-
-								# use subtitle_text blockoverride or replace this entire block
-								block "subheading" 
-								{
-									text_single = {
-										layoutpolicy_horizontal = expanding
-										autoresize = yes
-										fontsize_min = 14
-										using = Font_Size_Medium
-										block "subtitle_text" {
-											text = ""
-										}
-										fonttintcolor = "[TooltipInfo.GetTintColor]"
-									}
-								}
-							}
+							fontsize_min = 14
+							using = Font_Size_Medium
+							block "title_text" {}
+							fonttintcolor = "[TooltipInfo.GetTintColor]"
 						}
 
-						expand = {}
-
-						vbox = {
-							layoutpolicy_vertical = expanding
-
+						# use subtitle_text blockoverride or replace this entire block
+						block "subheading"
+						{
 							text_single = {
-								name = "concept_link"
 								layoutpolicy_horizontal = expanding
-								block "concept_link" {
-									text = "#D Missing concept link!#!"
+								autoresize = yes
+								fontsize_min = 14
+								using = Font_Size_Medium
+								block "subtitle_text" {
+									text = ""
 								}
-
 								fonttintcolor = "[TooltipInfo.GetTintColor]"
 							}
 						}
 					}
 				}
 
-				block "extra_data" {}
+				expand = {}
 
-				textbox = {
-					name = "above_description"
+				vbox = {
+					layoutpolicy_vertical = expanding
 
-					using = DefaultTooltipText
-					multiline = yes
-					block "above_description_text" {}
-					fonttintcolor = "[TooltipInfo.GetTintColor]"
-					alwaystransparent = no
+					text_single = {
+						name = "concept_link"
+						layoutpolicy_horizontal = expanding
+						block "concept_link" {
+							text = "#D Missing concept link!#!"
+						}
+
+						fonttintcolor = "[TooltipInfo.GetTintColor]"
+					}
 				}
+			}
 
-				# NOTE: This edit box is filled by TooltipInfo.GetTintColor from code in order to set the correct size when the tooltip is created and positioned and then it uses the text property specified here in the next frames
-				textbox = {
-					name = "Description"
-					max_width = 400
-					using = DefaultTooltipText
-					multiline = yes
-					block "description_text" {}
-					fonttintcolor = "[TooltipInfo.GetTintColor]"
-					alwaystransparent = no
-				}
 
-				# Things like "click to X", hotkeys etc
-				textbox = {
-					name = "input_info"
-					margin_top = 10
-					using = DefaultTooltipText
-					multiline = yes
-					block "input_info_text" {}
-					fonttintcolor = "[TooltipInfo.GetTintColor]"
-				}
+			block "extra_data" {}
 
-				textbox = {
-					name = "TooltipTextShortcut"
-					using = DefaultTooltipText
-					parentanchor = right
-					margin = { 10 10 }
-				}
+			textbox = {
+				name = "above_description"
+
+				using = DefaultTooltipText
+				layoutpolicy_horizontal = expanding
+				multiline = yes
+				block "above_description_text" {}
+				fonttintcolor = "[TooltipInfo.GetTintColor]"
+				alwaystransparent = no
+			}
+
+			# NOTE: This edit box is filled by TooltipInfo.GetTintColor from code in order to set the correct size when the tooltip is created and positioned and then it uses the text property specified here in the next frames
+			textbox = {
+				name = "Description"
+				layoutpolicy_horizontal = expanding
+				max_width = 400
+				using = DefaultTooltipText
+				multiline = yes
+				block "description_text" {}
+				fonttintcolor = "[TooltipInfo.GetTintColor]"
+				alwaystransparent = no
+			}
+
+			# Things like "click to X", hotkeys etc
+			textbox = {
+				name = "input_info"
+				layoutpolicy_horizontal = expanding
+				margin_top = 10
+				using = DefaultTooltipText
+				multiline = yes
+				block "input_info_text" {}
+				fonttintcolor = "[TooltipInfo.GetTintColor]"
+			}
+
+			textbox = {
+				name = "TooltipTextShortcut"
+				layoutpolicy_horizontal = expanding
+				using = DefaultTooltipText
+				margin = { 10 5 }
+				margin_top = 10
 			}
 		}
 	}
@@ -452,6 +457,7 @@ types GameTooltipTypes
 		vbox = {
 			set_parent_size_to_minimum = yes
 			margin = { 15 15 }
+			margin_top = 3
 
 			## REAL CHARACTERS
 			vbox = {
@@ -462,58 +468,74 @@ types GameTooltipTypes
 					name = "personal"
 					layoutpolicy_horizontal = expanding
 
-					background = {
-						using = Background_Area_Dark
-						margin = { 10 10 }
-					}
+					# background = {
+					# 	name = "header"
+					# 	texture = "gfx/interface/component_tiles/tile_title_big_top_01.dds"
+					# 	spriteType = Corneredtiled
+					# 	spriteborder_top = 54
+					# 	margin = { 12 0 }
+					# 	margin_bottom = 15
+					# 	margin_top = 5
+					# 	texture_density = 2
+
+					# 	modify_texture = {
+					# 		name = "mask"
+					# 		texture = "gfx/interface/component_masks/mask_title_big_top.dds"
+					# 		spriteType = Corneredtiled
+					# 		spriteborder = { 160 0 }
+					# 		blend_mode = alphamultiply
+					# 		alpha = 0.5
+					# 	}
+
+					# 	modify_texture = {
+					# 		name = "overlay"
+					# 		texture = "gfx/interface/component_overlay/overlay_title_big_top.dds"
+					# 		spriteType = Corneredstretched
+					# 		spriteborder = { 0 0 }
+					# 		blend_mode = overlay
+					# 	}
+					# }
 
 					hbox = {
 						layoutpolicy_horizontal = expanding
+
 						vbox = {
 							name = "name_etc"
 							layoutpolicy_horizontal = expanding
+							minimumsize = { 0 35 }
 
 							## Name
 							hbox = {
 								layoutpolicy_horizontal = expanding
-								margin = { 5 0 }
+								margin_top = 8
+								margin_right = 7
+
+								background = {
+									using = Background_Area
+									margin = { 15 0 }
+									margin_bottom = 7
+								}
+
+								portrait_opinion = {
+									visible = "[And( Character.IsAlive, Not( Character.IsPlayer ) )]"
+								}
+
+								spacer = {
+									visible = "[And( Character.IsAlive, Not( Character.IsPlayer ) )]"
+									size = { 8 5 }
+								}
 
 								text_multi = {
 									name = "character_name"
-									text = "[Character.GetUINameNotMeNoTooltip]"
+									text = "CHARACTER_TT_NAME_AGE"
 									default_format = "#high"
-									max_width = 350
+									using = Font_Size_Medium
+									max_width = 335
 									autoresize = yes
-								}
-
-								expand = {}
-							}
-
-							hbox = {
-								layoutpolicy_horizontal = expanding
-
-								block "char_tooltip_opinion"
-								{
-									hbox = {
-										visible = "[And( Character.IsAlive, Not( Character.IsPlayer ) )]"
-										margin_top = 8
-										margin_right = 7
-
-										portrait_opinion = {}
-									}
-								}
-
-								text_single = {
-									name = "character_age"
-									text = " [Character.GetAge]"
-									default_format = "#low"
-									tooltip = "[Character.GetDeathOrBirthDateInfo]"
 								}
 
 								hbox = {
 									margin_left = 4
-									margin_top = 10
-									spacing = -3
 
 									icon = {
 										visible = "[Not(Character.IsDeadAndValid)]"
@@ -527,37 +549,100 @@ types GameTooltipTypes
 
 								expand = {}
 							}
-
-							hbox_character_subheading = {}
 						}
+					}
+
+					hbox = {
+						layoutpolicy_horizontal = expanding
+
+						text_multi = {
+							name = "character_relation_to_you"
+							margin_top = 10
+							max_width = 308
+							text = "[Character.GetRelationToString( GetPlayer )]"
+							default_format = "#high"
+							align = nobaseline
+							autoresize = yes
+						}
+
+						expand = {}
 					}
 
 					vbox = {
 						layoutpolicy_horizontal = expanding
 						margin_top = 10
-						margin_bottom = 15
+						margin_bottom = 10
+
+						hbox = {
+							name = "AI_personality"
+							layoutpolicy_horizontal = expanding
+							spacing = 2
+
+							text_single = {
+								visible = "[Not( Character.IsPlayer )]"
+								text = "[Character.GetAIPersonality]"
+								align = nobaseline
+							}
+
+							vbox = {
+								layoutpolicy_vertical = expanding
+
+								icon = {
+									visible = "[Not(Character.IsFemale)]"
+									size = { 20 20 }
+									framesize = { 40 40 }
+									frame = "[Character.GetSexualityFrame]"
+									texture = "gfx/interface/icons/character_status/sexuality_icons_male.dds"
+									tooltip = "SEXUALITY_TT"
+								}
+
+								icon = {
+									visible = "[Character.IsFemale]"
+									size = { 20 20 }
+									framesize = { 40 40 }
+									frame = "[Character.GetSexualityFrame]"
+									texture = "gfx/interface/icons/character_status/sexuality_icons_female.dds"
+									tooltip = "SEXUALITY_TT"
+								}
+
+								expand = {}
+							}
+
+							expand = {}
+						}
 
 						text_single = {
 							visible = "[Character.IsAlive]"
 							text = "[Character.Custom('CooltipSpouseListing')]"
 							layoutpolicy_horizontal = expanding
+							align = nobaseline
+
 						}
 
 						text_single = {
 							visible = "[And( Character.HasLocation,Not(Character.IsImprisoned))]"
 							layoutpolicy_horizontal = expanding
 							text = "CHARACTER_LOCATION_TOOLTIP"
+							align = nobaseline
+
 						}
 
 						text_single = {
 							visible = "[Character.IsImprisoned]"
 							layoutpolicy_horizontal = expanding
 							text = "CHARACTER_IMPRISONED_TOOLTIP"
+							align = nobaseline
 						}
 					}
 
 					hbox = {
 						layoutpolicy_horizontal = expanding
+						spacing = 10
+
+						background = {
+							using = Background_Area
+							margin = { 15 0 }
+						}
 
 						hbox = {
 							name = "faith_and_culture"
@@ -566,7 +651,6 @@ types GameTooltipTypes
 								name = "faith_button"
 								datacontext = "[Character.GetFaith]"
 								size = { 45 45 }
-								# shortcut = "faith_window"
 							}
 
 							vbox = {
@@ -604,7 +688,6 @@ types GameTooltipTypes
 										# shortcut = "innovations_window"
 									}
 								}
-
 							}
 						}
 
@@ -612,10 +695,6 @@ types GameTooltipTypes
 							name = "house"
 							datacontext = "[Character.GetHouse]"
 							margin = { 10 5 }
-
-							background = {
-								using = Background_Frame
-							}
 
 							coa_house_small = {
 								container = {
@@ -645,24 +724,22 @@ types GameTooltipTypes
 								}
 							}
 
-							text_single = {
+							text_multi = {
 								visible = "[Character.HasDynasty]"
-								layoutpolicy_horizontal = expanding
-								layoutpolicy_vertical = expanding
 								margin = { 5 0 }
 								text = "HOUSE_VIEW_NAME_WITH_HOUSE"
-								align = nobaseline
+								max_width = 100
+								autoresize = yes
 							}
 						}
-
-						expand = {}
 					}
 				}
 
 				hbox = {
 					layoutpolicy_horizontal = expanding
 					visible = "[Character.HasLandedTitles]"
-					margin = { 0 10 }
+					margin = { 0 5 }
+					spacing = 5
 
 					coa_realm_small_crown = {
 						name = "realm_flag"
@@ -680,7 +757,7 @@ types GameTooltipTypes
 							name = "character_title"
 							layoutpolicy_horizontal = expanding
 							text = "[Character.GetPrimaryTitle.GetNameNoTooltip|U]"
-							default_format = "#low"
+							default_format = "#medium"
 							using = Font_Size_Medium
 						}
 
@@ -688,7 +765,7 @@ types GameTooltipTypes
 							name = "government_type"
 							layoutpolicy_horizontal = expanding
 							text = "CV_REALM_TYPE"
-							default_format = "#low"
+							default_format = "#medium"
 						}
 					}
 				}
@@ -741,15 +818,14 @@ types GameTooltipTypes
 						text = "CHARACTER_TOOLTIP_NO_PORTRAIT"
 					}
 				}
-
 			}
-
 		}
 	}
 
 	type cooltip_paragraph = textbox {
 
 		name = "cooltip_paragraph"
+		layoutpolicy_horizontal = expanding
 		using = DefaultTooltipText
 		fonttintcolor = "[TooltipInfo.GetTintColor]"
 		multiline = yes
@@ -884,14 +960,14 @@ template maa_type_container_tooltip
 
 					icon = {
 						size = { 40 40 }
-						texture = "[RegimentType.GetIcon]"
+						texture = "[MenAtArmsType.GetIcon]"
 					}
 
 					text_single = {
 						layoutpolicy_horizontal = expanding
 						name = "header"
 						align = top|hcenter
-						text = "[RegimentType.GetNameNoTooltip]"
+						text = "[MenAtArmsType.GetNameNoTooltip]"
 						maximumsize = { 400 -1 }
 
 						using = Font_Type_Flavor
@@ -914,7 +990,7 @@ template maa_type_container_tooltip
 
 					background = {
 						name = "image"
-						texture = "[RegimentType.GetHorizontalImage]"
+						texture = "[MenAtArmsType.GetHorizontalImage]"
 
 						using = Mask_Rough_Edges
 					}
@@ -963,7 +1039,7 @@ template maa_type_container_tooltip
 						layoutpolicy_horizontal = expanding
 
 						text_single = {
-							text = "REGIMENT_TYPE_TOOLTIP_CREATION_COST"
+							text = "MEN_AT_ARMS_TYPE_TOOLTIP_CREATION_COST"
 						}
 						expand = {}
 					}
@@ -971,7 +1047,7 @@ template maa_type_container_tooltip
 						layoutpolicy_horizontal = expanding
 
 						text_single = {
-							text = "[RegimentType.GetReinforcementCostString( GetPlayer )]"
+							text = "[MenAtArmsType.GetReinforcementCostString( GetPlayer )]"
 						}
 						expand = {}
 					}
@@ -981,7 +1057,7 @@ template maa_type_container_tooltip
 						layoutpolicy_horizontal = expanding
 
 						text_single = {
-							text = "[RegimentType.GetFullStrengthMaintenanceCostForPlayerString]"
+							text = "[MenAtArmsType.GetFullStrengthMaintenanceCostForPlayerString]"
 						}
 						expand = {}
 					}
@@ -1041,14 +1117,14 @@ widget = {
 
 				icon = {
 					size = { 40 40 }
-					texture = "[RegimentType.GetIcon]"
+					texture = "[MenAtArmsType.GetIcon]"
 				}
 
 				text_single = {
 					layoutpolicy_horizontal = expanding
 					name = "header"
 					align = top|hcenter
-					text = "[RegimentType.GetNameNoTooltip]"
+					text = "[MenAtArmsType.GetNameNoTooltip]"
 					maximumsize = { 400 -1 }
 
 					using = Font_Type_Flavor
@@ -1072,7 +1148,7 @@ widget = {
 
 				background = {
 					name = "image"
-					texture = "[RegimentType.GetHorizontalImage]"
+					texture = "[MenAtArmsType.GetHorizontalImage]"
 
 					using = Mask_Rough_Edges
 				}
@@ -1122,7 +1198,7 @@ widget = {
 					layoutpolicy_horizontal = expanding
 
 					text_single = {
-						text = "REGIMENT_TYPE_TOOLTIP_CREATION_COST"
+						text = "MEN_AT_ARMS_TYPE_TOOLTIP_CREATION_COST"
 					}
 					expand = {}
 				}
@@ -1130,7 +1206,7 @@ widget = {
 					layoutpolicy_horizontal = expanding
 
 					text_single = {
-						text = "[RegimentType.GetReinforcementCostString( GetPlayer )]"
+						text = "[MenAtArmsType.GetReinforcementCostString( GetPlayer )]"
 					}
 					expand = {}
 				}
@@ -1140,7 +1216,7 @@ widget = {
 					layoutpolicy_horizontal = expanding
 
 					text_single = {
-						text = "[RegimentType.GetFullStrengthMaintenanceCostForPlayerString]"
+						text = "[MenAtArmsType.GetFullStrengthMaintenanceCostForPlayerString]"
 					}
 					expand = {}
 				}
@@ -1241,7 +1317,7 @@ template regiment_container_tooltip
 						background = {
 
 							name = "image"
-							texture = "[RegimentType.GetHorizontalImage]"
+							texture = "[MenAtArmsType.GetHorizontalImage]"
 
 							using = Mask_Rough_Edges
 						}
@@ -1253,8 +1329,10 @@ template regiment_container_tooltip
 							text_label_right = {
 								text = "[SelectLocalization(Regiment.IsRaised, 'MAA_RAISED', 'MAA_UNRAISED')]"
 								using = Font_Size_Medium
-								align = right
-								margin_right = 10
+							}
+
+							spacer = {
+								size = {10 0}
 							}
 						}
 
@@ -1285,11 +1363,15 @@ template regiment_container_tooltip
 
 							text_label_right = {
 								text = "REGIMENT_CURRENT_SIZE"
-								margin_right = 10
 
 								default_format = "#high"
 								using = Font_Size_Medium
 							}
+
+							spacer = {
+								size = {10 0}
+							}
+
 						}
 					}
 				}
@@ -1781,7 +1863,7 @@ template unit_icon_item_tooltip {
 			}
 
 			block "extra_unit_info" {}
-			
+
 			text_single = {
 				visible = "[And( InDebugMode, Not(ReleaseMode) )]"
 				# Deliberately unlocalized since this is debug functionality
@@ -1823,7 +1905,7 @@ template unit_icon_tooltip {
 		}
 
 		alwaystransparent = no
-		
+
 		flowcontainer = {
 			datamodel = "[UnitMapIcon.GetUnitItems]"
 			visible = "[GreaterThan_int32(GetDataModelSize(UnitMapIcon.GetUnitItems), '(int32)1')]"
@@ -1832,7 +1914,7 @@ template unit_icon_tooltip {
 			margin = { 30 15 }
 			margin_right = 20
 
-			
+
 			text_single = {
 				text = "ARMY_ICON_HEADER"
 			}
@@ -1896,6 +1978,41 @@ template faith_tooltip_click_default_extra_info
 	}
 }
 
+template faith_tooltip_core_tenents_extra_info
+{
+	divider_light = {
+		layoutpolicy_horizontal = expanding
+	}
+	text_label_center = {
+		text = "FAITH_CORE_TENETS_HEADING"
+	}
+	hbox = {
+		name = "doctrines"
+		datamodel = "[Faith.GetDoctrines]"
+		spacing = 10
+		item = {
+			name = "doctrine_item"
+			container_tenet_item = {
+				visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetGroupingKey, 'core_tenets' )]"
+				tooltip = FAITH_WINDOW_DOCTRINE_TOOLTIP_WITH_FAITH
+			}
+		}
+	}
+}
+
+template faith_tooltip_ruler_designer_extra_info
+{
+	spacer = {
+		size = { 0 4 }
+	}
+	divider_light = {
+		layoutpolicy_horizontal = expanding
+	}
+	text_single = {
+		text = RULER_DESIGNER_LIST_FAITH_ENTRY_SELECT_TOOLTIP
+	}
+}
+
 template holding_tooltip_click_default_extra_info
 {
 	text_single = {
@@ -1932,6 +2049,8 @@ types HoldingTooltips
 					texture = "gfx/interface/component_tiles/tile_title_big_top_01.dds"
 					spriteType = Corneredstretched
 					align = vcenter|left
+					texture_density = 2
+
 					modify_texture = {
 						name = "mask"
 						texture = "gfx/interface/component_masks/mask_title_big_top.dds"
@@ -2066,11 +2185,14 @@ types FaithTooltips
 				layoutpolicy_horizontal = expanding
 				layoutpolicy_vertical = expanding
 				margin = { 0 4 }
+
 				background = {
 					name = "header"
 					texture = "gfx/interface/component_tiles/tile_title_big_top_01.dds"
 					spriteType = Corneredstretched
-					align = vcenter|left
+					texture_density = 2
+					margin = { 15 0 }
+
 					modify_texture = {
 						name = "mask"
 						texture = "gfx/interface/component_masks/mask_title_big_top.dds"
@@ -2088,6 +2210,7 @@ types FaithTooltips
 						blend_mode = overlay
 					}
 				}
+
 				hbox = {
 					layoutpolicy_horizontal = expanding
 					icon = {
@@ -2213,15 +2336,30 @@ types FaithTooltips
 					autoresize = yes
 				}
 
-
 				block "extra_info" {}
 			}
 		}
 	}
 	type faith_tooltip_click = faith_tooltip
 	{
-		blockoverride "extra_info" {
+		blockoverride "extra_info"
+		{
 			using = faith_tooltip_click_default_extra_info
+		}
+	}
+	type faith_tooltip_core_tenents = faith_tooltip
+	{
+		blockoverride "extra_info"
+		{
+			using = faith_tooltip_core_tenents_extra_info
+		}
+	}
+	type faith_tooltip_ruler_designer = faith_tooltip
+	{
+		blockoverride "extra_info"
+		{
+			using = faith_tooltip_core_tenents_extra_info
+			using = faith_tooltip_ruler_designer_extra_info
 		}
 	}
 }
@@ -2648,7 +2786,8 @@ template dynasty_house_tooltip {
 
 		blockoverride "subtitle_text" {
 			text = "HOUSE_VIEW_MOTTO"
-		}	
+			default_format = "#weak"
+		}
 
 		blockoverride "concept_link" {
 			text = [house|E]
@@ -3127,6 +3266,7 @@ types CultureTooltips
 	{
 		using = GeneralTooltipSetup
 		alwaystransparent = no
+
 		widget = {
 			name = "background"
 			using = DefaultTooltipBackground
@@ -3136,7 +3276,7 @@ types CultureTooltips
 
 		vbox = {
 			set_parent_size_to_minimum = yes
-			margin = { 6 6 }
+			margin = { 15 5 }
 			margin_bottom = 16
 
 			vbox = {
@@ -3144,11 +3284,15 @@ types CultureTooltips
 				layoutpolicy_vertical = expanding
 				margin = { 6 4 }
 				margin_bottom = 12
+
 				background = {
 					name = "header"
 					texture = "gfx/interface/component_tiles/tile_title_big_top_01.dds"
 					spriteType = Corneredstretched
 					align = vcenter|left
+					margin = { 15 0 }
+					texture_density = 2
+
 					modify_texture = {
 						name = "mask"
 						texture = "gfx/interface/component_masks/mask_title_big_top.dds"

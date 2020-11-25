@@ -86,7 +86,7 @@ window = {
 
 						button_barbershop = {
 							name = "customize_portrait"
-							visible = "[Character.CanCustomizePortrait]"
+							#visible = "[Character.CanCustomizePortrait]"
 							onclick = "[Character.OnCustomizePortrait]"
 							onclick = "[CharacterInteractionMenuWindow.Close]"
 							size = { 25 25 }

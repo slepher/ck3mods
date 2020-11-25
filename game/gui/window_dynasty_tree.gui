@@ -29,7 +29,7 @@ types DynastyTreeView
 				texture = "gfx/interface/component_tiles/tile_window_background_popup.dds"
 				spriteType = CorneredTiled
 				spriteborder = { 20 20 }
-
+				texture_density = 2
 				alpha = 0.4
 
 				using = Color_Blue
@@ -103,7 +103,7 @@ types DynastyTreeView
 							ignoreinvisible = yes
 							direction = vertical
 							minimumsize = { 330 255 }
-							position = {0 -250 }
+							position = { 0 -250 }
 
 							background = {
 								using = Background_Area_With_Header_Dark
@@ -294,12 +294,26 @@ types DynastyTreeView
 
 						button = {
 							name = "show_hide_parent"
-							position = { 0 12 }
-							visible = "[Not( DynastyTreeItem.IsTopParent )]"
+							parentanchor = hcenter
+							position = { 7 12 }
+							visible = "[And(Not( DynastyTreeItem.IsTopParent ), Not(Character.IsDynastyHead))]"
 							size = { 25 25 }
 							framesize = { 60 60 }
 							texture = "gfx/interface/icons/symbols/plus_minus.dds"
+							frame = "[BoolTo2And1( DynastyTreeItem.IsTopDisplayed )]"
+							tooltip = "[SelectLocalization( DynastyTreeItem.IsTopDisplayed, 'DYNASTY_VIEW_EXPAND_ROOT', 'DYNASTY_VIEW_SET_ROOT' )]"
+							onclick = "[DynastyTreeItem.ToggleParentVisibility]"
+						}
+						
+						button = {
+							name = "show_hide_parent_player"
 							parentanchor = hcenter
+							position = { 0 12 }
+							visible = "[And(Not( DynastyTreeItem.IsTopParent ), Character.IsDynastyHead)]"
+							
+							size = { 25 25 }
+							framesize = { 60 60 }
+							texture = "gfx/interface/icons/symbols/plus_minus.dds"
 							frame = "[BoolTo2And1( DynastyTreeItem.IsTopDisplayed )]"
 							tooltip = "[SelectLocalization( DynastyTreeItem.IsTopDisplayed, 'DYNASTY_VIEW_EXPAND_ROOT', 'DYNASTY_VIEW_SET_ROOT' )]"
 							onclick = "[DynastyTreeItem.ToggleParentVisibility]"
