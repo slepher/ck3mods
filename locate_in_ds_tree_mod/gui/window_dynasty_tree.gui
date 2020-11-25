@@ -401,7 +401,6 @@ types DynastyTreeView
 			using = Background_Frame
 		}
 	}
-    
 }
 
 
