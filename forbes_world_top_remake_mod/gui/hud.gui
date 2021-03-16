@@ -1167,7 +1167,7 @@ icon = {
                     on_finish = "[GetVariableSystem.Toggle( 'extra_buttons_expand' )]"
                 }
             }
-                        
+
 			button_standard = {
 				name = "find_character_button"
 				text = "FIND_CHARACTER"
