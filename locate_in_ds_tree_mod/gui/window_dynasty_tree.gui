@@ -62,7 +62,7 @@ types DynastyTreeView
 			name = "dynasty_tree_item_line_area"
 			direction = vertical
 			ignoreinvisible = yes
-			margin = { 10 10 }
+			margin = { 0 10 }
 
 			container = {
 				parentanchor = hcenter
@@ -180,7 +180,7 @@ types DynastyTreeView
 						widget = {
 							name = "background_dynasty_head"
 							visible = "[And( Character.IsDynastyHead, Not( Character.IsFounderOfDynasty ))]"
-							size = { 140 150 }
+							size = { 120 150 }
 
 							background = {
 								margin = { 10 5 }
@@ -210,7 +210,7 @@ types DynastyTreeView
 						widget = {
 							name = "background_house_head"
 							visible = "[And( Character.IsHouseHead, Not( Character.IsDynastyHead ))]"
-							size = { 140 150 }
+							size = { 120 150 }
 
 							background = {
 								margin = { 10 5 }
