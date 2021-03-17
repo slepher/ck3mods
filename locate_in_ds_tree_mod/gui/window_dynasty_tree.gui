@@ -62,7 +62,7 @@ types DynastyTreeView
 			name = "dynasty_tree_item_line_area"
 			direction = vertical
 			ignoreinvisible = yes
-			margin = { 10 10 }
+			margin = { 0 10 }
 
 			container = {
 				parentanchor = hcenter
@@ -366,7 +366,7 @@ types DynastyTreeView
 	}
 
 	type dynasty_character_backgroud = widget {
-		size = { 140 150 }
+		size = { 120 150 }
 
 		background = {
 			margin = { 10 5 }
