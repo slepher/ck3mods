@@ -730,7 +730,7 @@ types GameTooltipTypes
 								text = "HOUSE_VIEW_NAME_WITH_HOUSE"
 								max_width = 100
 								autoresize = yes
-                            }
+							}
 
 							button_dynasty_tree = {
 								name = "button_dynasty_tree"
