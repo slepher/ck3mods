@@ -471,7 +471,7 @@ window = {
 				zoom_min = 0.2
 				zoom_max = 1.0
 				pan_position = { 0 0 }
-				draggable_by = left
+				draggable_by = left|middle
 
 				state = {
 					name = "_zoom_changed"
@@ -511,7 +511,6 @@ window = {
 		position = { -33 20 }
 
 		vbox = {
-			layoutpolicy_horizontal = expanding
 			margin = { 10 5 }
 			margin_left = 20
 			margin_bottom = 15
@@ -526,6 +525,10 @@ window = {
 
 				coa_dynasty_small = {
 					datacontext = "[DynastyTreeView.GetDynasty]"
+					blockoverride "OnClickDefault" {
+						onclick = "[DefaultOnDynastyCoatOfArmsClick(Dynasty.GetID)]"
+						onclick = "[DynastyTreeView.Close]"
+					}
 				}
 
 				vbox = {
