@@ -98,11 +98,9 @@
 			}
 		}
 	}
-	else_if {
+	else_if = {
 		limit = {
-			OR = {
-				var:forbes_mode = 4
-			}
+			var:forbes_mode = 4
 		}
 		ordered_independent_ruler = {
 			order_by = realm_size
@@ -117,11 +115,9 @@
 			}
 		}
 	}
-	else_if {
+	else_if = {
 		limit = {
-			OR = {
-				var:forbes_mode = 5
-			}
+			var:forbes_mode = 5
 		}
 		ordered_ruler = {
 			order_by = max_military_strength
@@ -235,7 +231,6 @@
 				}
 			}
 		}
-				
 	}
 }
 
