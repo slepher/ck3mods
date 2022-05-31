@@ -9,7 +9,7 @@ types FobesTypes {
             layoutpolicy_horizontal = expanding
 			layoutpolicy_vertical = expanding
 
-            portrait_head_small_cached = {}
+            portrait_head_small = {}
 
 			hbox = {
 				layoutpolicy_horizontal = expanding
