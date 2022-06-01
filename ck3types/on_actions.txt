@@ -26,9 +26,21 @@ Expected Scope: character
 
 --------------------
 
+on_death_relation_best_friend:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_rank_down:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+fp2_lyonese_monk_events_phase_controversy_events:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -74,6 +86,12 @@ Expected Scope: none
 
 --------------------
 
+fp2_lyonese_monk_events_cycle:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 book_translation_story_events:
 From Code: No
 Expected Scope: character
@@ -98,6 +116,12 @@ Expected Scope: culture
 
 --------------------
 
+on_remove_relation_best_friend:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 task_convince_dejure_side_effects:
 From Code: No
 Expected Scope: character
@@ -117,6 +141,12 @@ Expected Scope: faith
 --------------------
 
 peasant_affair_peasant_at_court:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+fp2_struggle_council_toledo_organize:
 From Code: No
 Expected Scope: character
 
@@ -176,6 +206,12 @@ Expected Scope: character
 
 --------------------
 
+yearly_struggle_playable_pulse:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_remove_relation_rival:
 From Code: No
 Expected Scope: none
@@ -185,6 +221,12 @@ Expected Scope: none
 claim_throne_failed:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_hook_used:
+From Code: Yes
+Expected Scope: none
 
 --------------------
 
@@ -350,6 +392,12 @@ Expected Scope: faith
 
 --------------------
 
+on_set_relation_nemesis:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 faith_fervor_events_pulse:
 From Code: No
 Expected Scope: faith
@@ -407,6 +455,12 @@ Expected Scope: character
 on_raid_action_start:
 From Code: Yes
 Expected Scope: army
+
+--------------------
+
+fp2_struggle_council_toledo_debate:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -644,6 +698,12 @@ Expected Scope: character
 
 --------------------
 
+on_set_relation_soulmate:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_stress_level_4:
 From Code: No
 Expected Scope: character
@@ -711,6 +771,12 @@ Expected Scope: character
 --------------------
 
 task_promote_culture_side_effects:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+fp2_lyonese_monk_events_phase_teachings_events:
 From Code: No
 Expected Scope: character
 
@@ -848,6 +914,12 @@ Expected Scope: character
 
 --------------------
 
+fp2_struggle_council_toledo_attend:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_character_culture_change:
 From Code: Yes
 Expected Scope: none
@@ -873,6 +945,12 @@ Expected Scope: character
 --------------------
 
 inspiration_completed_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+fp2_yearly_events:
 From Code: No
 Expected Scope: character
 
@@ -963,6 +1041,12 @@ Expected Scope: character
 --------------------
 
 befriend_rival_ongoing:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+fp2_struggle_council_toledo_fallback:
 From Code: No
 Expected Scope: character
 
@@ -1103,6 +1187,12 @@ Expected Scope: character
 diplomacy_foreign_special_1010_court_visit_events:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_set_relation_guardian:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -1532,8 +1622,20 @@ Expected Scope: none
 
 --------------------
 
+fp2_lyonese_monk_events_cycle_no_valid_events_fallback:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 pilgrimage_generic_destination_events:
 From Code: No
+Expected Scope: character
+
+--------------------
+
+five_year_struggle_playable_pulse:
+From Code: Yes
 Expected Scope: character
 
 --------------------
@@ -1697,6 +1799,12 @@ Expected Scope: character
 on_county_auto_granted_to_local_culture:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+fp2_lyonese_monk_events_phase_schism_events:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -1959,6 +2067,12 @@ Expected Scope: none
 --------------------
 
 in_debt_county_corruption_pulse:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_set_relation_best_friend:
 From Code: No
 Expected Scope: none
 
@@ -2303,6 +2417,12 @@ Expected Scope: character
 task_religious_relations_side_effects:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+fp2_iberian_struggle_starting_events:
+From Code: No
+Expected Scope: struggle
 
 --------------------
 

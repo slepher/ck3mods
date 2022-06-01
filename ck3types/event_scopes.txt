@@ -28,3 +28,4 @@ council task
 mercenary company
 artifact
 inspiration
+struggle

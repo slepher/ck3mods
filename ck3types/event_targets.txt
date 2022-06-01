@@ -104,12 +104,6 @@ Output Scopes: landed title
 
 --------------------
 
-controlled_faith - Get faith headed by scoped title
-Input Scopes: landed title
-Output Scopes: faith
-
---------------------
-
 current_heir - Get current heir to scoped title
 Input Scopes: landed title
 Output Scopes: character
@@ -765,11 +759,6 @@ Output Scopes: culture
 
 --------------------
 
-custom - Adds custom text between scope changes
-Requires Data: yes
-
---------------------
-
 define - Reference the value of a numeric define: define:Namespace|Name
 Requires Data: yes
 Global Link: yes
@@ -871,6 +860,13 @@ Global Link: yes
 scope - Reference a previously saved scope via its name eg: scope:target
 Requires Data: yes
 Global Link: yes
+
+--------------------
+
+struggle - Global link to struggle of the given key
+Requires Data: yes
+Global Link: yes
+Output Scopes: struggle
 
 --------------------
 
@@ -1101,3 +1097,5 @@ quality
 wealth
 mover
 destination
+hook_type
+struggle

@@ -465,7 +465,7 @@ window = {
 					alwaystransparent = yes
 					parentanchor = center
 					size = { 20 20 }
-					texture = "gfx/interface/icons/flat_icons/mapmode_duchy.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/dejure_duchies.dds"
 				}
             }
 			
@@ -535,7 +535,7 @@ window = {
                     alwaystransparent = yes
                     parentanchor = center
 					size = { 20 20 }
-					texture = "gfx/interface/icons/flat_icons/mapmode_religion.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/religions.dds"
                 }
 			}
 

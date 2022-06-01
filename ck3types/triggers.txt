@@ -578,20 +578,6 @@ Supported Scopes: landed title
 
 --------------------
 
-any_any_past_holder - Iterate through all past owners of a title from earliest to latest
-any_any_past_holder = { <count=num/all> / <percent=fixed_point> <triggers> }
-Supported Scopes: landed title
-Supported Targets: character
-
---------------------
-
-any_any_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
-any_any_past_holder_reversed = { <count=num/all> / <percent=fixed_point> <triggers> }
-Supported Scopes: landed title
-Supported Targets: character
-
---------------------
-
 any_claimant - Iterate through all claimants to title. parameters: explicit = yes/no/all - default yes
 any_claimant = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: landed title
@@ -609,10 +595,31 @@ Supported Targets: landed title
 
 --------------------
 
+any_controlled_faith - Iterate through all faiths headed by a title
+any_controlled_faith = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed title
+Supported Targets: faith
+
+--------------------
+
 any_county_province - Iterate through all provinces in a county
 any_county_province = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: landed title
 Supported Targets: province
+
+--------------------
+
+any_county_struggle - Iterate through all struggles that a county is involved in.
+any_county_struggle = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed title
+Supported Targets: struggle
+
+--------------------
+
+any_de_jure_county - Iterate through all counties within this dejure title
+any_de_jure_county = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed title
+Supported Targets: landed title
 
 --------------------
 
@@ -634,6 +641,20 @@ any_dejure_vassal_title_holder - Iterate through all the vassal holders of the t
 any_dejure_vassal_title_holder = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: landed title
 Supported Targets: character
+
+--------------------
+
+any_direct_de_facto_vassal_title - Iterate through all de facto vassal titles
+any_direct_de_facto_vassal_title = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed title
+Supported Targets: landed title
+
+--------------------
+
+any_direct_de_jure_vassal_title - Iterate through the all de jure vassals titles
+any_direct_de_jure_vassal_title = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed title
+Supported Targets: landed title
 
 --------------------
 
@@ -673,6 +694,20 @@ any_neighboring_county - Iterate through all neighboring counties. Can only be u
 any_neighboring_county = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: landed title
 Supported Targets: landed title
+
+--------------------
+
+any_past_holder - Iterate through all past owners of a title from earliest to latest
+any_past_holder = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed title
+Supported Targets: character
+
+--------------------
+
+any_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
+any_past_holder_reversed = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: landed title
+Supported Targets: character
 
 --------------------
 
@@ -1679,6 +1714,12 @@ Supported Scopes: province
 
 --------------------
 
+is_raided - Is this province currently being raided?
+Traits: yes/no 
+Supported Scopes: province
+
+--------------------
+
 is_riverside_province - is the province riverside?
 Traits: yes/no 
 Supported Scopes: province
@@ -1719,6 +1760,65 @@ Supported Scopes: province
 any_killed_character - Iterate through all kills of a character
 any_killed_character = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character, artifact
+Supported Targets: character
+
+--------------------
+
+any_interloper_ruler - Iterate through all characters that are interloper in a struggle.
+any_interloper_ruler = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: struggle
+Supported Targets: character
+
+--------------------
+
+any_involved_ruler - Iterate through all characters that are involved in a struggle.
+any_involved_ruler = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: struggle
+Supported Targets: character
+
+--------------------
+
+has_struggle_phase_parameter - Does the given struggle's current phase have the given parameter? Can only check for bool parameters. has_struggle_phase_parameter = parameter_key
+Supported Scopes: struggle
+
+--------------------
+
+is_culture_involved_in_struggle - is the culture involved in struggle?
+	is_culture_involved_in_struggle = culture:english
+Traits: culture scope
+Supported Scopes: struggle
+Supported Targets: culture
+
+--------------------
+
+is_faith_involved_in_struggle - is the faith involved in struggle?
+	is_faith_involved_in_struggle  = faith:baltic_pagan
+Traits: faith scope
+Supported Scopes: struggle
+Supported Targets: faith
+
+--------------------
+
+is_struggle_phase - is the scope struggle's current phase particular phase?
+	is_struggle_phase = struggle_iberia_phase_opportunity
+Supported Scopes: struggle
+
+--------------------
+
+is_struggle_type - is the scope struggle's type particular type?
+	is_struggle_type = iberian_struggle
+Supported Scopes: struggle
+
+--------------------
+
+phase_has_catalyst - Is any of the future phases affected by the given catalyst?phase_has_catalyst = catalyst_key
+Supported Scopes: struggle
+
+--------------------
+
+was_player_joined - Check that player has been already joined in struggle
+Traits: character scope
+Supported Scopes: struggle
 Supported Targets: character
 
 --------------------
@@ -2033,6 +2133,18 @@ Supported Scopes: dynasty
 --------------------
 
 fp1_pillage_legacy_track_perks - How many perks in the lifestyle does this dynasty have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: dynasty
+
+--------------------
+
+fp2_coterie_legacy_track_perks - How many perks in the lifestyle does this dynasty have?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: dynasty
+
+--------------------
+
+fp2_urbanism_legacy_track_perks - How many perks in the lifestyle does this dynasty have?
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: dynasty
 
@@ -2414,13 +2526,13 @@ Supported Scopes: none
 --------------------
 
 has_dlc - Does the host have this DLC
-Traits: Valid DLCs: Fashion of the Abbasid Court， Garments of the Holy Roman Empire， The Northern Lords，以及 The Royal Court
+Traits: Valid DLCs: Fashion of the Abbasid Court， Garments of the Holy Roman Empire， The Fate of Iberia， The Northern Lords，以及 The Royal Court
 Supported Scopes: none
 
 --------------------
 
 has_dlc_feature - Does the host have DLC that enables this particular feature
-Traits: Valid Features: garments_of_the_hre， fashion_of_the_abbasid_court， the_northern_lords， hybridize_culture， diverge_culture， royal_court， reform_culture，以及 court_artifacts
+Traits: Valid Features: garments_of_the_hre， fashion_of_the_abbasid_court， the_northern_lords， hybridize_culture， diverge_culture， royal_court， reform_culture， court_artifacts，以及 the_fate_of_iberia
 Supported Scopes: none
 
 --------------------
@@ -2958,6 +3070,13 @@ any_character_artifact - Iterate through all artifacts in a given characters inv
 any_character_artifact = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
 Supported Targets: artifact
+
+--------------------
+
+any_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper } 
+any_character_struggle = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: struggle
 
 --------------------
 
@@ -3775,6 +3894,13 @@ Supported Scopes: character
 --------------------
 
 can_hybridize - Can this ruler hybridize with the target culture? Includes checking the cost
+Traits: culture scope
+Supported Scopes: character
+Supported Targets: culture
+
+--------------------
+
+can_hybridize_excluding_cost - Can this ruler hybridize with the target culture? Does not check the cost
 Traits: culture scope
 Supported Scopes: character
 Supported Targets: culture

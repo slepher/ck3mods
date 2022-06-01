@@ -616,6 +616,16 @@ Supported Targets: artifact
 
 --------------------
 
+equip_artifact_to_owner - Makes the owner of the scoped artifact equip it, will fail if there already is an equipment in the artifact's slot.
+Supported Scopes: artifact
+
+--------------------
+
+equip_artifact_to_owner_replace - Makes the owner of the scoped artifact equip it, will replace the first held artifact if all slots of its type are filled.
+Supported Scopes: artifact
+
+--------------------
+
 every_artifact_claimant - Iterate through all characters with a claim on the scoped artifact
 every_artifact_claimant = { limit = { <triggers> } <effects> }
 Supported Scopes: artifact
@@ -778,6 +788,11 @@ Supported Scopes: artifact
 
 --------------------
 
+unequip_artifact_from_owner - Makes the owner of the scoped artifact unequip it.
+Supported Scopes: artifact
+
+--------------------
+
 generate_coa - Generates a coat of arms for the scoped landed title, dynasty or house
 generate_coa = yes
 Supported Scopes: landed title, dynasty, dynasty house
@@ -849,20 +864,6 @@ Supported Targets: landed title
 
 --------------------
 
-every_any_past_holder - Iterate through all past owners of a title from earliest to latest
-every_any_past_holder = { limit = { <triggers> } <effects> }
-Supported Scopes: landed title
-Supported Targets: character
-
---------------------
-
-every_any_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
-every_any_past_holder_reversed = { limit = { <triggers> } <effects> }
-Supported Scopes: landed title
-Supported Targets: character
-
---------------------
-
 every_claimant - Iterate through all claimants to title. parameters: explicit = yes/no/all - default yes
 every_claimant = { limit = { <triggers> } <effects> }
 Supported Scopes: landed title
@@ -880,10 +881,31 @@ Supported Targets: landed title
 
 --------------------
 
+every_controlled_faith - Iterate through all faiths headed by a title
+every_controlled_faith = { limit = { <triggers> } <effects> }
+Supported Scopes: landed title
+Supported Targets: faith
+
+--------------------
+
 every_county_province - Iterate through all provinces in a county
 every_county_province = { limit = { <triggers> } <effects> }
 Supported Scopes: landed title
 Supported Targets: province
+
+--------------------
+
+every_county_struggle - Iterate through all struggles that a county is involved in.
+every_county_struggle = { limit = { <triggers> } <effects> }
+Supported Scopes: landed title
+Supported Targets: struggle
+
+--------------------
+
+every_de_jure_county - Iterate through all counties within this dejure title
+every_de_jure_county = { limit = { <triggers> } <effects> }
+Supported Scopes: landed title
+Supported Targets: landed title
 
 --------------------
 
@@ -905,6 +927,20 @@ every_dejure_vassal_title_holder - Iterate through all the vassal holders of the
 every_dejure_vassal_title_holder = { limit = { <triggers> } <effects> }
 Supported Scopes: landed title
 Supported Targets: character
+
+--------------------
+
+every_direct_de_facto_vassal_title - Iterate through all de facto vassal titles
+every_direct_de_facto_vassal_title = { limit = { <triggers> } <effects> }
+Supported Scopes: landed title
+Supported Targets: landed title
+
+--------------------
+
+every_direct_de_jure_vassal_title - Iterate through the all de jure vassals titles
+every_direct_de_jure_vassal_title = { limit = { <triggers> } <effects> }
+Supported Scopes: landed title
+Supported Targets: landed title
 
 --------------------
 
@@ -944,6 +980,20 @@ every_neighboring_county - Iterate through all neighboring counties. Can only be
 every_neighboring_county = { limit = { <triggers> } <effects> }
 Supported Scopes: landed title
 Supported Targets: landed title
+
+--------------------
+
+every_past_holder - Iterate through all past owners of a title from earliest to latest
+every_past_holder = { limit = { <triggers> } <effects> }
+Supported Scopes: landed title
+Supported Targets: character
+
+--------------------
+
+every_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
+every_past_holder_reversed = { limit = { <triggers> } <effects> }
+Supported Scopes: landed title
+Supported Targets: character
 
 --------------------
 
@@ -1031,34 +1081,6 @@ Supported Targets: holy order
 
 --------------------
 
-ordered_any_past_holder - Iterate through all past owners of a title from earliest to latest
-ordered_any_past_holder = {
-limit = { <triggers> }
-order_by = script_value
-position = int
-min = int
-max = script_value
-check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
-<effects> }
-Supported Scopes: landed title
-Supported Targets: character
-
---------------------
-
-ordered_any_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
-ordered_any_past_holder_reversed = {
-limit = { <triggers> }
-order_by = script_value
-position = int
-min = int
-max = script_value
-check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
-<effects> }
-Supported Scopes: landed title
-Supported Targets: character
-
---------------------
-
 ordered_claimant - Iterate through all claimants to title. parameters: explicit = yes/no/all - default yes
 ordered_claimant = {
 limit = { <triggers> }
@@ -1090,6 +1112,20 @@ Supported Targets: landed title
 
 --------------------
 
+ordered_controlled_faith - Iterate through all faiths headed by a title
+ordered_controlled_faith = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed title
+Supported Targets: faith
+
+--------------------
+
 ordered_county_province - Iterate through all provinces in a county
 ordered_county_province = {
 limit = { <triggers> }
@@ -1101,6 +1137,34 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: landed title
 Supported Targets: province
+
+--------------------
+
+ordered_county_struggle - Iterate through all struggles that a county is involved in.
+ordered_county_struggle = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed title
+Supported Targets: struggle
+
+--------------------
+
+ordered_de_jure_county - Iterate through all counties within this dejure title
+ordered_de_jure_county = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed title
+Supported Targets: landed title
 
 --------------------
 
@@ -1143,6 +1207,34 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: landed title
 Supported Targets: character
+
+--------------------
+
+ordered_direct_de_facto_vassal_title - Iterate through all de facto vassal titles
+ordered_direct_de_facto_vassal_title = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed title
+Supported Targets: landed title
+
+--------------------
+
+ordered_direct_de_jure_vassal_title - Iterate through the all de jure vassals titles
+ordered_direct_de_jure_vassal_title = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed title
+Supported Targets: landed title
 
 --------------------
 
@@ -1217,6 +1309,34 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: landed title
 Supported Targets: landed title
+
+--------------------
+
+ordered_past_holder - Iterate through all past owners of a title from earliest to latest
+ordered_past_holder = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed title
+Supported Targets: character
+
+--------------------
+
+ordered_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
+ordered_past_holder_reversed = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: landed title
+Supported Targets: character
 
 --------------------
 
@@ -1374,20 +1494,6 @@ Supported Targets: landed title
 
 --------------------
 
-random_any_past_holder - Iterate through all past owners of a title from earliest to latest
-random_any_past_holder = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-Supported Scopes: landed title
-Supported Targets: character
-
---------------------
-
-random_any_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
-random_any_past_holder_reversed = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
-Supported Scopes: landed title
-Supported Targets: character
-
---------------------
-
 random_claimant - Iterate through all claimants to title. parameters: explicit = yes/no/all - default yes
 random_claimant = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: landed title
@@ -1405,10 +1511,31 @@ Supported Targets: landed title
 
 --------------------
 
+random_controlled_faith - Iterate through all faiths headed by a title
+random_controlled_faith = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed title
+Supported Targets: faith
+
+--------------------
+
 random_county_province - Iterate through all provinces in a county
 random_county_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: landed title
 Supported Targets: province
+
+--------------------
+
+random_county_struggle - Iterate through all struggles that a county is involved in.
+random_county_struggle = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed title
+Supported Targets: struggle
+
+--------------------
+
+random_de_jure_county - Iterate through all counties within this dejure title
+random_de_jure_county = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed title
+Supported Targets: landed title
 
 --------------------
 
@@ -1430,6 +1557,20 @@ random_dejure_vassal_title_holder - Iterate through all the vassal holders of th
 random_dejure_vassal_title_holder = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: landed title
 Supported Targets: character
+
+--------------------
+
+random_direct_de_facto_vassal_title - Iterate through all de facto vassal titles
+random_direct_de_facto_vassal_title = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed title
+Supported Targets: landed title
+
+--------------------
+
+random_direct_de_jure_vassal_title - Iterate through the all de jure vassals titles
+random_direct_de_jure_vassal_title = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed title
+Supported Targets: landed title
 
 --------------------
 
@@ -1469,6 +1610,20 @@ random_neighboring_county - Iterate through all neighboring counties. Can only b
 random_neighboring_county = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: landed title
 Supported Targets: landed title
+
+--------------------
+
+random_past_holder - Iterate through all past owners of a title from earliest to latest
+random_past_holder = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed title
+Supported Targets: character
+
+--------------------
+
+random_past_holder_reversed - Iterate through all past owners of a title from latest to earliest
+random_past_holder_reversed = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: landed title
+Supported Targets: character
 
 --------------------
 
@@ -2502,6 +2657,101 @@ random_killed_character - Iterate through all kills of a character
 random_killed_character = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character, artifact
 Supported Targets: character
+
+--------------------
+
+activate_struggle_catalyst - Activate a catalyst, activate_struggle_catalyst = { catalyst = X character = Y}where X is a catalystY is scope:character # optionalsimplified: activate_struggle_catalyst = <catalyst>
+Supported Scopes: struggle
+
+--------------------
+
+change_struggle_phase - Change the phase from the current one to a listed scripted phasechange_phase = Xwhere X is a struggle phase type
+Supported Scopes: struggle
+
+--------------------
+
+end_struggle - End a struggle, end_struggle = yes
+Supported Scopes: struggle
+
+--------------------
+
+every_interloper_ruler - Iterate through all characters that are interloper in a struggle.
+every_interloper_ruler = { limit = { <triggers> } <effects> }
+Supported Scopes: struggle
+Supported Targets: character
+
+--------------------
+
+every_involved_ruler - Iterate through all characters that are involved in a struggle.
+every_involved_ruler = { limit = { <triggers> } <effects> }
+Supported Scopes: struggle
+Supported Targets: character
+
+--------------------
+
+ordered_interloper_ruler - Iterate through all characters that are interloper in a struggle.
+ordered_interloper_ruler = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: struggle
+Supported Targets: character
+
+--------------------
+
+ordered_involved_ruler - Iterate through all characters that are involved in a struggle.
+ordered_involved_ruler = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: struggle
+Supported Targets: character
+
+--------------------
+
+random_interloper_ruler - Iterate through all characters that are interloper in a struggle.
+random_interloper_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: struggle
+Supported Targets: character
+
+--------------------
+
+random_involved_ruler - Iterate through all characters that are involved in a struggle.
+random_involved_ruler = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: struggle
+Supported Targets: character
+
+--------------------
+
+set_culture_as_involved - Set a culture as involved in the scoped Struggle.
+Supported Scopes: struggle
+Supported Targets: culture
+
+--------------------
+
+set_culture_as_uninvolved - Set a culture as involved in the scoped Struggle.
+Supported Scopes: struggle
+Supported Targets: culture
+
+--------------------
+
+set_faith_as_involved - Set a faith as involved in the scoped Struggle.
+Supported Scopes: struggle
+Supported Targets: faith
+
+--------------------
+
+set_faith_as_uninvolved - Set a faith as uninvolved in the scoped Struggle.
+Supported Scopes: struggle
+Supported Targets: faith
 
 --------------------
 
@@ -4099,6 +4349,11 @@ Supported Scopes: none
 
 --------------------
 
+start_struggle - Start a struggle, start_struggle = { struggle_type = X start_phase = Y }where X is a struggle type, Y is a phase
+Supported Scopes: none
+
+--------------------
+
 start_tutorial_lesson - Starts the tutorial lesson with the given key. Does nothing if the tutorial is not running, the lesson is completed (or already running), or the lesson cannot be triggered (e.g. trigger fails)
 Supported Scopes: none
 
@@ -4785,6 +5040,13 @@ every_character_artifact - Iterate through all artifacts in a given characters i
 every_character_artifact = { limit = { <triggers> } <effects> }
 Supported Scopes: character
 Supported Targets: artifact
+
+--------------------
+
+every_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper } 
+every_character_struggle = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: struggle
 
 --------------------
 
@@ -5765,6 +6027,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: character
 Supported Targets: artifact
+
+--------------------
+
+ordered_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper } 
+ordered_character_struggle = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: struggle
 
 --------------------
 
@@ -7230,6 +7506,13 @@ random_character_artifact - Iterate through all artifacts in a given characters 
 random_character_artifact = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: artifact
+
+--------------------
+
+random_character_struggle - Iterate through all struggles that character is involved in. Optional: Narrow down the involvement status *_chracter_struggle = { involvement = involved | interloper } 
+random_character_struggle = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: struggle
 
 --------------------
 
