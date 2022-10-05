@@ -882,7 +882,6 @@ icon = {
 					trigger_on_create = no
 					trigger_when = "[And(GetVariableSystem.Exists('to_open_forbes_list'), Not(GetVariableSystem.Exists('forbes_list_opened')))]"
 					on_start = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-					on_start = "[ExecuteConsoleCommand('gui.createwidget gui/forbes.gui forbes_gui_window')]"
 					on_start = "[GetVariableSystem.Set('forbes_list_opened', 'true')]"
 					on_finish = "[GetVariableSystem.Clear('to_open_forbes_list')]"
 					on_finish = "[GetVariableSystem.Toggle( 'extra_buttons_expand' )]"

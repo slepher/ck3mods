@@ -337,6 +337,7 @@ window = {
 	position = { -20 90 }
 	allow_outside = yes
 	layer = middle
+	visible="[And(GetVariableSystem.Exists('forbes_list_opened'), Not( IsPauseMenuShown ))]"
 
 	using = Window_Background
 	using = Window_Decoration_Flat
@@ -404,7 +405,6 @@ window = {
 			{
                 datacontext = "[GetScriptedGui('clear_forbes_list')]"
                 onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-				onclick = "[ExecuteConsoleCommand('gui.clearwidgets forbes_gui_window')]"
 				onclick = "[GetVariableSystem.Clear('forbes_list_opened')]"
 			}
         }

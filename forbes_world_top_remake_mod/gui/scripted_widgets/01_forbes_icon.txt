@@ -1,0 +1,2 @@
+﻿gui/forbes_icon.gui = forbes_gui_icon
+gui/forbes.gui = forbes_gui_window
