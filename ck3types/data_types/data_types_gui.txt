@@ -568,6 +568,25 @@ Return type: [unregistered]
 
 -----------------------
 
+Character
+Definition type: Type
+
+-----------------------
+
+Character.IsPartOfPlayerLegacy( Arg0 )
+Description: If this character is part of the player legacy (dynasty of played characters) of target character.
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Character.WasPlayer
+Description: If this character is, or was, played by a player.
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Chat
 Description: Jomini Chat - Chat
 Definition type: Type
@@ -832,13 +851,31 @@ Return type: int32
 
 -----------------------
 
+CoatOfArms.GetFrameWithEffect( Arg0, Arg1, Arg2 )
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 CoatOfArms.GetSlot( Arg0, Arg1 )
 Definition type: Function
 Return type: CVector4f
 
 -----------------------
 
+CoatOfArms.GetSlotWithEffect( Arg0, Arg1, Arg2 )
+Definition type: Function
+Return type: CVector4f
+
+-----------------------
+
 CoatOfArms.GetTexture( Arg0, Arg1 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CoatOfArms.GetTextureWithEffect( Arg0, Arg1, Arg2 )
 Definition type: Function
 Return type: [unregistered]
 
@@ -2038,6 +2075,12 @@ Return type: CString
 
 -----------------------
 
+JominiGUISetting.HasChanged
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 JominiGUISetting.Self
 Definition type: Function
 Return type: [unregistered]
@@ -2505,6 +2548,24 @@ Return type: [unregistered]
 
 -----------------------
 
+JominiSettingsWindow.AllowApply
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+JominiSettingsWindow.AppliedOnRestart
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+JominiSettingsWindow.Close
+Definition type: Function
+Return type: void
+
+-----------------------
+
 JominiSettingsWindow.GetInputActionName( Arg0 )
 Definition type: Function
 Return type: CString
@@ -2568,6 +2629,12 @@ Return type: bool
 JominiSettingsWindow.IsInputPopUpEnabled
 Definition type: Function
 Return type: bool
+
+-----------------------
+
+JominiSettingsWindow.OnApply
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -3333,6 +3400,40 @@ Return type: bool
 
 -----------------------
 
+MusicPlayerCategory
+Definition type: Type
+
+-----------------------
+
+MusicPlayerCategory.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerCategory.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicTrack
+Definition type: Type
+
+-----------------------
+
+MusicTrack.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicTrack.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 NotificationDummyContext
 Description: Jomini Notification Dummy Context
 Definition type: Type
@@ -4094,13 +4195,13 @@ Return type: bool
 
 -----------------------
 
-PdxGuiGfxVideoControl.IsPlaying
+PdxGuiGfxVideoControl.IsPlaybackComplete
 Definition type: Function
 Return type: bool
 
 -----------------------
 
-PdxGuiGfxVideoControl.IsVisible
+PdxGuiGfxVideoControl.IsPlaying
 Definition type: Function
 Return type: bool
 
@@ -4119,12 +4220,6 @@ Return type: [unregistered]
 -----------------------
 
 PdxGuiGfxVideoControl.SetLooping( Arg0 )
-Definition type: Function
-Return type: void
-
------------------------
-
-PdxGuiGfxVideoControl.SetVisible( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -4274,9 +4369,27 @@ Return type: [unregistered]
 
 -----------------------
 
+PdxGuiWidget.CountVisibleChildren
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 PdxGuiWidget.FindChild( Arg0 )
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+PdxGuiWidget.GetChildrenCount
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+PdxGuiWidget.GetIndexInDataModel
+Definition type: Function
+Return type: int32
 
 -----------------------
 
@@ -4324,7 +4437,7 @@ Return type: void
 
 PdxGuiWidget.InterruptThenTriggerAnimation( Arg0, Arg1 )
 Definition type: Function
-Return type: bool
+Return type: void
 
 -----------------------
 
@@ -4366,7 +4479,7 @@ Return type: void
 
 PdxGuiWidget.TriggerAnimation( Arg0 )
 Definition type: Function
-Return type: bool
+Return type: void
 
 -----------------------
 
@@ -4516,64 +4629,6 @@ Return type: bool
 RemoveFriendConfirmWindow.Show
 Definition type: Function
 Return type: void
-
------------------------
-
-ScopedJominiSettingsCategory
-Definition type: Type
-
------------------------
-
-ScopedJominiSettingsCategory.AccessCategory
-Definition type: Promote
-Return type: SettingCategory
-
------------------------
-
-ScopedJominiSettingsCategory.GetCategory
-Definition type: Promote
-Return type: SettingCategory
-
------------------------
-
-ScopedJominiSettingsCategory.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-ScopedJominiSettingsCategory.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-ScopedJominiSettingsPage
-Definition type: Type
-
------------------------
-
-ScopedJominiSettingsPage.AccessPage
-Definition type: Promote
-Return type: SettingsPage
-
------------------------
-
-ScopedJominiSettingsPage.GetPage
-Definition type: Promote
-Return type: SettingsPage
-
------------------------
-
-ScopedJominiSettingsPage.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-ScopedJominiSettingsPage.Self
-Definition type: Function
-Return type: [unregistered]
 
 -----------------------
 

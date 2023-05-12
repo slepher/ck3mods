@@ -26,6 +26,12 @@ Expected Scope: character
 
 --------------------
 
+petition_liege_ghosted:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_death_relation_best_friend:
 From Code: No
 Expected Scope: none
@@ -44,9 +50,9 @@ Expected Scope: character
 
 --------------------
 
-christian_destination_events:
+petition_liege_0201:
 From Code: No
-Expected Scope: character
+Expected Scope: none
 
 --------------------
 
@@ -77,12 +83,6 @@ Expected Scope: character
 convert_to_witchcraft_failure_outcome:
 From Code: No
 Expected Scope: character
-
---------------------
-
-playdate_host_event_selection:
-From Code: No
-Expected Scope: none
 
 --------------------
 
@@ -134,6 +134,12 @@ Expected Scope: character
 
 --------------------
 
+contest_bout_duel_random_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_faith_monthly:
 From Code: Yes
 Expected Scope: faith
@@ -141,6 +147,18 @@ Expected Scope: faith
 --------------------
 
 peasant_affair_peasant_at_court:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+petition_liege_0401:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+wedding_ceremony_ending_event_pulse:
 From Code: No
 Expected Scope: character
 
@@ -182,14 +200,32 @@ Expected Scope: character
 
 --------------------
 
+burial_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_tradition_added:
 From Code: Yes
 Expected Scope: none
 
 --------------------
 
+contest_bout_board_game_pivotal_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_war_transferred:
 From Code: Yes
+Expected Scope: character
+
+--------------------
+
+contest_ongoing_event_melee_outcome_pulse:
+From Code: No
 Expected Scope: character
 
 --------------------
@@ -218,6 +254,12 @@ Expected Scope: none
 
 --------------------
 
+hunt_outcome_start_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 claim_throne_failed:
 From Code: No
 Expected Scope: character
@@ -242,6 +284,12 @@ Expected Scope: character
 
 --------------------
 
+on_accolade_new_acclaimed_knight:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 murder_ongoing:
 From Code: No
 Expected Scope: character
@@ -249,6 +297,18 @@ Expected Scope: character
 --------------------
 
 stewardship_duty_special_2000_mediation_stage_2:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+ongoing_doppelganger_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+house_feud_ai_scheme_pulse:
 From Code: No
 Expected Scope: character
 
@@ -272,6 +332,24 @@ Expected Scope: character
 
 --------------------
 
+travel_events_on_action:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+buddhist_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+feast_murder_feast_event_selection:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 high_countrol_pulse:
 From Code: No
 Expected Scope: none
@@ -284,7 +362,7 @@ Expected Scope: character
 
 --------------------
 
-buddhist_destination_events:
+on_tour_grounds_liege:
 From Code: No
 Expected Scope: character
 
@@ -299,6 +377,12 @@ Expected Scope: character
 abduct_ongoing:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_travel_plan_cancel:
+From Code: Yes
+Expected Scope: none
 
 --------------------
 
@@ -380,6 +464,12 @@ Expected Scope: character
 
 --------------------
 
+contest_bout_joust_random_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_alliance_added:
 From Code: Yes
 Expected Scope: none
@@ -389,6 +479,30 @@ Expected Scope: none
 faith_heresy_events_pulse:
 From Code: No
 Expected Scope: faith
+
+--------------------
+
+travel_event_tombola:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+contest_ongoing_event_archery_random_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+tournament_leave_travel_state:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+pilgrimage_arrival_events:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -411,6 +525,12 @@ Expected Scope: character
 --------------------
 
 childhood_education_boost:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+wedding_ceremony_ongoing_event_pulse:
 From Code: No
 Expected Scope: character
 
@@ -446,6 +566,12 @@ Expected Scope: character
 
 --------------------
 
+contest_bout_joust_pivotal_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 task_foreign_affairs_side_effects:
 From Code: No
 Expected Scope: character
@@ -470,15 +596,15 @@ Expected Scope: character
 
 --------------------
 
-on_county_faith_change:
-From Code: Yes
-Expected Scope: landed title
+contest_bout_board_game_random_pulse:
+From Code: No
+Expected Scope: character
 
 --------------------
 
-tengri_destination_events:
-From Code: No
-Expected Scope: character
+on_county_faith_change:
+From Code: Yes
+Expected Scope: landed_title
 
 --------------------
 
@@ -489,6 +615,12 @@ Expected Scope: character
 --------------------
 
 stress_loss_athletic:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+ongoing_visited_by_ghosts_events:
 From Code: No
 Expected Scope: character
 
@@ -509,6 +641,12 @@ Expected Scope: none
 claim_throne_ongoing:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_death_relation_lover:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -554,6 +692,12 @@ Expected Scope: character
 
 --------------------
 
+travel_murder_method_selection:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 murder_setup:
 From Code: No
 Expected Scope: character
@@ -566,13 +710,7 @@ Expected Scope: character
 
 --------------------
 
-on_battle_owner_battle_end:
-From Code: No
-Expected Scope: none
-
---------------------
-
-feast_default_fallback:
+wedding_wnight_ongoing_event_pulse:
 From Code: No
 Expected Scope: character
 
@@ -602,6 +740,12 @@ Expected Scope: character
 
 --------------------
 
+on_tour_grounds_vassal:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_birth_father:
 From Code: Yes
 Expected Scope: none
@@ -617,6 +761,12 @@ Expected Scope: character
 on_betrothal_broken:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+norse_arrival_events:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -662,7 +812,31 @@ Expected Scope: character
 
 --------------------
 
+on_birthday_adulthood:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_stress_level_1:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+on_tour_travel:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+on_tour_dinner_liege:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+diarchy_mandate_swell_armies_random:
 From Code: No
 Expected Scope: character
 
@@ -722,6 +896,12 @@ Expected Scope: character
 
 --------------------
 
+contest_ongoing_event_archery_pivotal_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_death_relation_friend:
 From Code: No
 Expected Scope: none
@@ -741,6 +921,12 @@ Expected Scope: character
 --------------------
 
 intrigue_lifestyle_common_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+hindu_arrival_events:
 From Code: No
 Expected Scope: character
 
@@ -782,12 +968,6 @@ Expected Scope: character
 
 --------------------
 
-muslim_destination_events:
-From Code: No
-Expected Scope: character
-
---------------------
-
 hunt_random_pulse:
 From Code: No
 Expected Scope: character
@@ -797,6 +977,12 @@ Expected Scope: character
 feast_default_event_selection:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_diarch_change:
+From Code: Yes
+Expected Scope: none
 
 --------------------
 
@@ -866,6 +1052,12 @@ Expected Scope: character
 
 --------------------
 
+petition_liege_travel_planner_exit:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 ai_character_pulse:
 From Code: No
 Expected Scope: character
@@ -879,6 +1071,12 @@ Expected Scope: character
 --------------------
 
 on_title_gain:
+From Code: Yes
+Expected Scope: character
+
+--------------------
+
+on_travel_plan_movement:
 From Code: Yes
 Expected Scope: character
 
@@ -915,6 +1113,12 @@ Expected Scope: character
 --------------------
 
 fp2_struggle_council_toledo_attend:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+ongoing_sycophant_events:
 From Code: No
 Expected Scope: character
 
@@ -968,6 +1172,24 @@ Expected Scope: character
 
 --------------------
 
+on_death_relation_rival:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+on_travel_activity_complete:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+contest_ongoing_event_recital_pivotal_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_holy_order_hired:
 From Code: Yes
 Expected Scope: none
@@ -982,7 +1204,7 @@ Expected Scope: character
 
 on_great_holy_war_invalidation:
 From Code: Yes
-Expected Scope: great holy war
+Expected Scope: ghw
 
 --------------------
 
@@ -994,7 +1216,7 @@ Expected Scope: character
 
 on_combat_end_loser:
 From Code: Yes
-Expected Scope: combat side
+Expected Scope: combat_side
 
 --------------------
 
@@ -1016,6 +1238,24 @@ Expected Scope: character
 
 --------------------
 
+bp1_yearly_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+on_inactive_accolade_succession:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+contest_ongoing_event_melee_ai_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 horse_riding_accident_outcome:
 From Code: No
 Expected Scope: character
@@ -1023,12 +1263,6 @@ Expected Scope: character
 --------------------
 
 stewardship_lifestyle_rare_events:
-From Code: No
-Expected Scope: character
-
---------------------
-
-jewish_destination_events:
 From Code: No
 Expected Scope: character
 
@@ -1052,6 +1286,12 @@ Expected Scope: character
 
 --------------------
 
+on_accolade_successor_death:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 five_year_everyone_pulse:
 From Code: Yes
 Expected Scope: character
@@ -1059,6 +1299,12 @@ Expected Scope: character
 --------------------
 
 martial_lifestyle_ongoing_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+contest_bout_board_game_outcome_pulse:
 From Code: No
 Expected Scope: character
 
@@ -1112,19 +1358,25 @@ Expected Scope: none
 
 --------------------
 
-zoroastrian_destination_events:
-From Code: No
-Expected Scope: character
-
---------------------
-
 quarterly_playable_pulse:
 From Code: Yes
 Expected Scope: character
 
 --------------------
 
+house_feud_inheritance_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_prestige_level_gain:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_accolade_acclaimed_removal:
 From Code: Yes
 Expected Scope: none
 
@@ -1162,6 +1414,12 @@ Expected Scope: character
 
 on_title_gain_inheritance:
 From Code: Yes
+Expected Scope: character
+
+--------------------
+
+petition_liege_0205:
+From Code: No
 Expected Scope: none
 
 --------------------
@@ -1172,9 +1430,9 @@ Expected Scope: character
 
 --------------------
 
-on_commander_battle_end:
+contest_ongoing_event_recital_random_pulse:
 From Code: No
-Expected Scope: none
+Expected Scope: character
 
 --------------------
 
@@ -1196,15 +1454,27 @@ Expected Scope: none
 
 --------------------
 
+contest_bout_joust_outcome_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_game_start:
 From Code: Yes
 Expected Scope: none
 
 --------------------
 
-hajj_destination_events:
+contest_bout_duel_pivotal_pulse:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_accolade_deactivated:
+From Code: Yes
+Expected Scope: none
 
 --------------------
 
@@ -1256,6 +1526,18 @@ Expected Scope: character
 
 --------------------
 
+tournament_locale_settlement_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+tengri_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 martial_lifestyle_common_events:
 From Code: No
 Expected Scope: character
@@ -1276,7 +1558,13 @@ Expected Scope: character
 
 on_combat_end_winner:
 From Code: Yes
-Expected Scope: combat side
+Expected Scope: combat_side
+
+--------------------
+
+on_accolade_acclaimed_death:
+From Code: Yes
+Expected Scope: none
 
 --------------------
 
@@ -1298,6 +1586,18 @@ Expected Scope: character
 
 --------------------
 
+contest_ongoing_event_horse_race_pivotal_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+feast_new_event_selection_tombola:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_courtier_decided_to_move_to_pool:
 From Code: Yes
 Expected Scope: character
@@ -1310,7 +1610,25 @@ Expected Scope: none
 
 --------------------
 
+tournament_locale_artisans_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 rival_quarterly_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+pay_homage_start:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+ongoing_house_feud_events:
 From Code: No
 Expected Scope: character
 
@@ -1334,7 +1652,19 @@ Expected Scope: character
 
 --------------------
 
+muslim_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 hajj_journey_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+pilgrimage_intent_travel_events:
 From Code: No
 Expected Scope: character
 
@@ -1358,6 +1688,12 @@ Expected Scope: character
 
 --------------------
 
+contest_bout_duel_outcome_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 task_support_schemes_side_effects:
 From Code: No
 Expected Scope: character
@@ -1376,7 +1712,19 @@ Expected Scope: character
 
 --------------------
 
+on_accolade_successor_removal:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 dungeon_ongoing_reformed:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+tournament_locale_visitor_camp_events:
 From Code: No
 Expected Scope: character
 
@@ -1454,6 +1802,18 @@ Expected Scope: character
 
 --------------------
 
+diarchy_mandate_promote_authority_random:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+tournament_locale_tavern_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 martial_lifestyle_unavailable_events:
 From Code: No
 Expected Scope: character
@@ -1462,13 +1822,19 @@ Expected Scope: character
 
 on_potential_great_holy_war_invalidation:
 From Code: Yes
-Expected Scope: great holy war
+Expected Scope: ghw
 
 --------------------
 
 fp1_trade_events_cycle:
 From Code: No
 Expected Scope: none
+
+--------------------
+
+contest_bout_wrestling_random_pulse:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -1509,12 +1875,6 @@ Expected Scope: character
 --------------------
 
 sibling_quarterly_pulse:
-From Code: No
-Expected Scope: character
-
---------------------
-
-jain_destination_events:
 From Code: No
 Expected Scope: character
 
@@ -1586,6 +1946,12 @@ Expected Scope: none
 
 --------------------
 
+tournament_locale_religious_building_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 yearly_global_pulse:
 From Code: Yes
 Expected Scope: none
@@ -1599,6 +1965,18 @@ Expected Scope: character
 --------------------
 
 task_convert_side_effects:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+petition_liege_0101:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+pay_homage_invalid_on_action:
 From Code: No
 Expected Scope: character
 
@@ -1622,20 +2000,44 @@ Expected Scope: none
 
 --------------------
 
+jain_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 fp2_lyonese_monk_events_cycle_no_valid_events_fallback:
 From Code: No
 Expected Scope: none
 
 --------------------
 
-pilgrimage_generic_destination_events:
+wedding_wnight_spouse_event_pulse:
 From Code: No
 Expected Scope: character
 
 --------------------
 
+pilgrimage_generic_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+tournament_passive_state_host_pulse:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 five_year_struggle_playable_pulse:
 From Code: Yes
+Expected Scope: character
+
+--------------------
+
+jewish_arrival_events:
+From Code: No
 Expected Scope: character
 
 --------------------
@@ -1648,7 +2050,13 @@ Expected Scope: character
 
 on_great_holy_war_countdown_end:
 From Code: Yes
-Expected Scope: great holy war
+Expected Scope: ghw
+
+--------------------
+
+pilgrimage_temptation_travel_events:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -1700,6 +2108,12 @@ Expected Scope: character
 
 --------------------
 
+contest_bout_wrestling_pivotal_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 friendship_quarterly_pulse:
 From Code: No
 Expected Scope: character
@@ -1736,13 +2150,25 @@ Expected Scope: character
 
 --------------------
 
+on_entered_diarchy:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_birthday_education_events:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-playdate_fallback:
+zoroastrian_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+contest_ongoing_event_recital_outcome_pulse:
 From Code: No
 Expected Scope: character
 
@@ -1755,6 +2181,18 @@ Expected Scope: character
 --------------------
 
 stress_loss_irritable:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+tournament_opening_on_action:
+From Code: No
+Expected Scope: none
+
+--------------------
+
+hunt_outcome_complication_events:
 From Code: No
 Expected Scope: character
 
@@ -1808,6 +2246,18 @@ Expected Scope: character
 
 --------------------
 
+contest_ongoing_event_melee_random_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+petition_liege_start:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 childhood_education:
 From Code: No
 Expected Scope: character
@@ -1826,6 +2276,12 @@ Expected Scope: none
 
 --------------------
 
+on_diarch_designation:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_piety_level_gain:
 From Code: Yes
 Expected Scope: none
@@ -1835,6 +2291,24 @@ Expected Scope: none
 on_siege_looting:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+contest_ongoing_event_horse_race_outcome_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+on_active_accolade_succession:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_travel_plan_abort:
+From Code: Yes
+Expected Scope: character
 
 --------------------
 
@@ -1874,6 +2348,12 @@ Expected Scope: character
 
 --------------------
 
+hunt_sighting_on_action:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_county_auto_granted_to_liege_culture:
 From Code: Yes
 Expected Scope: none
@@ -1888,12 +2368,6 @@ Expected Scope: character
 
 on_title_destroyed:
 From Code: Yes
-Expected Scope: character
-
---------------------
-
-norse_destination_events:
-From Code: No
 Expected Scope: character
 
 --------------------
@@ -1922,6 +2396,12 @@ Expected Scope: character
 
 --------------------
 
+on_accolade_glory_change:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 organize_the_levies_marshal_task_side_effects:
 From Code: No
 Expected Scope: character
@@ -1931,6 +2411,12 @@ Expected Scope: character
 court_politics_setup:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_death_relation_nemesis:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -1958,19 +2444,25 @@ Expected Scope: character
 
 --------------------
 
+pilgrimage_religious_travel_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 task_bestow_royal_favor_side_effects:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-pilgrimage_journey_event_fallback:
+feast_main_event_selection:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-feast_main_event_selection:
+hunt_outcome_end_events:
 From Code: No
 Expected Scope: character
 
@@ -2000,6 +2492,12 @@ Expected Scope: character
 
 --------------------
 
+wedding_bloody_banquet_ongoing_event_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_imprison:
 From Code: Yes
 Expected Scope: character
@@ -2012,19 +2510,37 @@ Expected Scope: artifact
 
 --------------------
 
-pagan_destination_events:
-From Code: No
-Expected Scope: character
-
---------------------
-
 on_birth_mother:
 From Code: Yes
 Expected Scope: character
 
 --------------------
 
+on_left_diarchy:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+pay_homage_travel_planner_exit:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_yearly_common_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+pilgrimage_generic_travel_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+contest_bout_wrestling_outcome_pulse:
 From Code: No
 Expected Scope: character
 
@@ -2066,6 +2582,12 @@ Expected Scope: none
 
 --------------------
 
+tournament_locale_tournament_grounds_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 in_debt_county_corruption_pulse:
 From Code: No
 Expected Scope: none
@@ -2102,13 +2624,31 @@ Expected Scope: none
 
 --------------------
 
+on_tour_dinner_vassal:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+pagan_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+on_tour_festival_liege:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_county_occupied:
 From Code: Yes
 Expected Scope: none
 
 --------------------
 
-hunt_end_pulse:
+tournament_passive_state_guest_pulse:
 From Code: No
 Expected Scope: character
 
@@ -2116,6 +2656,12 @@ Expected Scope: character
 
 intrigue_lifestyle_unavailable_events:
 From Code: No
+Expected Scope: none
+
+--------------------
+
+on_accolade_created:
+From Code: Yes
 Expected Scope: none
 
 --------------------
@@ -2132,21 +2678,27 @@ Expected Scope: none
 
 --------------------
 
+on_travel_leader_removed:
+From Code: Yes
+Expected Scope: character
+
+--------------------
+
 stress_threshold_level_3_event_prison:
 From Code: No
 Expected Scope: character
 
 --------------------
 
-learning_lifestyle_common_events:
+on_death_relation_soulmate:
 From Code: No
-Expected Scope: character
+Expected Scope: none
 
 --------------------
 
-on_vassal_become_powerful:
-From Code: Yes
-Expected Scope: none
+learning_lifestyle_common_events:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -2158,6 +2710,12 @@ Expected Scope: none
 
 task_collect_taxes_side_effects:
 From Code: No
+Expected Scope: character
+
+--------------------
+
+on_travel_plan_complete:
+From Code: Yes
 Expected Scope: character
 
 --------------------
@@ -2204,7 +2762,7 @@ Expected Scope: none
 
 --------------------
 
-hindu_destination_events:
+tournament_intent_setup_events:
 From Code: No
 Expected Scope: character
 
@@ -2216,9 +2774,15 @@ Expected Scope: character
 
 --------------------
 
-pilgrimage_setup:
+hunt_end_events:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_travel_activity_invalidated:
+From Code: Yes
+Expected Scope: none
 
 --------------------
 
@@ -2288,6 +2852,18 @@ Expected Scope: character
 
 --------------------
 
+on_accolade_rank_change:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
+contest_ongoing_event_archery_outcome_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 varangian_ongoing:
 From Code: No
 Expected Scope: character
@@ -2342,6 +2918,18 @@ Expected Scope: none
 
 --------------------
 
+on_travel_plan_arrival:
+From Code: Yes
+Expected Scope: character
+
+--------------------
+
+contest_ongoing_event_melee_setup_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 court_outcome:
 From Code: No
 Expected Scope: character
@@ -2384,6 +2972,12 @@ Expected Scope: character
 
 --------------------
 
+wedding_banquet_ongoing_event_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 stewardship_lifestyle_domesday:
 From Code: No
 Expected Scope: character
@@ -2391,6 +2985,12 @@ Expected Scope: character
 --------------------
 
 on_graceful_aging_birthday:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+contest_ongoing_event_horse_race_random_pulse:
 From Code: No
 Expected Scope: character
 
@@ -2426,6 +3026,12 @@ Expected Scope: struggle
 
 --------------------
 
+tournament_active_state_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 mentor_student_quarterly_pulse:
 From Code: No
 Expected Scope: character
@@ -2434,6 +3040,12 @@ Expected Scope: character
 
 on_marriage:
 From Code: Yes
+Expected Scope: character
+
+--------------------
+
+hajj_arrival_events:
+From Code: No
 Expected Scope: character
 
 --------------------
@@ -2456,6 +3068,12 @@ Expected Scope: character
 
 --------------------
 
+on_travel_plan_start:
+From Code: Yes
+Expected Scope: character
+
+--------------------
+
 on_great_holy_war_participant_replaced:
 From Code: Yes
 Expected Scope: character
@@ -2463,6 +3081,12 @@ Expected Scope: character
 --------------------
 
 task_accept_culture_side_effects:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+contest_ongoing_event_melee_pivotal_pulse:
 From Code: No
 Expected Scope: character
 
@@ -2498,6 +3122,12 @@ Expected Scope: character
 
 --------------------
 
+travel_danger_events_on_action:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 escape_from_prison:
 From Code: No
 Expected Scope: character
@@ -2528,6 +3158,12 @@ Expected Scope: character
 
 --------------------
 
+christian_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 stress_loss_journaller:
 From Code: No
 Expected Scope: character
@@ -2540,13 +3176,31 @@ Expected Scope: character
 
 --------------------
 
+on_tour_festival_vassal:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 court_intrigue_setup:
 From Code: No
 Expected Scope: character
 
 --------------------
 
+diarchy_mandate_fill_coffers_random:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 murder_succeeded:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+contest_archery_mysterious_event:
 From Code: No
 Expected Scope: character
 
