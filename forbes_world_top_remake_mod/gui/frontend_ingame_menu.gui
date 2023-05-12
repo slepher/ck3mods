@@ -222,6 +222,7 @@ window = {
 
 							button_frontend = {
 								name = "switch_character_button"
+								tooltip = "INGAME_MENU_SWITCH_CHARACTER"
 								size = { 325 58 }
 								text = "FRONTEND_SWITCH_CHARACTER"
 
