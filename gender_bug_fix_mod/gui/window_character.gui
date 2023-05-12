@@ -3367,6 +3367,22 @@ types CharacterWindow
 			tooltip = "SEXUALITY_TT"
 		}
 
+		text_single = {
+			visible = "[Not(Character.IsFemale)]"
+			max_width = 432
+			fontsize_min = 13
+			text = "SEX_MALE"
+			align = nobaseline|hcenter
+		}
+
+		text_single = {
+			visible = "[Character.IsFemale]"
+			max_width = 432
+			fontsize_min = 13
+			text = "SEX_FEMALE"
+			align = nobaseline|hcenter
+		}
+
 		expand = {}
 	}
 
