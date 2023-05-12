@@ -885,7 +885,7 @@ types GameTooltipTypes
 							button_dynasty_tree = {
 								name = "button_dynasty_tree"
 								visible = "[Character.GetHouse.IsValid]"
-								onclick = "[OpenDynastyTreeViewFromCharacter(Character.GetID)]"
+								onclick = "[OpenGameViewData( 'dynasty_tree_view', Character.GetID)]"
 								onclick = "[CharacterInteractionMenuWindow.Close]"
 
 								size = { 25 25 }
