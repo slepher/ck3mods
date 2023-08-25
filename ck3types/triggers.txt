@@ -205,6 +205,14 @@ Supported Targets: character
 
 --------------------
 
+any_special_guest - Iterate through all special guests of an activity.
+any_special_guest = { ... }
+any_special_guest = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: activity
+Supported Targets: character
+
+--------------------
+
 has_active_locale - Does the scoped activity have the designated locale active?
 has_active_locale = locale_key
 Supported Scopes: activity
@@ -358,6 +366,13 @@ Supported Targets: culture
 
 --------------------
 
+any_tradition - Iterate through all traditions of the given culture
+any_tradition = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: culture
+Supported Targets: culture_tradition
+
+--------------------
+
 can_get_innovation_from - Get random applicable innovation from another culture
 Supported Scopes: culture
 
@@ -385,6 +400,12 @@ Supported Scopes: culture
 --------------------
 
 culture_overlaps_geographical_region - Checks if any county with this culture is in the given geographical region
+Supported Scopes: culture
+
+--------------------
+
+free_tradition_slot - How many free tradition slot are in the scoped culturescope:culture = { free_tradition_slot > 1 }
+Traits: <, <=, =, !=, >, >=
 Supported Scopes: culture
 
 --------------------
@@ -434,9 +455,11 @@ Supported Scopes: culture
 
 --------------------
 
-has_cultural_tradition - Does the culture have this cultural tradition?
-<culture> = { has_cultural_tradition = name }
+has_cultural_tradition - Does the culture have this cultural tradition scope?
+<culture> = { has_cultural_tradition = scope:traditon }
+Traits: class CCultureTraditionDatabase key
 Supported Scopes: culture
+Supported Targets: culture_tradition
 
 --------------------
 
@@ -506,6 +529,25 @@ Supported Scopes: culture
 is_hybrid_culture - Checks if the scope culture was created from a hybridization of two cultures and returns yes if true or no if false.
 is_hybrid_culture = yes
 Traits: yes/no 
+Supported Scopes: culture
+
+--------------------
+
+num_discovered_innovations - Does the culture have the required number of discovered innovations?
+num_discovered_innovations > 20
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: culture
+
+--------------------
+
+num_discovered_innovations_in_era - Does the scoped culture have the required number of active discovered innovations in the specified era?
+num_discovered_innovations_in_era = {
+	era = culture_era_early_medieval
+	value > 5
+}
+num_discovered_innovations_in_era:culture_era_early_medieval > 15
+num_discovered_innovations_in_era:culture_era_early_medieval > scope:target_culture.num_discovered_innovations_in_era:culture_era_early_medieval
+Traits: <, <=, =, !=, >, >=
 Supported Scopes: culture
 
 --------------------
@@ -1080,13 +1122,17 @@ Supported Scopes: faith
 
 trait_is_sin - Does the scoped faith consider the given trait a sin?
 trait_is_sin = lustful
+Traits: class CTraitDatabase key
 Supported Scopes: faith
+Supported Targets: trait
 
 --------------------
 
 trait_is_virtue - Does the scoped faith consider the given trait a virtue?
 trait_is_virtue = lustful
+Traits: class CTraitDatabase key
 Supported Scopes: faith
+Supported Targets: trait
 
 --------------------
 
@@ -1237,6 +1283,12 @@ Supported Scopes: accolade_type
 
 --------------------
 
+has_tradition_category - has_tradition_category = realm
+Does the scoped tradition belong to the specified category?
+Supported Scopes: culture_tradition
+
+--------------------
+
 any_target_title - Iterate through all casus belli's target titles
 any_target_title = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: casus_belli
@@ -1380,7 +1432,7 @@ Supported Scopes: none
 
 --------------------
 
-any_accolade_type - 
+any_accolade_type - ��/a�
 Supported Scopes: none
 Supported Targets: accolade_type
 
@@ -1441,26 +1493,25 @@ Supported Targets: culture
 
 --------------------
 
-any_culture_pillar - @
+any_culture_pillar - ��/a�
 Supported Scopes: none
 Supported Targets: culture_pillar
 
 --------------------
 
-any_culture_tradition - 
+any_culture_tradition - ��/a�
 Supported Scopes: none
 Supported Targets: culture_tradition
 
 --------------------
 
-any_decision - �Oq�
+any_decision - 
 Supported Scopes: none
 Supported Targets: decision
 
 --------------------
 
-any_doctrine - Iterate through every doctrine in the database
-any_doctrine = { <count=num/all> / <percent=fixed_point> <triggers> }
+any_doctrine - �
 Supported Scopes: none
 Supported Targets: doctrine
 
@@ -1485,7 +1536,7 @@ Supported Scopes: none
 
 --------------------
 
-any_government_type - 
+any_government_type - [2023-08-25 20:12:49.895] [Clausewitz Debug] [debug] [pdx_gui_assetfactory.cpp:675] [LoadAssetsGUI] Loading "gui/preload/labels.gui"
 Supported Scopes: none
 Supported Targets: government_type
 
@@ -1593,7 +1644,14 @@ Supported Targets: character
 
 --------------------
 
-any_trait - 
+any_special_building_province - Iterate through all provinces with a special building slot (built or un-built)
+any_special_building_province = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: none
+Supported Targets: province
+
+--------------------
+
+any_trait - 
 Supported Scopes: none
 Supported Targets: trait
 
@@ -1607,7 +1665,7 @@ Supported Targets: trait
 
 --------------------
 
-any_vassal_contract - E��4
+any_vassal_contract - 
 Supported Scopes: none
 Supported Targets: vassal_contract
 
@@ -1762,7 +1820,7 @@ Supported Scopes: none
 --------------------
 
 has_dlc_feature - Does the host have DLC that enables this particular feature
-Traits: Valid Features: garments_of_the_hre， fashion_of_the_abbasid_court， the_northern_lords， hybridize_culture， diverge_culture， royal_court， reform_culture， court_artifacts， the_fate_of_iberia， friends_and_foes， tours_and_tournaments， advanced_activities， accolades，以及 elegance_of_the_empire
+Traits: Valid Features: garments_of_the_hre， fashion_of_the_abbasid_court， the_northern_lords， hybridize_culture， diverge_culture， royal_court， reform_culture， court_artifacts， the_fate_of_iberia， friends_and_foes， tours_and_tournaments， advanced_activities， accolades， elegance_of_the_empire，以及 wards_and_wardens
 Supported Scopes: none
 
 --------------------
@@ -2283,13 +2341,13 @@ Supported Scopes: province
 
 --------------------
 
-has_special_building - Does the province (holding) have a special buidling?
+has_special_building - Does the province (holding) have a special building?
 Traits: yes/no 
 Supported Scopes: province
 
 --------------------
 
-has_special_building_slot - Does the province (holding) have a special buidling slot?
+has_special_building_slot - Does the province (holding) have a special building slot?
 Traits: yes/no 
 Supported Scopes: province
 
@@ -2302,6 +2360,13 @@ Supported Scopes: province
 --------------------
 
 has_stationed_regiment_of_base_type - Does the province have stationed regiment of base type?
+Supported Scopes: province
+
+--------------------
+
+has_travel_point_of_interest - Checks if there is a travel point of interest of type X in the province.
+has_travel_point_of_interest = point_of_interest_type
+Traits: class CTravelPointOfInterestTypeDatabase key
 Supported Scopes: province
 
 --------------------
@@ -3165,6 +3230,13 @@ Supported Targets: mercenary_company
 
 --------------------
 
+any_home_court_hostage - Iterate through all hostages currently abroad
+any_home_court_hostage = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 any_hooked_character - Iterate through all characters this character has a hook on
 any_hooked_character = { <count=num/all> / <percent=fixed_point> <triggers> }
 Supported Scopes: character
@@ -3620,6 +3692,13 @@ Supported Targets: character
 
 --------------------
 
+any_warden_hostage - Iterate through all hostages having this warden
+any_warden_hostage = { <count=num/all> / <percent=fixed_point> <triggers> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 aptitude - What is the scoped character's aptitude in the target court position type? aptitude = { court_position = court_position_type value >= 1 }
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -3719,6 +3798,18 @@ Supported Scopes: character
 
 can_diverge_excluding_cost - Can this ruler diverge their culture? Does not check the cost
 Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
+can_embrace_tradition - Can scoped charater embrace new culture tradition?
+scope:character = { can_embrace_tradition = scope:new_tradition }
+scope:character = {
+	can_embrace_tradition = {
+		tradition = scope:new_tradition
+		replace = my_old_tradition
+	}
+}
 Supported Scopes: character
 
 --------------------
@@ -3826,6 +3917,22 @@ Supported Scopes: character
 
 character_is_realm_neighbor - Is the scoped character a realm neighbor of the target? Meaning they're independent or has the same liege, and border your realm. Including across two sea zones
 Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+character_men_at_arms_expense_gold_relative - What is the ratio of the scoped character's men-at-arms gold expenses, relative to their income?
+Similar calc compared to `ai_men_at_arms_expense_gold_min` / `ai_men_at_arms_expense_gold_ideal`.
+(Relative value 0.0 - 1.0 - *, where 1.0 is all income, unraised maa costs)
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+character_men_at_arms_expense_prestige_relative - What is the ratio of the scoped character's men-at-arms prestige expenses, relative to their income?
+Similar calc compared to `ai_men_at_arms_expense_prestige_min` / `ai_men_at_arms_expense_prestige_ideal`.
+(Relative value 0.0 - 1.0 - *, where 1.0 is all income, unraised maa costs)
+Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
 --------------------
@@ -4230,6 +4337,12 @@ has_artifact_claim - Does the scoped character have a personal or house claim on
 Traits: artifact scope
 Supported Scopes: character
 Supported Targets: artifact
+
+--------------------
+
+has_away_hostages - Does the scoped character have Hostages abroad?
+Traits: yes/no 
+Supported Scopes: character
 
 --------------------
 
@@ -4656,6 +4769,12 @@ Supported Scopes: character
 
 --------------------
 
+has_relation_nursed_child - Checks for a scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
 has_relation_oaf - Checks for a scripted relationship with a target character
 Traits: character target 
 Supported Scopes: character
@@ -4748,6 +4867,12 @@ Supported Scopes: character
 --------------------
 
 has_relation_wedding_very_good_fertility - Checks for a scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+has_relation_wet_nurse - Checks for a scripted relationship with a target character
 Traits: character target 
 Supported Scopes: character
 
@@ -4899,6 +5024,12 @@ Supported Scopes: character
 
 --------------------
 
+has_secret_relation_nursed_child - Checks for a secret scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
 has_secret_relation_oaf - Checks for a secret scripted relationship with a target character
 Traits: character target 
 Supported Scopes: character
@@ -4984,6 +5115,12 @@ Supported Scopes: character
 --------------------
 
 has_secret_relation_wedding_very_good_fertility - Checks for a secret scripted relationship with a target character
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+has_secret_relation_wet_nurse - Checks for a secret scripted relationship with a target character
 Traits: character target 
 Supported Scopes: character
 
@@ -5117,6 +5254,11 @@ Supported Scopes: character
 
 holds_landed_title - Is the scope character landed (holds a county or barony)?
 Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
+hostage_duration - For how long has the scope character been a hostage? { days/months/years =,>,< X }
 Supported Scopes: character
 
 --------------------
@@ -5617,6 +5759,30 @@ Supported Scopes: character
 
 --------------------
 
+is_hostage - Is the scoped character a Hostage?
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
+is_hostage_from - Is the scope character a Hostage with target character as their original Liege? is_hostage_from = TARGET
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+is_hostage_of - Is the scope character a Hostage with target character as their Warden? is_hostage_of = TARGET
+Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+is_hostage_warden - Is the scoped character a Warden with Hostages?
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
 is_immortal - Is the character immortal?
 Traits: yes/no 
 Supported Scopes: character
@@ -5846,6 +6012,12 @@ Supported Scopes: character
 
 is_pool_guest_of - Is the character a guest from the pool, visiting the target character's court? In contrast to is_foreign_court_guest_of the character has no liege
 Traits: character target 
+Supported Scopes: character
+
+--------------------
+
+is_potential_knight - Is the scoped character a POTENTIAL knight to their liege?
+Traits: yes/no 
 Supported Scopes: character
 
 --------------------
@@ -6255,6 +6427,18 @@ Supported Scopes: character
 
 --------------------
 
+monthly_character_men_at_arms_expense_gold - Is the scoped character's monthly military gold expenses this big? (unraised maa costs)
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+monthly_character_men_at_arms_expense_prestige - Is the scoped character's monthly military prestige expenses this big? (unraised maa costs)
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 months_as_ruler - Number of months this character has been a ruler, returns -1 if character isn't a ruler
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -6401,6 +6585,12 @@ Supported Scopes: character
 
 --------------------
 
+num_of_relation_nursed_child - Compares the number of scripted relations a character has of the type
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
 num_of_relation_oaf - Compares the number of scripted relations a character has of the type
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -6486,6 +6676,12 @@ Supported Scopes: character
 --------------------
 
 num_of_relation_wedding_very_good_fertility - Compares the number of scripted relations a character has of the type
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+num_of_relation_wet_nurse - Compares the number of scripted relations a character has of the type
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 
@@ -7104,6 +7300,12 @@ Supported Scopes: character
 
 --------------------
 
+was_hostage_child - Was the scoped character a Hostage as a Child?
+Traits: yes/no 
+Supported Scopes: character
+
+--------------------
+
 year_of_birth - Get character year_of_birth: scope:character = { year_of_birth > 1096 }
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
@@ -7123,6 +7325,18 @@ Supported Scopes: character
 --------------------
 
 yearly_character_income - Is the scoped character's yearly income this big?
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+yearly_character_men_at_arms_expense_gold - Is the scoped character's yearly military gold expenses this big? (unraised maa costs)
+Traits: <, <=, =, !=, >, >=
+Supported Scopes: character
+
+--------------------
+
+yearly_character_men_at_arms_expense_prestige - Is the scoped character's yearly military prestige expenses this big? (unraised maa costs)
 Traits: <, <=, =, !=, >, >=
 Supported Scopes: character
 

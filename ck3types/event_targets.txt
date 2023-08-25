@@ -807,6 +807,12 @@ Output Scopes: character
 
 --------------------
 
+home_court - Get the home court owner of the scoped hostage. Returns empty scope if the character is not a hostage
+Input Scopes: character
+Output Scopes: character
+
+--------------------
+
 host - Get current host of the scoped character
 Input Scopes: character
 Output Scopes: character
@@ -939,6 +945,12 @@ Output Scopes: character
 
 --------------------
 
+real_mother - Get the real mother of the scoped character
+Input Scopes: character
+Output Scopes: character
+
+--------------------
+
 realm_priest - Get realm priest of scoped character
 Input Scopes: character
 Output Scopes: character
@@ -946,6 +958,12 @@ Output Scopes: character
 --------------------
 
 top_liege - Get the top liege of the scoped character
+Input Scopes: character
+Output Scopes: character
+
+--------------------
+
+warden - Get the warden of the scoped hostage. Returns empty scope if the character is not a hostage
 Input Scopes: character
 Output Scopes: character
 
@@ -1186,6 +1204,9 @@ province
 provinces
 victory
 imprisoner
+hostage
+warden
+home_court
 none
 target_titles
 secret_exposer

@@ -2626,6 +2626,30 @@ Return type: [unregistered]
 
 -----------------------
 
+adopt
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+adopting
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+adoption
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+adopts
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 adult
 Definition type: Global function
 Return type: [unregistered]
@@ -4528,6 +4552,12 @@ Return type: [unregistered]
 
 -----------------------
 
+culture_possessive
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 culture_tradition
 Definition type: Global function
 Return type: [unregistered]
@@ -4823,6 +4853,18 @@ Return type: [unregistered]
 -----------------------
 
 diarch_powers_possessive
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+diarch_succession
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+diarch_succession_explicit
 Definition type: Global function
 Return type: [unregistered]
 
@@ -6070,6 +6112,12 @@ Return type: [unregistered]
 
 -----------------------
 
+goliardic_shenanigans
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 government
 Definition type: Global function
 Return type: [unregistered]
@@ -6478,6 +6526,24 @@ Return type: [unregistered]
 
 -----------------------
 
+home_court
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+home_courts
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+home_courts_possessive
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 homosexual
 Definition type: Global function
 Return type: [unregistered]
@@ -6533,6 +6599,12 @@ Return type: [unregistered]
 -----------------------
 
 hostages
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+hostages_possessive
 Definition type: Global function
 Return type: [unregistered]
 
@@ -8044,6 +8116,18 @@ Return type: [unregistered]
 
 -----------------------
 
+perpetual_hook
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+perpetual_hooks
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 personal
 Definition type: Global function
 Return type: [unregistered]
@@ -8177,6 +8261,12 @@ Return type: [unregistered]
 -----------------------
 
 player_heir
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+point_of_interest
 Definition type: Global function
 Return type: [unregistered]
 
@@ -10618,6 +10708,18 @@ Return type: [unregistered]
 
 -----------------------
 
+valuable_prisoner
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+valuable_prisoners
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 varangian_adventure
 Definition type: Global function
 Return type: [unregistered]
@@ -10894,6 +10996,24 @@ Return type: [unregistered]
 
 -----------------------
 
+warden
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+wardens
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+wardens_possessive
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 wards
 Definition type: Global function
 Return type: [unregistered]
@@ -11003,9 +11123,30 @@ Definition type: Global macro
 
 -----------------------
 
+CalculateScriptValue( Target, ScriptValueName )
+Macro replacement: Target.MakeScope().ScriptValue( ScriptValueName )
+Description: Calculates the named script value with target character as root scope
+Definition type: Global macro
+
+-----------------------
+
 CanDisplayLocaleView( ViewVariable )
 Macro replacement: VariableSystem.HasValue( 'activity_locale_view', ViewVariable )
 Description: Yields 'true' if there is NO activity event open and 'activity_locale_view' is set to the specified variable
+Definition type: Global macro
+
+-----------------------
+
+CanPlayerCompeteInMartialContest( Host )
+Macro replacement: GetScriptedGui( 'tournament_is_character_martial_eligible_in_contest' ).IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'host', Host.MakeScope ).End )
+Description: Can the player compete in the martial contests hosted by Host?
+Definition type: Global macro
+
+-----------------------
+
+CanPlayerCompeteInMartialContestTooltip( Host )
+Macro replacement: GetScriptedGui( 'tournament_is_character_martial_eligible_in_contest' ).BuildTooltip( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'host', Host.MakeScope ).End )
+Description: Tooltip for CanPlayerCompeteInMartialContest
 Definition type: Global macro
 
 -----------------------
@@ -11192,6 +11333,13 @@ Definition type: Global macro
 
 -----------------------
 
+GetScriptValueBreakdown( Target, ScriptValueName )
+Macro replacement: Target.MakeScope().GetScriptValueDesc( ScriptValueName )
+Description: Breaks down the named script value with target character as root scope
+Definition type: Global macro
+
+-----------------------
+
 GetScriptedRelationTooltip( Relation, Owner, Target )
 Macro replacement: JoinText( Localize( 'double_line_break' ), Relation.GetDescription( Owner.Self, Target.Self ), Relation.GetReasonFor( Owner.Self, Target.Self ) )
 Description: Get the tooltip for the scripted relation between owner and target
@@ -11321,6 +11469,41 @@ Definition type: Global macro
 IsHorseContest
 Macro replacement: Or( Or( IsContestType( 'tournament_phase_horse_race' ), IsContestType( 'tournament_phase_joust' ) ), IsContestType( 'tournament_phase_melee' ) )
 Description: Is the datacontexted contest a horse contest?
+Definition type: Global macro
+
+-----------------------
+
+IsMartialContest
+Macro replacement: And( And( Not( IsContestType( 'tournament_phase_board_game' ) ), Not( IsContestType( 'tournament_phase_recital' ) ) ), Not( IsContestType( 'tournament_phase_horse_race' ) ) )
+Description: Is the datacontexted contest a martial contest?
+Definition type: Global macro
+
+-----------------------
+
+IsPlayerAvailableToCompeteMartial
+Macro replacement: GetScriptedGui( 'tournament_is_player_available_to_compete_martial' ).IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )
+Description: Can the player compete in martial contests?
+Definition type: Global macro
+
+-----------------------
+
+IsPlayerAvailableToCompeteMartialTooltip
+Macro replacement: GetScriptedGui( 'tournament_is_player_available_to_compete_martial' ).BuildTooltip( GuiScope.SetRoot( GetPlayer.MakeScope ).End )
+Description: Tooltip for IsPlayerAvailableToCompeteMartial
+Definition type: Global macro
+
+-----------------------
+
+IsPlayerAvailableToCompeteNonMartial
+Macro replacement: GetScriptedGui( 'tournament_is_player_available_to_compete_non_martial' ).IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )
+Description: Is the player available to compete in non-martial contest?
+Definition type: Global macro
+
+-----------------------
+
+IsPlayerAvailableToCompeteNonMartialTooltip
+Macro replacement: GetScriptedGui( 'tournament_is_player_available_to_compete_non_martial' ).BuildTooltip( GuiScope.SetRoot( GetPlayer.MakeScope ).End )
+Description: Tooltip for IsPlayerAvailableToCompeteNonMartial
 Definition type: Global macro
 
 -----------------------
@@ -11698,6 +11881,12 @@ Return type: bool
 
 -----------------------
 
+AIWatchWindow.IsTabEconomy
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 AIWatchWindow.IsTabMarriage
 Definition type: Function
 Return type: bool
@@ -11729,6 +11918,12 @@ Return type: void
 -----------------------
 
 AIWatchWindow.SetTabCB
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AIWatchWindow.SetTabEconomy
 Definition type: Function
 Return type: void
 
@@ -11895,6 +12090,12 @@ Return type: CString
 
 -----------------------
 
+Accolade.GetHistory
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Accolade.GetID
 Definition type: Function
 Return type: uint32
@@ -12045,6 +12246,47 @@ Return type: [unregistered]
 
 -----------------------
 
+AccoladeHistoryEntry
+Definition type: Type
+
+-----------------------
+
+AccoladeHistoryEntry.GetAcclaimedDate
+Definition type: Promote
+Return type: Date
+
+-----------------------
+
+AccoladeHistoryEntry.GetAcclaimedKnight
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
+AccoladeHistoryEntry.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AccoladeHistoryEntry.GetAcclaimedDate
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AccoladeHistoryEntry.GetAcclaimedKnight
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AccoladeHistoryEntry.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 AccoladeRank
 Definition type: Type
 
@@ -12070,6 +12312,18 @@ Return type: [unregistered]
 
 AccoladeType
 Definition type: Type
+
+-----------------------
+
+AccoladeType.GetPrimaryMaaUnlock
+Definition type: Promote
+Return type: MenAtArmsType
+
+-----------------------
+
+AccoladeType.GetSecondaryMaaUnlock
+Definition type: Promote
+Return type: MenAtArmsType
 
 -----------------------
 
@@ -12121,6 +12375,18 @@ Return type: CString
 
 -----------------------
 
+AccoladeType.GetPrimaryMaaUnlock
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AccoladeType.GetPrimaryMaaUnlockWarning
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 AccoladeType.GetPrimaryTypeRankEffects
 Definition type: Function
 Return type: CString
@@ -12128,6 +12394,12 @@ Return type: CString
 -----------------------
 
 AccoladeType.GetRanks
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+AccoladeType.GetSecondaryMaaUnlock
 Definition type: Function
 Return type: [unregistered]
 
@@ -12288,6 +12560,12 @@ Return type: bool
 
 -----------------------
 
+AccoladeView.IsShowingHistory
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 AccoladeView.IsShowingPotentialAcclaimed
 Definition type: Function
 Return type: bool
@@ -12319,6 +12597,12 @@ Return type: void
 -----------------------
 
 AccoladeView.SubmitName
+Definition type: Function
+Return type: void
+
+-----------------------
+
+AccoladeView.ToggleHistory
 Definition type: Function
 Return type: void
 
@@ -13212,6 +13496,59 @@ Return type: [unregistered]
 
 -----------------------
 
+ActivityGuestCustomData
+Definition type: Type
+
+-----------------------
+
+ActivityGuestCustomData.GetCharacter
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
+ActivityGuestCustomData.GetEstimatedArrivalDate
+Definition type: Promote
+Return type: Date
+
+-----------------------
+
+ActivityGuestCustomData.GetJoinChance
+Definition type: Promote
+Return type: CFixedPoint
+
+-----------------------
+
+ActivityGuestCustomData.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ActivityGuestCustomData.GetCharacter
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ActivityGuestCustomData.GetEstimatedArrivalDate
+Definition type: Function
+Return type: Date
+
+-----------------------
+
+ActivityGuestCustomData.GetJoinChance
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+ActivityGuestCustomData.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 ActivityGuestInviteRule
 Definition type: Type
 
@@ -13489,6 +13826,12 @@ Definition type: Type
 
 -----------------------
 
+ActivityIntentSelectionWindow.AccessTargetList
+Definition type: Promote
+Return type: CharacterSelectionList
+
+-----------------------
+
 ActivityIntentSelectionWindow.GetActivityType
 Definition type: Promote
 Return type: ActivityType
@@ -13502,6 +13845,12 @@ Return type: ActivityIntentData
 -----------------------
 
 ActivityIntentSelectionWindow.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ActivityIntentSelectionWindow.AccessTargetList
 Definition type: Function
 Return type: [unregistered]
 
@@ -13564,6 +13913,12 @@ Return type: [unregistered]
 ActivityIntentSelectionWindow.GetSelectedIntent
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+ActivityIntentSelectionWindow.MayNotArriveInTime( Arg0 )
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -13868,6 +14223,12 @@ Return type: ActivityPulseEffect
 
 -----------------------
 
+ActivityLocaleWindow.GetLocaleBackground
+Definition type: Promote
+Return type: ActivityWindowBackgroundData
+
+-----------------------
+
 ActivityLocaleWindow.GetSelectedPhase
 Definition type: Promote
 Return type: PlannedActivityPhase
@@ -13952,7 +14313,19 @@ Return type: [unregistered]
 
 -----------------------
 
+ActivityLocaleWindow.GetIntentTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 ActivityLocaleWindow.GetLastWeeklyPulseEffectData
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ActivityLocaleWindow.GetLocaleBackground
 Definition type: Function
 Return type: [unregistered]
 
@@ -14929,9 +15302,15 @@ Return type: Province
 
 -----------------------
 
-ActivityPlannerMapIcon.GetTravelDangerIconData
+ActivityPlannerMapIcon.GetTravelDangerData
 Definition type: Promote
-Return type: TravelDangerTypeMapIconData
+Return type: TravelDangerMapIconData
+
+-----------------------
+
+ActivityPlannerMapIcon.GetTravelPointsOfInterestData
+Definition type: Promote
+Return type: TravelPointsOfInterestIconData
 
 -----------------------
 
@@ -14965,13 +15344,25 @@ Return type: CString
 
 -----------------------
 
-ActivityPlannerMapIcon.GetTravelDangerIconData
+ActivityPlannerMapIcon.GetTravelDangerData
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+ActivityPlannerMapIcon.GetTravelPointsOfInterestData
 Definition type: Function
 Return type: [unregistered]
 
 -----------------------
 
 ActivityPlannerMapIcon.HasTravelDanger
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ActivityPlannerMapIcon.HasTravelPointsOfInterest
 Definition type: Function
 Return type: bool
 
@@ -14990,6 +15381,12 @@ Return type: bool
 -----------------------
 
 ActivityPlannerMapIcon.IsSelectedDestination
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ActivityPlannerMapIcon.IsSelectingDestinations
 Definition type: Function
 Return type: bool
 
@@ -15374,6 +15771,12 @@ Return type: [unregistered]
 
 -----------------------
 
+ActivityType.GetPlannerType
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 ActivityType.GetProvinceDescription( Arg0, Arg1, Arg2 )
 Definition type: Function
 Return type: CString
@@ -15447,6 +15850,12 @@ Return type: bool
 -----------------------
 
 ActivityType.IsOpenInvite
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ActivityType.IsPlannerType( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -15580,6 +15989,12 @@ Return type: [unregistered]
 ActivityWindow.GetGuestSubsetKeys
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+ActivityWindow.GetIntentTooltip
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -18987,6 +19402,24 @@ Return type: CVector4f
 
 -----------------------
 
+BarbershopColorPickerHandler.GetColorChannels
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+BarbershopColorPickerHandler.GetHoveredIndex
+Definition type: Function
+Return type: CVector2i
+
+-----------------------
+
+BarbershopColorPickerHandler.HasMultipleColorChannels
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 BarbershopColorPickerHandler.PickColor
 Definition type: Function
 Return type: void
@@ -19002,6 +19435,12 @@ Return type: void
 BarbershopColorPickerHandler.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+BarbershopColorPickerHandler.SetColorChannel
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -20938,6 +21377,12 @@ Return type: [unregistered]
 
 -----------------------
 
+CActivityWindowBase.GetIntentTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 CActivityWindowBase.GetLastWeeklyPulseEffectData
 Definition type: Function
 Return type: [unregistered]
@@ -22096,6 +22541,12 @@ Return type: Date
 
 -----------------------
 
+Character.GetCourtType
+Definition type: Promote
+Return type: CourtType
+
+-----------------------
+
 Character.GetCulture
 Definition type: Promote
 Return type: Culture
@@ -22171,6 +22622,12 @@ Return type: FocusType
 Character.GetGovernment
 Definition type: Promote
 Return type: GovernmentType
+
+-----------------------
+
+Character.GetHomeCourt
+Definition type: Promote
+Return type: Character
 
 -----------------------
 
@@ -22312,6 +22769,12 @@ Return type: Character
 
 -----------------------
 
+Character.GetRealMother
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
 Character.GetRelationOfType( Arg0 )
 Definition type: Promote
 Return type: Character
@@ -22363,6 +22826,12 @@ Return type: VassalContract
 Character.GetVassalStance
 Definition type: Promote
 Return type: VassalStance
+
+-----------------------
+
+Character.GetWarden
+Definition type: Promote
+Return type: Character
 
 -----------------------
 
@@ -22530,7 +22999,7 @@ Return type: int32
 
 Character.GetAIBoldnessAsAffectedByPlayerDread
 Definition type: Function
-Return type: [unregistered]
+Return type: CFixedPoint
 
 -----------------------
 
@@ -23266,6 +23735,12 @@ Return type: CVector2f
 
 -----------------------
 
+Character.GetCourtType
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Character.GetCourtierLeaveDescription
 Definition type: Function
 Return type: CString
@@ -23398,6 +23873,12 @@ Return type: int32
 
 -----------------------
 
+Character.GetDiarchLoyaltyIconFrame
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 Character.GetDiarchLoyaltyLabel
 Definition type: Function
 Return type: CString
@@ -23496,7 +23977,7 @@ Return type: CFixedPoint
 
 Character.GetDreadBreakdown
 Definition type: Function
-Return type: [unregistered]
+Return type: CString
 
 -----------------------
 
@@ -24100,6 +24581,12 @@ Return type: CString
 
 -----------------------
 
+Character.GetHomeCourt
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Character.GetHookOn( Arg0 )
 Definition type: Function
 Return type: [unregistered]
@@ -24109,6 +24596,12 @@ Return type: [unregistered]
 Character.GetHookOrHookableSecretsFrame
 Definition type: Function
 Return type: int32
+
+-----------------------
+
+Character.GetHostageTooltip
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -24774,13 +25267,13 @@ Return type: CString
 
 Character.GetPlayerDreadEffectIconFrame
 Definition type: Function
-Return type: [unregistered]
+Return type: int32
 
 -----------------------
 
 Character.GetPlayerDreadEffectTooltip
 Definition type: Function
-Return type: [unregistered]
+Return type: CString
 
 -----------------------
 
@@ -24953,6 +25446,12 @@ Return type: [unregistered]
 -----------------------
 
 Character.GetRealFather
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Character.GetRealMother
 Definition type: Function
 Return type: [unregistered]
 
@@ -25684,9 +26183,21 @@ Return type: CFixedPoint
 
 -----------------------
 
+Character.GetTravelSafetyAptitudeBreakdown
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 Character.GetTravelSpeedAptitude
 Definition type: Function
 Return type: CFixedPoint
+
+-----------------------
+
+Character.GetTravelSpeedAptitudeBreakdown
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -25865,6 +26376,12 @@ Return type: CString
 -----------------------
 
 Character.GetVassals
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Character.GetWarden
 Definition type: Function
 Return type: [unregistered]
 
@@ -26260,6 +26777,12 @@ Return type: bool
 
 -----------------------
 
+Character.IsHostage
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Character.IsHouseHead
 Definition type: Function
 Return type: bool
@@ -26610,7 +27133,7 @@ Return type: [unregistered]
 
 Character.ShouldShowDreadEffectIcon
 Definition type: Function
-Return type: [unregistered]
+Return type: bool
 
 -----------------------
 
@@ -27115,6 +27638,18 @@ Return type: bool
 CharacterInteractionConfirmationWindow.Close
 Definition type: Function
 Return type: void
+
+-----------------------
+
+CharacterInteractionConfirmationWindow.GetAcceptanceBreakdown( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+CharacterInteractionConfirmationWindow.GetAcceptanceValue( Arg0 )
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -28873,6 +29408,12 @@ Definition type: Type
 
 -----------------------
 
+CharacterWindow.AccessCharacter
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
 CharacterWindow.GetCharacter
 Definition type: Promote
 Return type: Character
@@ -28906,6 +29447,12 @@ Return type: TraitArrays
 CharacterWindow.GetVassals
 Definition type: Promote
 Return type: CharacterSelectionList
+
+-----------------------
+
+CharacterWindow.AccessCharacter
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -29931,15 +30478,21 @@ Definition type: Type
 
 -----------------------
 
+CoatOfArmsDesignerEmblemInstancesPanel.AccessPagedEmblemInstanceData
+Definition type: Promote
+Return type: PagedContainerData
+
+-----------------------
+
 CoatOfArmsDesignerEmblemInstancesPanel.GetDetailEditCoAPreview
 Definition type: Promote
 Return type: DesignerCoA
 
 -----------------------
 
-CoatOfArmsDesignerEmblemInstancesPanel.GetPagedEmblemInstances
-Definition type: Promote
-Return type: CoatOfArmsDesignerPagedEmblemInstances
+CoatOfArmsDesignerEmblemInstancesPanel.AccessPagedEmblemInstanceData
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -30096,12 +30649,6 @@ Return type: [unregistered]
 CoatOfArmsDesignerEmblemInstancesPanel.GetMaxNumColorsForSelected
 Definition type: Function
 Return type: int32
-
------------------------
-
-CoatOfArmsDesignerEmblemInstancesPanel.GetPagedEmblemInstances
-Definition type: Function
-Return type: [unregistered]
 
 -----------------------
 
@@ -30327,65 +30874,6 @@ Return type: void
 CoatOfArmsDesignerEmblemTexture.Self
 Definition type: Function
 Return type: [unregistered]
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances
-Definition type: Type
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances.CanShowNextPage
-Definition type: Function
-Return type: bool
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances.CanShowPreviousPage
-Definition type: Function
-Return type: bool
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances.GetCurrentPage
-Definition type: Function
-Return type: int32
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances.GetEmblemInstances
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances.GetMaxPage
-Definition type: Function
-Return type: int32
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances.ShowNextPage
-Definition type: Function
-Return type: void
-
------------------------
-
-CoatOfArmsDesignerPagedEmblemInstances.ShowPreviousPage
-Definition type: Function
-Return type: void
 
 -----------------------
 
@@ -35665,6 +36153,12 @@ Definition type: Type
 
 -----------------------
 
+CreateAccoladeView.AccessKnightsView
+Definition type: Promote
+Return type: KnightsView
+
+-----------------------
+
 CreateAccoladeView.AccessMilitaryView
 Definition type: Promote
 Return type: MilitaryView
@@ -35674,6 +36168,12 @@ Return type: MilitaryView
 CreateAccoladeView.GetLiege
 Definition type: Promote
 Return type: Character
+
+-----------------------
+
+CreateAccoladeView.GetProgressBar
+Definition type: Promote
+Return type: ComplexBar
 
 -----------------------
 
@@ -35692,6 +36192,12 @@ Return type: AccoladeType
 CreateAccoladeView.GetSelectedSecondaryType
 Definition type: Promote
 Return type: AccoladeType
+
+-----------------------
+
+CreateAccoladeView.AccessKnightsView
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -35749,6 +36255,18 @@ Return type: CString
 
 -----------------------
 
+CreateAccoladeView.GetComplexBarRankIcon( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CreateAccoladeView.GetComplexBarRankTooltip( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 CreateAccoladeView.GetCreateAccoladeTooltip
 Definition type: Function
 Return type: CString
@@ -35762,6 +36280,12 @@ Return type: [unregistered]
 -----------------------
 
 CreateAccoladeView.GetPotentialTypes
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+CreateAccoladeView.GetProgressBar
 Definition type: Function
 Return type: [unregistered]
 
@@ -35840,6 +36364,12 @@ Return type: void
 -----------------------
 
 CreateAccoladeView.SubmitName
+Definition type: Function
+Return type: void
+
+-----------------------
+
+CreateAccoladeView.SwapSelectedAttributeTypes
 Definition type: Function
 Return type: void
 
@@ -39635,6 +40165,12 @@ Return type: CString
 
 -----------------------
 
+Dlc.GetEventDecoration
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Dlc.GetFeatures
 Definition type: Function
 Return type: CString
@@ -39659,6 +40195,12 @@ Return type: [unregistered]
 
 -----------------------
 
+Dlc.HasEventDecoration
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Dlc.HasIcon
 Definition type: Function
 Return type: [unregistered]
@@ -39678,6 +40220,12 @@ Return type: bool
 -----------------------
 
 Dlc.IsMajor
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+Dlc.IsValid
 Definition type: Function
 Return type: bool
 
@@ -41756,6 +42304,12 @@ Return type: Artifact
 
 -----------------------
 
+EventWindowData.GetContentSourceDlc
+Definition type: Promote
+Return type: Dlc
+
+-----------------------
+
 EventWindowData.GetEventBackgroundData
 Definition type: Promote
 Return type: EventWindowBackgroundData
@@ -41799,6 +42353,12 @@ Return type: [unregistered]
 -----------------------
 
 EventWindowData.GetArtifact( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+EventWindowData.GetContentSourceDlc
 Definition type: Function
 Return type: [unregistered]
 
@@ -41979,6 +42539,12 @@ Return type: [unregistered]
 -----------------------
 
 EventWindowData.ShouldHideImprisonment( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+EventWindowData.ShouldShowContentSource
 Definition type: Function
 Return type: bool
 
@@ -42479,15 +43045,21 @@ Return type: [unregistered]
 
 -----------------------
 
-FactionCharacterMember.CalcPower
+FactionCharacterMember.CalcJoinBreakdown
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FactionCharacterMember.CalcJoinScore
 Definition type: Function
 Return type: CFixedPoint
 
 -----------------------
 
-FactionCharacterMember.GetTooltip
+FactionCharacterMember.CalcPower
 Definition type: Function
-Return type: CString
+Return type: CFixedPoint
 
 -----------------------
 
@@ -42523,6 +43095,18 @@ Return type: Title
 FactionCountyMember.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+FactionCountyMember.CalcJoinBreakdown
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FactionCountyMember.CalcJoinScore
+Definition type: Function
+Return type: CFixedPoint
 
 -----------------------
 
@@ -46868,6 +47452,12 @@ Return type: CString
 
 -----------------------
 
+GameDialog.GetClickSound
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 GameDialog.GetDescription
 Definition type: Function
 Return type: CString
@@ -50030,6 +50620,12 @@ Return type: Building
 
 -----------------------
 
+Holding.GetCurrentSpecialBuildingType
+Definition type: Promote
+Return type: Building
+
+-----------------------
+
 Holding.GetDuchyBuildingType
 Definition type: Promote
 Return type: Building
@@ -50057,6 +50653,12 @@ Return type: Building
 Holding.GetProvince
 Definition type: Promote
 Return type: Province
+
+-----------------------
+
+Holding.GetSpecialBuildingType
+Definition type: Promote
+Return type: Building
 
 -----------------------
 
@@ -50099,6 +50701,12 @@ Return type: [unregistered]
 Holding.GetCurrentGarrisonSize
 Definition type: Function
 Return type: int32
+
+-----------------------
+
+Holding.GetCurrentSpecialBuildingType
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -50169,6 +50777,12 @@ Return type: [unregistered]
 -----------------------
 
 Holding.GetProvince
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Holding.GetSpecialBuildingType
 Definition type: Function
 Return type: [unregistered]
 
@@ -51267,6 +51881,197 @@ Return type: bool
 Hook.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+HostageExchangeWindow
+Definition type: Type
+
+-----------------------
+
+HostageExchangeWindow.GetActor
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
+HostageExchangeWindow.GetCharacterList
+Definition type: Promote
+Return type: CharacterSelectionList
+
+-----------------------
+
+HostageExchangeWindow.GetDemandCharacter
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
+HostageExchangeWindow.GetOfferCharacter
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
+HostageExchangeWindow.GetRecipient
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
+HostageExchangeWindow.GetSecondaryActor
+Definition type: Promote
+Return type: Character
+
+-----------------------
+
+HostageExchangeWindow.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+HostageExchangeWindow.CanClear
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+HostageExchangeWindow.CanExchangeHostage
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+HostageExchangeWindow.CanSend
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+HostageExchangeWindow.Close
+Definition type: Function
+Return type: void
+
+-----------------------
+
+HostageExchangeWindow.GetAcceptanceTooltipBreakdown( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+HostageExchangeWindow.GetActionInfo
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+HostageExchangeWindow.GetActor
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+HostageExchangeWindow.GetCharacterList
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+HostageExchangeWindow.GetDemandCharacter
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+HostageExchangeWindow.GetHeader
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+HostageExchangeWindow.GetHostageAcceptanceValue( Arg0 )
+Definition type: Function
+Return type: CFixedPoint
+
+-----------------------
+
+HostageExchangeWindow.GetLabelLeft
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+HostageExchangeWindow.GetLabelRight
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+HostageExchangeWindow.GetOfferCharacter
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+HostageExchangeWindow.GetRecipient
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+HostageExchangeWindow.GetSecondaryActor
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+HostageExchangeWindow.HasSelectedDemandCharacter
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+HostageExchangeWindow.HasSelectedOfferCharacter
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+HostageExchangeWindow.IsOpen
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+HostageExchangeWindow.OnClear
+Definition type: Function
+Return type: void
+
+-----------------------
+
+HostageExchangeWindow.OpenDemandHostage
+Definition type: Function
+Return type: void
+
+-----------------------
+
+HostageExchangeWindow.OpenOfferHostage
+Definition type: Function
+Return type: void
+
+-----------------------
+
+HostageExchangeWindow.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+HostageExchangeWindow.Send
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -54484,6 +55289,18 @@ Return type: [unregistered]
 
 -----------------------
 
+KnightsView.CanBeAcclaimedKnight( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+KnightsView.CanBeAcclaimedKnightDesc( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 KnightsView.Close
 Definition type: Function
 Return type: void
@@ -54517,6 +55334,24 @@ Return type: [unregistered]
 KnightsView.GetNumLockedAccoladeSlots( Arg0 )
 Definition type: Function
 Return type: int32
+
+-----------------------
+
+KnightsView.GetPotentialAccoladeTypes( Arg0 )
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+KnightsView.HasCachedPotentialAcclaimedKnights
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+KnightsView.HasPotentialAccolade( Arg0 )
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -54711,6 +55546,12 @@ Definition type: Type
 LawGroup.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+LawGroup.GetKey
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -56762,6 +57603,12 @@ Return type: bool
 
 -----------------------
 
+MenAtArmsType.IsValid
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 MenAtArmsType.Self
 Definition type: Function
 Return type: [unregistered]
@@ -58436,6 +59283,18 @@ Return type: void
 MyRealmWindow.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+MyRealmWindow.SendButtonClickedTelemetry( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MyRealmWindow.SendTabClickedTelemetry( Arg0 )
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -61051,6 +61910,12 @@ Return type: [unregistered]
 Province.GetTravelDangerTooltip( Arg0 )
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+Province.GetTravelPointsOfInterest
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -64790,6 +65655,12 @@ Return type: CString
 SAICBTypeInfo.GetScoreTooltip
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+SAICBTypeInfo.HasHostages
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -70243,9 +71114,9 @@ Return type: [unregistered]
 
 -----------------------
 
-TraditionGrouping.GetGroupingKey
+TraditionGrouping.GetCategory
 Definition type: Function
-Return type: CString
+Return type: [unregistered]
 
 -----------------------
 
@@ -70721,6 +71592,47 @@ Return type: void
 
 -----------------------
 
+TravelDangerMapIconData
+Definition type: Type
+
+-----------------------
+
+TravelDangerMapIconData.GetDangerType
+Definition type: Promote
+Return type: TravelDangerType
+
+-----------------------
+
+TravelDangerMapIconData.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelDangerMapIconData.GetDangerType
+Definition type: Function
+Return type: TravelDangerType
+
+-----------------------
+
+TravelDangerMapIconData.IsDangerous
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TravelDangerMapIconData.IsUnsafe
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TravelDangerMapIconData.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 TravelDangerType
 Definition type: Type
 
@@ -70757,76 +71669,6 @@ Return type: CString
 -----------------------
 
 TravelDangerType.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-TravelDangerTypeMapIcon
-Definition type: Type
-
------------------------
-
-TravelDangerTypeMapIcon.GetData
-Definition type: Promote
-Return type: TravelDangerTypeMapIconData
-
------------------------
-
-TravelDangerTypeMapIcon.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-TravelDangerTypeMapIcon.GetData
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-TravelDangerTypeMapIcon.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-TravelDangerTypeMapIconData
-Definition type: Type
-
------------------------
-
-TravelDangerTypeMapIconData.GetDangerType
-Definition type: Promote
-Return type: TravelDangerType
-
------------------------
-
-TravelDangerTypeMapIconData.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-TravelDangerTypeMapIconData.GetDangerType
-Definition type: Function
-Return type: TravelDangerType
-
------------------------
-
-TravelDangerTypeMapIconData.IsDangerous
-Definition type: Function
-Return type: bool
-
------------------------
-
-TravelDangerTypeMapIconData.IsUnsafe
-Definition type: Function
-Return type: bool
-
------------------------
-
-TravelDangerTypeMapIconData.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -71797,6 +72639,171 @@ Return type: void
 TravelPlanner.ToggleEntourageListWindow
 Definition type: Function
 Return type: void
+
+-----------------------
+
+TravelPointOfInterestType
+Definition type: Type
+
+-----------------------
+
+TravelPointOfInterestType.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelPointOfInterestType.GetDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TravelPointOfInterestType.GetIcon
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelPointOfInterestType.GetName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TravelPointOfInterestType.GetNameNoTooltip
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TravelPointOfInterestType.HasIcon
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelPointOfInterestType.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelPointsOfInterestIconData
+Definition type: Type
+
+-----------------------
+
+TravelPointsOfInterestIconData.GetProvince
+Definition type: Promote
+Return type: Province
+
+-----------------------
+
+TravelPointsOfInterestIconData.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelPointsOfInterestIconData.GetDescription
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+TravelPointsOfInterestIconData.GetIcon
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelPointsOfInterestIconData.GetProvince
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelPointsOfInterestIconData.HasMultiplePointsOfInterest
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TravelPointsOfInterestIconData.HasUnvisitedPointOfInterest
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TravelPointsOfInterestIconData.IsOnTravelRoute
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TravelPointsOfInterestIconData.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelProvinceMapIcon
+Definition type: Type
+
+-----------------------
+
+TravelProvinceMapIcon.GetDangerData
+Definition type: Promote
+Return type: TravelDangerMapIconData
+
+-----------------------
+
+TravelProvinceMapIcon.GetPointsOfInterestData
+Definition type: Promote
+Return type: TravelPointsOfInterestIconData
+
+-----------------------
+
+TravelProvinceMapIcon.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelProvinceMapIcon.GetDangerData
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelProvinceMapIcon.GetPointsOfInterestData
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+TravelProvinceMapIcon.HasDanger
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TravelProvinceMapIcon.HasPointsOfInterest
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TravelProvinceMapIcon.IsCurrentLocation
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+TravelProvinceMapIcon.Self
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -73404,6 +74411,12 @@ Definition type: Type
 
 -----------------------
 
+WarOverviewWindow.GetHostageExchangeWindow
+Definition type: Promote
+Return type: HostageExchangeWindow
+
+-----------------------
+
 WarOverviewWindow.GetLeftSideComposition
 Definition type: Promote
 Return type: ArmyComposition
@@ -73494,6 +74507,12 @@ Return type: void
 
 -----------------------
 
+WarOverviewWindow.DoesAllowHostages
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 WarOverviewWindow.GetAnswer
 Definition type: Function
 Return type: CString
@@ -73551,6 +74570,12 @@ Return type: CString
 WarOverviewWindow.GetCurrentTabMainOutputDescription
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+WarOverviewWindow.GetHostageExchangeWindow
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 

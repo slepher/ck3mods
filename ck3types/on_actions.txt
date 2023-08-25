@@ -86,6 +86,12 @@ Expected Scope: character
 
 --------------------
 
+ongoing_rock_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 fp2_lyonese_monk_events_cycle:
 From Code: No
 Expected Scope: none
@@ -95,6 +101,12 @@ Expected Scope: none
 book_translation_story_events:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_hostage_depart_travel_planner_exit:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -161,6 +173,12 @@ Expected Scope: none
 wedding_ceremony_ending_event_pulse:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_guardian_depart_for_home:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -296,6 +314,12 @@ Expected Scope: character
 
 --------------------
 
+destiny_child_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 stewardship_duty_special_2000_mediation_stage_2:
 From Code: No
 Expected Scope: character
@@ -303,6 +327,12 @@ Expected Scope: character
 --------------------
 
 ongoing_doppelganger_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+organize_levies_monthly_on_action:
 From Code: No
 Expected Scope: character
 
@@ -602,6 +632,12 @@ Expected Scope: character
 
 --------------------
 
+reincarnation_toy_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 on_county_faith_change:
 From Code: Yes
 Expected Scope: landed_title
@@ -674,6 +710,12 @@ Expected Scope: character
 
 --------------------
 
+imaginary_friend_adult_angel_on_action:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 random_yearly_playable_pulse:
 From Code: Yes
 Expected Scope: character
@@ -688,6 +730,12 @@ Expected Scope: army
 
 on_death:
 From Code: Yes
+Expected Scope: character
+
+--------------------
+
+commander_death_events_pulse:
+From Code: No
 Expected Scope: character
 
 --------------------
@@ -728,6 +776,12 @@ Expected Scope: none
 
 --------------------
 
+adult_education_arrival_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 stress_pulse:
 From Code: No
 Expected Scope: none
@@ -740,7 +794,19 @@ Expected Scope: character
 
 --------------------
 
+on_hostage_invalidated:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 on_tour_grounds_vassal:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+bp2_child_pulse:
 From Code: No
 Expected Scope: character
 
@@ -752,6 +818,12 @@ Expected Scope: none
 
 --------------------
 
+bp2_adult_followups:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 learn_commander_trait_offer:
 From Code: No
 Expected Scope: character
@@ -760,6 +832,12 @@ Expected Scope: character
 
 on_betrothal_broken:
 From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_death_relation_nursed_child:
+From Code: No
 Expected Scope: none
 
 --------------------
@@ -863,6 +941,12 @@ Expected Scope: character
 inspiration_maintenance_quarterly_pulse:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_hostage_depart_for_home_court:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -1202,6 +1286,12 @@ Expected Scope: character
 
 --------------------
 
+on_hostage_depart_for_warden:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_great_holy_war_invalidation:
 From Code: Yes
 Expected Scope: ghw
@@ -1268,6 +1358,12 @@ Expected Scope: character
 
 --------------------
 
+increase_control_monthly_on_action:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 random_yearly_everyone_pulse:
 From Code: Yes
 Expected Scope: character
@@ -1288,6 +1384,12 @@ Expected Scope: character
 
 on_accolade_successor_death:
 From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_hostage_arrive_at_warden:
+From Code: No
 Expected Scope: none
 
 --------------------
@@ -1317,6 +1419,12 @@ Expected Scope: character
 --------------------
 
 ongoing_cat_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+imaginary_friend_adult_devil_on_action:
 From Code: No
 Expected Scope: character
 
@@ -1503,6 +1611,12 @@ Expected Scope: character
 --------------------
 
 manage_guards_marshal_task_side_effects:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+imaginary_friend_childhood_on_action:
 From Code: No
 Expected Scope: character
 
@@ -2078,7 +2192,19 @@ Expected Scope: character
 
 --------------------
 
+on_travel_activity_estimated_arrival_too_late:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 befriend_success:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+ongoing_foreign_raised_reformer_events:
 From Code: No
 Expected Scope: character
 
@@ -2091,6 +2217,12 @@ Expected Scope: character
 --------------------
 
 stewardship_lifestyle_progress_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
+wet_nurse_pulse:
 From Code: No
 Expected Scope: character
 
@@ -2180,6 +2312,12 @@ Expected Scope: character
 
 --------------------
 
+on_ward_arrive_at_home:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 stress_loss_irritable:
 From Code: No
 Expected Scope: character
@@ -2252,9 +2390,21 @@ Expected Scope: character
 
 --------------------
 
+ongoing_hostage_loyalty_events:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 petition_liege_start:
 From Code: No
 Expected Scope: none
+
+--------------------
+
+on_hostage_released:
+From Code: Yes
+Expected Scope: character
 
 --------------------
 
@@ -2339,6 +2489,12 @@ Expected Scope: character
 stress_loss_comfort_eater:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_ward_arrive_at_guardian:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -2534,6 +2690,12 @@ Expected Scope: character
 
 --------------------
 
+on_hostage_taken:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 pilgrimage_generic_travel_events:
 From Code: No
 Expected Scope: character
@@ -2558,6 +2720,12 @@ Expected Scope: character
 
 --------------------
 
+on_ward_depart_for_guardian:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 task_increase_control_side_effects:
 From Code: No
 Expected Scope: character
@@ -2573,6 +2741,12 @@ Expected Scope: character
 on_dynasty_created:
 From Code: Yes
 Expected Scope: none
+
+--------------------
+
+adult_education_destination_events:
+From Code: No
+Expected Scope: character
 
 --------------------
 
@@ -2666,6 +2840,12 @@ Expected Scope: none
 
 --------------------
 
+on_guardian_depart_for_ward:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 on_culture_created:
 From Code: Yes
 Expected Scope: none
@@ -2750,6 +2930,12 @@ Expected Scope: character
 
 --------------------
 
+on_ward_depart_travel_planner_exit:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 learning_lifestyle_unavailable_events:
 From Code: No
 Expected Scope: none
@@ -2762,9 +2948,21 @@ Expected Scope: none
 
 --------------------
 
+on_set_relation_crush:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 tournament_intent_setup_events:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_guardian_arrive_at_ward:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -2807,6 +3005,12 @@ Expected Scope: none
 befriend_critical_failure:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_ward_depart_for_home:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -2930,6 +3134,12 @@ Expected Scope: character
 
 --------------------
 
+on_travel_activity_arrival_too_late:
+From Code: Yes
+Expected Scope: none
+
+--------------------
+
 court_outcome:
 From Code: No
 Expected Scope: character
@@ -2966,6 +3176,12 @@ Expected Scope: none
 
 --------------------
 
+bp2_parent_guardian_hostage_taker_pulse:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 seduce_failure:
 From Code: No
 Expected Scope: character
@@ -2981,6 +3197,12 @@ Expected Scope: character
 stewardship_lifestyle_domesday:
 From Code: No
 Expected Scope: character
+
+--------------------
+
+on_hostage_arrive_at_home_court:
+From Code: No
+Expected Scope: none
 
 --------------------
 
@@ -3110,6 +3332,12 @@ Expected Scope: character
 
 --------------------
 
+on_guardian_depart_travel_planner_exit:
+From Code: No
+Expected Scope: none
+
+--------------------
+
 fabricate_hook_method_success_outcome:
 From Code: No
 Expected Scope: character
@@ -3188,6 +3416,12 @@ Expected Scope: character
 
 --------------------
 
+on_visited_grand_city:
+From Code: No
+Expected Scope: character
+
+--------------------
+
 diarchy_mandate_fill_coffers_random:
 From Code: No
 Expected Scope: character
@@ -3232,4 +3466,10 @@ Expected Scope: none
 
 on_game_start_with_tutorial:
 From Code: Yes
+Expected Scope: none
+
+--------------------
+
+on_guardian_arrive_at_home:
+From Code: No
 Expected Scope: none

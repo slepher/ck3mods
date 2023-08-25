@@ -5,28 +5,28 @@ Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: none
-Stores Variables: yes
+Stores Variables: no
 
 value:
 Evaluate Triggers: no
 Execute Effects: no
 Change Scopes: no
 Save Token: value
-Stores Variables: yes
+Stores Variables: no
 
 boolean:
 Evaluate Triggers: no
 Execute Effects: no
 Change Scopes: no
 Save Token: boolean
-Stores Variables: yes
+Stores Variables: no
 
 flag:
 Evaluate Triggers: no
 Execute Effects: no
 Change Scopes: no
 Save Token: flag
-Stores Variables: yes
+Stores Variables: no
 
 character:
 Evaluate Triggers: yes
@@ -89,7 +89,7 @@ Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: tvc
-Stores Variables: yes
+Stores Variables: no
 
 faith:
 Evaluate Triggers: yes
@@ -131,7 +131,7 @@ Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: cb
-Stores Variables: yes
+Stores Variables: no
 
 dynasty:
 Evaluate Triggers: yes
@@ -173,21 +173,21 @@ Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: ho
-Stores Variables: yes
+Stores Variables: no
 
 council_task:
 Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: council_task
-Stores Variables: yes
+Stores Variables: no
 
 mercenary_company:
 Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: mc
-Stores Variables: yes
+Stores Variables: no
 
 artifact:
 Evaluate Triggers: yes
@@ -236,68 +236,68 @@ Evaluate Triggers: yes
 Execute Effects: no
 Change Scopes: yes
 Save Token: accolade_type
-Stores Variables: yes
+Stores Variables: no
 
 decision:
 Evaluate Triggers: yes
 Execute Effects: no
 Change Scopes: yes
 Save Token: decision
-Stores Variables: yes
+Stores Variables: no
 
 doctrine:
 Evaluate Triggers: yes
 Execute Effects: no
 Change Scopes: yes
 Save Token: doctrine
-Stores Variables: yes
+Stores Variables: no
 
 activity_type:
 Evaluate Triggers: yes
 Execute Effects: no
 Change Scopes: yes
 Save Token: activity_type
-Stores Variables: yes
+Stores Variables: no
 
 culture_tradition:
 Evaluate Triggers: yes
 Execute Effects: no
 Change Scopes: yes
 Save Token: culture_tradition
-Stores Variables: yes
+Stores Variables: no
 
 culture_pillar:
 Evaluate Triggers: yes
 Execute Effects: no
 Change Scopes: yes
 Save Token: culture_pillar
-Stores Variables: yes
+Stores Variables: no
 
 government_type:
 Evaluate Triggers: yes
 Execute Effects: no
 Change Scopes: yes
 Save Token: government_type
-Stores Variables: yes
+Stores Variables: no
 
 trait:
 Evaluate Triggers: yes
 Execute Effects: no
 Change Scopes: yes
 Save Token: trait
-Stores Variables: yes
+Stores Variables: no
 
 vassal_contract:
 Evaluate Triggers: yes
 Execute Effects: no
 Change Scopes: yes
 Save Token: vassal_contract
-Stores Variables: yes
+Stores Variables: no
 
 vassal_contract_obligation_level:
 Evaluate Triggers: yes
 Execute Effects: yes
 Change Scopes: yes
 Save Token: vcol
-Stores Variables: yes
+Stores Variables: no
 

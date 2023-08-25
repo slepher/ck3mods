@@ -2,6 +2,29 @@ Custom Localization Documentation:
 
 --------------------
 
+GetFaithSacredLanguage:
+
+Scope: all
+Random Valid: no
+
+Entries:
+language_latin_name
+language_occitano_romance_name
+language_aramaic_name
+language_armenian_name
+language_greek_name
+language_hebrew_name
+language_arabic_name
+language_avestan_name
+language_pali_name
+language_classical_tibetan_name
+language_chinese_name
+language_sanskrit_name
+language_greek_name
+fallback_liturgical_province_language
+
+--------------------
+
 GetAnimalType:
 
 Scope: all
@@ -637,127 +660,6 @@ Entries:
 animal_type_hawk_plural
 animal_type_falcon_plural
 animal_type_raptor_plural
-
---------------------
-
-GetAnimalType_DE_1:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_1
-
-Entries:
-
---------------------
-
-GetAnimalType_DE_2:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_2
-
-Entries:
-
---------------------
-
-GetAnimalType_DE_3:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_3
-
-Entries:
-
---------------------
-
-GetAnimalType_DE_4:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_4
-
-Entries:
-
---------------------
-
-GetAnimalType_DE_Plural:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_Plural
-
-Entries:
-
---------------------
-
-LocalAnimal_DE_ART_DEF_S_N:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_ART_DEF_S_N
-
-Entries:
-
---------------------
-
-LocalAnimal_DE_1:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_1
-
-Entries:
-
---------------------
-
-LocalAnimal_DE_2:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_2
-
-Entries:
-
---------------------
-
-LocalAnimal_DE_3:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_3
-
-Entries:
-
---------------------
-
-LocalAnimal_DE_4:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_4
-
-Entries:
-
---------------------
-
-LocalAnimal_DE_Plural:
-
-Scope: all
-Random Valid: no
-Parent: GetAnimalType
-Suffix: _DE_Plural
-
-Entries:
 
 --------------------
 
@@ -1834,6 +1736,468 @@ Scope: all
 Random Valid: no
 Parent: GetAnimalTypeMismanaged
 Suffix: _DE_END_ADJ_DEF_S_A
+
+Entries:
+
+--------------------
+
+GetAnimalPlural_DE_DAT:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalPlural
+Suffix: _DE_DAT
+
+Entries:
+
+--------------------
+
+FR_Le_GetAnimalType:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalType
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetAnimalType:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalType
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetAnimalType:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalType
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetAnimalType:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalType
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetAnimalType:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalType
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Color_GetAnimalType:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalType
+Suffix: _FR_Color
+
+Entries:
+
+--------------------
+
+FR_Le_GetAnimalTypeCaptive:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeCaptive
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetAnimalTypeCaptive:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeCaptive
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetAnimalTypeCaptive:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeCaptive
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetAnimalTypeCaptive:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeCaptive
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetAnimalTypeCaptive:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeCaptive
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Le_GetAnimalTypeGamebird:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeGamebird
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetAnimalTypeGamebird:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeGamebird
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetAnimalTypeGamebird:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeGamebird
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetAnimalTypeGamebird:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeGamebird
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetAnimalTypeGamebird:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeGamebird
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Le_GetAnimalTypeKill:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeKill
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetAnimalTypeKill:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeKill
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetAnimalTypeKill:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeKill
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetAnimalTypeKill:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeKill
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetAnimalTypeKill:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeKill
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Le_GetAnimalTypeMismanaged:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeMismanaged
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetAnimalTypeMismanaged:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeMismanaged
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetAnimalTypeMismanaged:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeMismanaged
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetAnimalTypeMismanaged:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeMismanaged
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetAnimalTypeMismanaged:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeMismanaged
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Le_GetAnimalTypeTame:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeTame
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetAnimalTypeTame:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeTame
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetAnimalTypeTame:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeTame
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetAnimalTypeTame:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeTame
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetAnimalTypeTame:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeTame
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Le_GetAnimalTypeWaterfowl:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeWaterfowl
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetAnimalTypeWaterfowl:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeWaterfowl
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetAnimalTypeWaterfowl:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeWaterfowl
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetAnimalTypeWaterfowl:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeWaterfowl
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetAnimalTypeWaterfowl:
+
+Scope: all
+Random Valid: no
+Parent: GetAnimalTypeWaterfowl
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Le_GetRaptorType:
+
+Scope: all
+Random Valid: no
+Parent: GetRaptorType
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetRaptorType:
+
+Scope: all
+Random Valid: no
+Parent: GetRaptorType
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetRaptorType:
+
+Scope: all
+Random Valid: no
+Parent: GetRaptorType
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetRaptorType:
+
+Scope: all
+Random Valid: no
+Parent: GetRaptorType
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetRaptorType:
+
+Scope: all
+Random Valid: no
+Parent: GetRaptorType
+Suffix: _FR_E
 
 Entries:
 
@@ -3399,6 +3763,21 @@ bg_randomfacialexpression_quailing
 
 --------------------
 
+BG_GameType_Generic:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+bg_gametype_pachisi
+bg_gametype_hnefatafl
+bg_gametype_tabula
+bg_gametype_go
+bg_gametype_fidchell
+bg_gametype_chess
+
+--------------------
+
 HandHands:
 
 Scope: character
@@ -3975,6 +4354,17 @@ stick_horse_plural
 
 --------------------
 
+GetChildChildren:
+
+Scope: character
+Random Valid: no
+
+Entries:
+child_children_singular
+child_children_plural
+
+--------------------
+
 ComplimentAdjective:
 
 Scope: character
@@ -4191,14 +4581,28 @@ Random Valid: yes
 Entries:
 education_conversation_subject_martial_1
 education_conversation_subject_martial_2
+education_conversation_subject_martial_3
 education_conversation_subject_diplomacy_1
 education_conversation_subject_diplomacy_2
+education_conversation_subject_diplomacy_3
+education_conversation_subject_diplomacy_4
 education_conversation_subject_learning_1
 education_conversation_subject_learning_2
+education_conversation_subject_learning_3
+education_conversation_subject_learning_4
+education_conversation_subject_learning_5
+education_conversation_subject_learning_6
+education_conversation_subject_learning_7
 education_conversation_subject_stewardship_1
 education_conversation_subject_stewardship_2
+education_conversation_subject_stewardship_3
+education_conversation_subject_stewardship_4
+education_conversation_subject_stewardship_5
+education_conversation_subject_stewardship_6
 education_conversation_subject_intrigue_1
 education_conversation_subject_intrigue_2
+education_conversation_subject_intrigue_3
+education_conversation_subject_intrigue_4
 
 --------------------
 
@@ -7345,22 +7749,55 @@ trait_education_diplomacy_1
 trait_education_diplomacy_2
 trait_education_diplomacy_3
 trait_education_diplomacy_4
+trait_education_diplomacy_5
 trait_education_martial_1
 trait_education_martial_2
 trait_education_martial_3
 trait_education_martial_4
+trait_education_martial_5
 trait_education_stewardship_1
 trait_education_stewardship_2
 trait_education_stewardship_3
 trait_education_stewardship_4
+trait_education_stewardship_5
 trait_education_intrigue_1
 trait_education_intrigue_2
 trait_education_intrigue_3
 trait_education_intrigue_4
+trait_education_intrigue_5
 trait_education_learning_1
 trait_education_learning_2
 trait_education_learning_3
 trait_education_learning_4
+trait_education_learning_5
+
+--------------------
+
+GetChildEducationFocus:
+
+Scope: character
+Random Valid: no
+
+Entries:
+diplomatic_education
+martial_education
+stewardship_education
+intrigue_education
+learning_education
+
+--------------------
+
+GetEducationTraitConcept:
+
+Scope: character
+Random Valid: no
+
+Entries:
+diplomacy_concept
+martial_concept
+stewardship_concept
+intrigue_concept
+learning_concept
 
 --------------------
 
@@ -9310,6 +9747,18 @@ medic_barber
 
 --------------------
 
+GetRandomCourtMedic:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+medic_doctor
+medic_physic
+medic_surgeon
+
+--------------------
+
 get_hold_court_8001_flaw:
 
 Scope: character
@@ -9497,7 +9946,6 @@ banbury_cheese
 bampot
 pervert
 debaucher
-venemous_animal_loc
 fool
 kumquat
 
@@ -9747,6 +10195,32 @@ harlot
 bedswerver
 pig
 skirt_chaser
+
+--------------------
+
+InsultNounClumsy:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+insult_noun_clumsy_oaf
+insult_noun_clumsy_buffoon
+insult_noun_clumsy_dimwit
+insult_noun_clumsy_nimrod
+
+--------------------
+
+InsultAdjectiveClumsy:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+insult_adjective_clumsy_clumsy
+insult_adjective_clumsy_stumbling
+insult_adjective_clumsy_blundering
+insult_adjective_clumsy_fumbling
 
 --------------------
 
@@ -10979,6 +11453,29 @@ Random Valid: no
 Entries:
 IberiaRomanceLanguage_castilian
 IberiaRomanceLanguage_mozarabic
+
+--------------------
+
+GetFaithSacredLanguageCharacter:
+
+Scope: character
+Random Valid: no
+
+Entries:
+language_latin_name
+language_occitano_romance_name
+language_aramaic_name
+language_armenian_name
+language_greek_name
+language_hebrew_name
+language_arabic_name
+language_avestan_name
+language_pali_name
+language_classical_tibetan_name
+language_chinese_name
+language_sanskrit_name
+language_greek_name
+fallback_liturgical_character_language
 
 --------------------
 
@@ -13320,6 +13817,7 @@ cat_name_snow
 cat_name_shadow
 cat_name_paws
 cat_name_mittens
+cat_name_spooky
 
 --------------------
 
@@ -15206,6 +15704,20 @@ body_of_water_a_watering_hole
 
 --------------------
 
+IndefiniteBodyOfWater_Static:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+body_of_water_an_oasis
+body_of_water_a_large_pond
+body_of_water_a_lagoon
+body_of_water_a_lake
+body_of_water_a_watering_hole
+
+--------------------
+
 RandomExampleName:
 
 Scope: character
@@ -15697,6 +16209,8 @@ relation_niece
 relation_nephew
 relation_aunt
 relation_uncle
+relation_hostage
+relation_warden
 relation_concubine_female
 relation_concubine_male
 relation_religious_head
@@ -15811,6 +16325,8 @@ relation_court_gardener_female
 relation_court_gardener_male
 relation_chief_qadi_female
 relation_chief_qadi_male
+relation_wet_nurse_female
+relation_wet_nurse_male
 relation_vassal_female
 relation_vassal_male
 relation_knight
@@ -15896,6 +16412,8 @@ relation_niece_possessive
 relation_nephew_possessive
 relation_aunt_possessive
 relation_uncle_possessive
+relation_hostage_possessive
+relation_warden_possessive
 relation_concubine_female_possessive
 relation_concubine_male_possessive
 relation_grandmother_possessive
@@ -16012,6 +16530,8 @@ relation_court_gardener_female_possessive
 relation_court_gardener_male_possessive
 relation_chief_qadi_female_possessive
 relation_chief_qadi_male_possessive
+relation_wet_nurse_female_possessive
+relation_wet_nurse_male_possessive
 relation_kinswoman_possessive
 relation_kinsman_possessive
 relation_courtier_female_possessive
@@ -16062,8 +16582,6 @@ relation_sonhusband
 relation_son_consort
 relation_wife
 relation_husband
-relation_wife
-relation_husband
 relation_mother
 relation_father
 relation_daughter
@@ -16078,6 +16596,8 @@ relation_niece
 relation_nephew
 relation_aunt
 relation_uncle
+relation_hostage
+relation_warden
 relation_concubine_female
 relation_concubine_male
 relation_great_grandmother
@@ -16225,6 +16745,8 @@ relation_niece
 relation_nephew
 relation_aunt
 relation_uncle
+relation_hostage
+relation_warden
 relation_cousin
 relation_cousin_female
 
@@ -16717,6 +17239,41 @@ Random Valid: no
 Entries:
 relation_niece
 relation_nephew
+
+--------------------
+
+GetAuntieUncle:
+
+Scope: character
+Random Valid: no
+
+Entries:
+relation_auntie
+relation_uncle
+
+--------------------
+
+GetMumDad:
+
+Scope: character
+Random Valid: no
+
+Entries:
+mother_mum
+father_dad
+
+--------------------
+
+GetWomanManGirlBoy:
+
+Scope: character
+Random Valid: no
+
+Entries:
+CHARACTER_WOMAN
+CHARACTER_MAN
+girl
+boy
 
 --------------------
 
@@ -19979,7 +20536,6 @@ animal_maneuver
 plough_maneuver
 hurricane_maneuver
 dangerous_animal_maneuver
-venomous_animal_maneuver
 knot_maneuver
 
 --------------------
@@ -20409,6 +20965,36 @@ council_toledo_unlanded_desc
 
 --------------------
 
+PrestigeLevelText:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+prestige_level_0
+prestige_level_1
+prestige_level_2
+prestige_level_3
+prestige_level_4
+prestige_level_5
+
+--------------------
+
+PietyLevelText:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+piety_level_0
+piety_level_1
+piety_level_2
+piety_level_3
+piety_level_4
+piety_level_5
+
+--------------------
+
 AccoladeRankFlavorNumber:
 
 Scope: character
@@ -20448,6 +21034,20 @@ invite_to_activity_flavor_playdate
 invite_to_activity_flavor_witch_ritual
 invite_to_activity_flavor_gruesome_festival
 invite_to_activity_flavor_fallback
+
+--------------------
+
+GetTournamentPrizeFlavor:
+
+Scope: character
+Random Valid: no
+
+Entries:
+tournament_invite_flavor_bad_prizes
+tournament_invite_flavor_normal_prizes
+tournament_invite_flavor_good_prizes
+tournament_invite_flavor_very_good_prizes
+tournament_invite_flavor_splendid_prizes
 
 --------------------
 
@@ -21126,6 +21726,254 @@ Entries:
 hunt_martial_gender_female
 hunt_martial_gender_male
 hunt_martial_gender_equal
+
+--------------------
+
+GetPrettyAdjective:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+pretty
+comely
+radiant
+handsome
+striking
+fetching
+winsome
+fair
+
+--------------------
+
+GetSheHeOpposite:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+CHARACTER_SHEHE_HE
+CHARACTER_SHEHE_SHE
+
+--------------------
+
+GetHerHisOpposite:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+CHARACTER_HERHIS_HIS
+CHARACTER_HERHIS_HER
+
+--------------------
+
+GetHerHimOpposite:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+CHARACTER_HERHIM_HIM
+CHARACTER_HERHIM_HER
+
+--------------------
+
+EruditeTopic:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+boethius_wheel
+aristotle_logic
+indian_logic
+advanced_math_computus
+advanced_math_problem
+advanced_math_trigonometry
+classical_vs_arabic_medicine
+indian_medicine
+classical_vs_modern_warfare
+astrology_topic
+quran_exegesis
+basri_vs_kufi
+reason_vs_faith
+jewish_christian_debate
+debating_mythological_characters
+geometrical_shapes
+
+--------------------
+
+GetDiplomacyBuilding:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+building_city_02
+
+--------------------
+
+GetMartialBuilding:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+building_type_war_camps_01
+building_type_curtain_walls_01
+building_type_hill_forts_01
+building_type_watchtowers_01
+building_type_the_colosseum_01
+building_type_the_tower_of_london_01
+building_type_citadel_of_aleppo_01
+
+--------------------
+
+GetStewardshipBuilding:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+building_type_farm_estates_01
+
+--------------------
+
+GetIntrigueBuilding:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+building_type_market_villages_01
+building_castle_02
+building_type_common_tradeport_01
+building_city_04
+
+--------------------
+
+GetLearningBuilding:
+
+Scope: character
+Random Valid: yes
+
+Entries:
+building_type_temple_01
+building_type_generic_university
+building_type_monastic_schools_01
+building_type_buddhas_of_bamian_01
+building_type_petra_01
+building_type_notre_dame_01
+building_type_hagia_sophia_01
+building_type_holy_site_great_mosque_of_mecca_01
+building_type_holy_site_cologne_cathedral_01
+building_type_holy_site_canterbury_cathedral_01
+
+--------------------
+
+RockStoryName:
+
+Scope: character
+Random Valid: no
+
+Entries:
+rock_name
+rock_name_cliff
+rock_name_sandy
+rock_name_rocky
+rock_name_crag
+rock_name_flint
+rock_name_gritty
+rock_name_rubble
+rock_name_tuff
+rock_name_rosetta
+rock_name_chip
+rock_name_fluffy
+rock_name_sten
+rock_name_ariadne
+rock_name_dwayne
+rock_name_potapczyk
+rock_name_gemma
+
+--------------------
+
+RockStoryNamePossessive:
+
+Scope: character
+Random Valid: no
+
+Entries:
+rock_name_possessive
+
+--------------------
+
+RockStoryHerHis:
+
+Scope: character
+Random Valid: no
+
+Entries:
+rock_gender_her
+rock_gender_his
+
+--------------------
+
+RockStoryHerHim:
+
+Scope: character
+Random Valid: no
+
+Entries:
+rock_gender_her
+rock_gender_him
+
+--------------------
+
+RockStorySheHe:
+
+Scope: character
+Random Valid: no
+
+Entries:
+rock_gender_she
+rock_gender_he
+
+--------------------
+
+RockStoryHerselfHimself:
+
+Scope: character
+Random Valid: no
+
+Entries:
+rock_gender_herself
+rock_gender_himself
+
+--------------------
+
+RockStoryFemaleMale:
+
+Scope: character
+Random Valid: no
+
+Entries:
+rock_gender_female
+rock_gender_male
+
+--------------------
+
+RockColor:
+
+Scope: character
+Random Valid: no
+
+Entries:
+fur_color_brown
+fur_color_gray
+fur_color_black
+fur_color_white
+fur_color_sandy
 
 --------------------
 
@@ -22026,17 +22874,6 @@ Scope: character
 Random Valid: no
 Parent: GetLocalStreetFood
 Suffix: _DE_ART_IND_A
-
-Entries:
-
---------------------
-
-RegionalFerociousAnimal_DE_ART_IND_N:
-
-Scope: character
-Random Valid: no
-Parent: RegionalFerociousAnimal
-Suffix: _DE_ART_IND_N
 
 Entries:
 
@@ -23518,7 +24355,7 @@ CustomLoc_FR_a_accent
 
 --------------------
 
-FR_only_de_HouseOfWorshipPlural:
+FR_De_HouseOfWorshipPlural:
 
 Scope: character
 Random Valid: no
@@ -23526,72 +24363,6 @@ Random Valid: no
 Entries:
 CustomLoc_FR_d
 CustomLoc_FR_de
-
---------------------
-
-FR_DogStory_fake:
-
-Scope: character
-Random Valid: no
-
-Entries:
-FR_dog_female
-FR_dog_male
-
---------------------
-
-FR_DogStory_e:
-
-Scope: character
-Random Valid: no
-Parent: FR_DogStory_fake
-Suffix: _e
-
-Entries:
-
---------------------
-
-FR_DogStory_le:
-
-Scope: character
-Random Valid: no
-Parent: FR_DogStory_fake
-Suffix: _le
-
-Entries:
-
---------------------
-
-FR_CatStory_fake:
-
-Scope: character
-Random Valid: no
-
-Entries:
-FR_cat_female
-FR_cat_male
-
---------------------
-
-FR_CatStory_e:
-
-Scope: character
-Random Valid: no
-Parent: FR_CatStory_fake
-Suffix: _e
-
-Entries:
-
---------------------
-
-FR_CatStory_le:
-
-Scope: character
-Random Valid: no
-Parent: FR_CatStory_fake
-Suffix: _le
-
-Entries:
 
 --------------------
 
@@ -23815,6 +24586,237 @@ Entries:
 
 --------------------
 
+FR_Le_GetRegionalDeerType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalDeerType
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetRegionalDeerType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalDeerType
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetRegionalDeerType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalDeerType
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetRegionalDeerType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalDeerType
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetRegionalDeerType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalDeerType
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Le_GetRegionalEagleType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalEagleType
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetRegionalEagleType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalEagleType
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetRegionalEagleType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalEagleType
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetRegionalEagleType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalEagleType
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetRegionalEagleType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalEagleType
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Le_GetRegionalWolfType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalWolfType
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_GetRegionalWolfType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalWolfType
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_GetRegionalWolfType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalWolfType
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_GetRegionalWolfType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalWolfType
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_GetRegionalWolfType:
+
+Scope: character
+Random Valid: no
+Parent: GetRegionalWolfType
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_Le_RegionalFerociousAnimal:
+
+Scope: character
+Random Valid: no
+Parent: RegionalFerociousAnimal
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_RegionalFerociousAnimal:
+
+Scope: character
+Random Valid: no
+Parent: RegionalFerociousAnimal
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_RegionalFerociousAnimal:
+
+Scope: character
+Random Valid: no
+Parent: RegionalFerociousAnimal
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_RegionalFerociousAnimal:
+
+Scope: character
+Random Valid: no
+Parent: RegionalFerociousAnimal
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_RegionalFerociousAnimal:
+
+Scope: character
+Random Valid: no
+Parent: RegionalFerociousAnimal
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
+FR_E_GetRandomRegionalSmallGame:
+
+Scope: character
+Random Valid: no
+Parent: GetRandomRegionalSmallGame
+Suffix: _FR_E
+
+Entries:
+
+--------------------
+
 GetAnimalSightingDescriptionType:
 
 Scope: landed_title
@@ -23988,6 +24990,7 @@ Random Valid: no
 Entries:
 pilgrimage_piousness
 pilgrimage_worldliness
+activity_adult_education_success
 
 --------------------
 
@@ -24179,60 +25182,207 @@ Entries:
 
 --------------------
 
-FR_Le_ActivityType:
+FR_ActivityShort_template:
 
 Scope: activity
 Random Valid: no
 
 Entries:
-CustomLoc_FR_le
-CustomLoc_FR_la
-CustomLoc_FR_la
-CustomLoc_FR_le
-CustomLoc_FR_la
-CustomLoc_FR_la
-CustomLoc_FR_le
-CustomLoc_FR_le
-CustomLoc_FR_le
-CustomLoc_FR_le
+FR_activity_feast
+FR_activity_gruesome_festival
+FR_activity_hunt
+FR_activity_pilgrimage
+FR_activity_playdate
+FR_activity_tour
+FR_activity_tournament
+FR_activity_wedding
+FR_activity_witch_ritual
+FR_activity_fallback
 
 --------------------
 
-FR_On_ActivityType:
+FR_Le_ActivityShort:
 
 Scope: activity
 Random Valid: no
+Parent: FR_ActivityShort_template
+Suffix: _Le
 
 Entries:
-CustomLoc_FR_on
-CustomLoc_FR_a
-CustomLoc_FR_a
-CustomLoc_FR_on
-CustomLoc_FR_a
-CustomLoc_FR_a
-CustomLoc_FR_on
-CustomLoc_FR_on
-CustomLoc_FR_on
-CustomLoc_FR_on
 
 --------------------
 
-FR_E_ActivityType:
+FR_Au_ActivityShort:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityShort_template
+Suffix: _Au
+
+Entries:
+
+--------------------
+
+FR_Du_ActivityShort:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityShort_template
+Suffix: _Du
+
+Entries:
+
+--------------------
+
+FR_E_ActivityShort:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityShort_template
+Suffix: _E
+
+Entries:
+
+--------------------
+
+FR_ActivityFull_template:
 
 Scope: activity
 Random Valid: no
 
 Entries:
-CustomLoc_FR_empty
-CustomLoc_FR_female_E
-CustomLoc_FR_female_E
-CustomLoc_FR_empty
-CustomLoc_FR_female_E
-CustomLoc_FR_female_E
-CustomLoc_FR_empty
-CustomLoc_FR_empty
-CustomLoc_FR_empty
-CustomLoc_FR_empty
+FR_activity_localplayer
+FR_activity_feast
+FR_activity_gruesome_festival
+FR_activity_hunt
+FR_activity_pilgrimage
+FR_activity_playdate
+FR_activity_tour
+FR_activity_tournament
+FR_activity_wedding
+FR_activity_witch_ritual
+FR_activity_fallback
+
+--------------------
+
+FR_Le_ActivityFull:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityFull_template
+Suffix: _Le
+
+Entries:
+
+--------------------
+
+FR_Au_ActivityFull:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityFull_template
+Suffix: _Au
+
+Entries:
+
+--------------------
+
+FR_Du_ActivityFull:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityFull_template
+Suffix: _Du
+
+Entries:
+
+--------------------
+
+FR_ActivityPhase_template:
+
+Scope: activity
+Random Valid: no
+
+Entries:
+FR_witch_ritual_phase
+FR_feast_phase_meal
+FR_feast_phase_toast
+FR_pilgrimage_phase_solo
+FR_playdate_phase
+FR_wedding_phase_ceremony
+FR_wedding_phase_banquet
+FR_wedding_phase_wnight
+FR_tournament_phase_melee
+FR_tournament_phase_archery
+FR_tournament_phase_recital
+FR_tournament_phase_joust
+FR_tournament_phase_duel
+FR_tournament_phase_wrestling
+FR_tournament_phase_board_game
+FR_tournament_phase_horse_race
+FR_tournament_phase_ceremony
+FR_tour_phase_tour_grounds
+FR_tour_phase_dinner
+FR_tour_phase_cultural_festival
+FR_tour_phase_journey_home
+FR_gruesome_festival_phase
+FR_hunt_phase
+FR_activity_phase_fallback
+
+--------------------
+
+FR_Le_ActivityPhase:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityPhase_template
+Suffix: _Le
+
+Entries:
+
+--------------------
+
+FR_Du_ActivityPhase:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityPhase_template
+Suffix: _Du
+
+Entries:
+
+--------------------
+
+FR_Au_ActivityPhase:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityPhase_template
+Suffix: _Au
+
+Entries:
+
+--------------------
+
+FR_E_ActivityPhase:
+
+Scope: activity
+Random Valid: no
+Parent: FR_ActivityPhase_template
+Suffix: _E
+
+Entries:
+
+--------------------
+
+FR_Le_GetVersusRound:
+
+Scope: activity
+Random Valid: no
+Parent: GetVersusRound
+Suffix: _FR_Le
+
+Entries:
 
 --------------------
 
@@ -24553,6 +25703,18 @@ building_tower_of_hercules_01
 building_city_wall_of_toledo_01
 building_alcazar_of_segovia_01
 building_holy_site_basilica_santiago_01
+
+--------------------
+
+GetLocationFaithTemple:
+
+Scope: province
+Random Valid: no
+
+Entries:
+building_temple_church
+building_temple_mosque
+building_temple_temple
 
 --------------------
 
@@ -25576,6 +26738,17 @@ Entries:
 
 --------------------
 
+ArtifactAnimalType_DE_GEN:
+
+Scope: artifact
+Random Valid: no
+Parent: ArtifactAnimalType
+Suffix: _DE_ART_IND_G
+
+Entries:
+
+--------------------
+
 FR_Artifact_OnA:
 
 Scope: artifact
@@ -25599,6 +26772,18 @@ CustomLoc_FR_le
 
 --------------------
 
+FR_Du_ArtifactType:
+
+Scope: artifact
+Random Valid: no
+
+Entries:
+CustomLoc_FR_dela
+CustomLoc_FR_del
+CustomLoc_FR_du
+
+--------------------
+
 FR_E_ArtifactType:
 
 Scope: artifact
@@ -25607,6 +26792,61 @@ Random Valid: no
 Entries:
 CustomLoc_FR_female_E
 CustomLoc_FR_empty
+
+--------------------
+
+FR_Le_ArtifactAnimalType:
+
+Scope: artifact
+Random Valid: no
+Parent: ArtifactAnimalType
+Suffix: _FR_Le
+
+Entries:
+
+--------------------
+
+FR_Du_ArtifactAnimalType:
+
+Scope: artifact
+Random Valid: no
+Parent: ArtifactAnimalType
+Suffix: _FR_Du
+
+Entries:
+
+--------------------
+
+FR_Au_ArtifactAnimalType:
+
+Scope: artifact
+Random Valid: no
+Parent: ArtifactAnimalType
+Suffix: _FR_Au
+
+Entries:
+
+--------------------
+
+FR_De_ArtifactAnimalType:
+
+Scope: artifact
+Random Valid: no
+Parent: ArtifactAnimalType
+Suffix: _FR_De
+
+Entries:
+
+--------------------
+
+FR_E_ArtifactAnimalType:
+
+Scope: artifact
+Random Valid: no
+Parent: ArtifactAnimalType
+Suffix: _FR_E
+
+Entries:
 
 --------------------
 

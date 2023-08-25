@@ -185,6 +185,14 @@ Supported Targets: character
 
 --------------------
 
+every_special_guest - Iterate through all special guests of an activity.
+any_special_guest = { ... }
+every_special_guest = { limit = { <triggers> } <effects> }
+Supported Scopes: activity
+Supported Targets: character
+
+--------------------
+
 ordered_activity_phase_location - Iterate through all province locations of the phases of the activity, optionally limited to unique locations.
 any/every/random_activity_phase_location {
 	unique = yes/no
@@ -307,6 +315,21 @@ Supported Targets: character
 
 --------------------
 
+ordered_special_guest - Iterate through all special guests of an activity.
+any_special_guest = { ... }
+ordered_special_guest = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: activity
+Supported Targets: character
+
+--------------------
+
 progress_activity_phase_after - Progress the current activity phase forward after X days.
 progress_activity_phase_after = { days = X weeks = Z months = Y}
 Supported Scopes: activity
@@ -386,6 +409,14 @@ Supported Targets: character
 
 --------------------
 
+random_special_guest - Iterate through all special guests of an activity.
+any_special_guest = { ... }
+random_special_guest = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: activity
+Supported Targets: character
+
+--------------------
+
 remove_from_current_phase_guest_subset - remove_from_current_phase_guest_subset = {
 	name = <subset_key>
 	target = scope:character
@@ -419,8 +450,9 @@ Supported Scopes: activity
 
 --------------------
 
-add_culture_tradition - Adds the cultural tradition specified in the RHS to the scope culture.add_culture_tradition = tradition_court_eunuchs
+add_culture_tradition - Adds the cultural tradition scope specified in the RHS to the scope culture.add_culture_tradition = tradition_court_eunuchs
 Supported Scopes: culture
+Supported Targets: culture_tradition
 
 --------------------
 
@@ -512,6 +544,13 @@ every_parent_culture_or_above - Iterate through all parent cultures or above
 every_parent_culture_or_above = { limit = { <triggers> } <effects> }
 Supported Scopes: culture
 Supported Targets: culture
+
+--------------------
+
+every_tradition - Iterate through all traditions of the given culture
+every_tradition = { limit = { <triggers> } <effects> }
+Supported Scopes: culture
+Supported Targets: culture_tradition
 
 --------------------
 
@@ -623,6 +662,20 @@ Supported Targets: culture
 
 --------------------
 
+ordered_tradition - Iterate through all traditions of the given culture
+ordered_tradition = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: culture
+Supported Targets: culture_tradition
+
+--------------------
+
 random_culture_county - Iterate through all counties of the culture
 random_culture_county = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: culture
@@ -665,8 +718,16 @@ Supported Targets: culture
 
 --------------------
 
-remove_culture_tradition - Removes the cultural tradition specified in the RHS from the scope culture.remove_culture_tradition = tradition_court_eunuchs
+random_tradition - Iterate through all traditions of the given culture
+random_tradition = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: culture
+Supported Targets: culture_tradition
+
+--------------------
+
+remove_culture_tradition - Removes the cultural tradition scope specified in the RHS from the scope culture.remove_culture_tradition = tradition_court_eunuchs
+Supported Scopes: culture
+Supported Targets: culture_tradition
 
 --------------------
 
@@ -2449,7 +2510,7 @@ Supported Scopes: none
 
 --------------------
 
-every_accolade_type - 
+every_accolade_type - [2023-08-25 20:12:49.895] [Clausewitz Debug] [debug] [pdx_gui_assetfactory.cpp:675] [LoadAssetsGUI] Loading "gui/preload/labels.gui"
 Supported Scopes: none
 Supported Targets: accolade_type
 
@@ -2462,7 +2523,7 @@ Supported Targets: activity
 
 --------------------
 
-every_activity_type - u
+every_activity_type - Ðð/aþ
 Supported Scopes: none
 Supported Targets: activity_type
 
@@ -2510,25 +2571,25 @@ Supported Targets: culture
 
 --------------------
 
-every_culture_pillar - 
+every_culture_pillar - Ðð/aþ
 Supported Scopes: none
 Supported Targets: culture_pillar
 
 --------------------
 
-every_culture_tradition - 
+every_culture_tradition - Ðð/aþ
 Supported Scopes: none
 Supported Targets: culture_tradition
 
 --------------------
 
-every_decision - 
+every_decision - 
 Supported Scopes: none
 Supported Targets: decision
 
 --------------------
 
-every_doctrine - 
+every_doctrine - 
 Supported Scopes: none
 Supported Targets: doctrine
 
@@ -2548,7 +2609,7 @@ Supported Targets: landed_title
 
 --------------------
 
-every_government_type - 
+every_government_type - Ðð/aþ
 Supported Scopes: none
 Supported Targets: government_type
 
@@ -2656,7 +2717,14 @@ Supported Targets: character
 
 --------------------
 
-every_trait - 
+every_special_building_province - Iterate through all provinces with a special building slot (built or un-built)
+every_special_building_province = { limit = { <triggers> } <effects> }
+Supported Scopes: none
+Supported Targets: province
+
+--------------------
+
+every_trait - 
 Supported Scopes: none
 Supported Targets: trait
 
@@ -2670,7 +2738,7 @@ Supported Targets: trait
 
 --------------------
 
-every_vassal_contract - 
+every_vassal_contract - ð}¼—
 Supported Scopes: none
 Supported Targets: vassal_contract
 
@@ -2741,7 +2809,7 @@ Supported Scopes: none
 
 --------------------
 
-ordered_accolade_type - 
+ordered_accolade_type - Àò§Å—
 Supported Scopes: none
 Supported Targets: accolade_type
 
@@ -2761,7 +2829,7 @@ Supported Targets: activity
 
 --------------------
 
-ordered_activity_type - 
+ordered_activity_type - ˜[t¼—
 Supported Scopes: none
 Supported Targets: activity_type
 
@@ -2851,25 +2919,25 @@ Supported Targets: culture
 
 --------------------
 
-ordered_culture_pillar - 
+ordered_culture_pillar - BlendState
 Supported Scopes: none
 Supported Targets: culture_pillar
 
 --------------------
 
-ordered_culture_tradition - hYK÷
+ordered_culture_tradition - P
 Supported Scopes: none
 Supported Targets: culture_tradition
 
 --------------------
 
-ordered_decision - Ð 7÷
+ordered_decision - 
 Supported Scopes: none
 Supported Targets: decision
 
 --------------------
 
-ordered_doctrine - Ð 7÷
+ordered_doctrine - 
 Supported Scopes: none
 Supported Targets: doctrine
 
@@ -2903,7 +2971,17 @@ Supported Targets: landed_title
 
 --------------------
 
-ordered_government_type - 
+ordered_government_type - VS_OUTPUT_FULLSCREEN FullscreenVertexShader( VS_INPUT_FULLSCREEN Input )
+{
+	VS_OUTPUT_FULLSCREEN VertexOut;
+	VertexOut.position = float4( Input.position, 0.0, 1.0 );
+
+	VertexOut.uv = Input.position.xy * 0.5 + 0.5;
+	VertexOut.uv.y = 1.0 - VertexOut.uv.y;
+
+	return VertexOut;
+}
+
 Supported Scopes: none
 Supported Targets: government_type
 
@@ -3116,7 +3194,21 @@ Supported Targets: character
 
 --------------------
 
-ordered_trait - Ð 7÷
+ordered_special_building_province - Iterate through all provinces with a special building slot (built or un-built)
+ordered_special_building_province = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: none
+Supported Targets: province
+
+--------------------
+
+ordered_trait - 
 Supported Scopes: none
 Supported Targets: trait
 
@@ -3137,7 +3229,17 @@ Supported Targets: trait
 
 --------------------
 
-ordered_vassal_contract - 
+ordered_vassal_contract - VS_OUTPUT_FULLSCREEN FullscreenVertexShader( VS_INPUT_FULLSCREEN Input )
+{
+	VS_OUTPUT_FULLSCREEN VertexOut;
+	VertexOut.position = float4( Input.position, 0.0, 1.0 );
+
+	VertexOut.uv = Input.position.xy * 0.5 + 0.5;
+	VertexOut.uv.y = 1.0 - VertexOut.uv.y;
+
+	return VertexOut;
+}
+
 Supported Scopes: none
 Supported Targets: vassal_contract
 
@@ -3163,7 +3265,7 @@ Supported Scopes: none
 
 --------------------
 
-random_accolade_type - 
+random_accolade_type - Ðð/aþ
 Supported Scopes: none
 Supported Targets: accolade_type
 
@@ -3176,7 +3278,7 @@ Supported Targets: activity
 
 --------------------
 
-random_activity_type - 
+random_activity_type - €­³Å—
 Supported Scopes: none
 Supported Targets: activity_type
 
@@ -3224,25 +3326,25 @@ Supported Targets: culture
 
 --------------------
 
-random_culture_pillar - 
+random_culture_pillar - Ðð/aþ
 Supported Scopes: none
 Supported Targets: culture_pillar
 
 --------------------
 
-random_culture_tradition - 
+random_culture_tradition - 	¨
 Supported Scopes: none
 Supported Targets: culture_tradition
 
 --------------------
 
-random_decision - 
+random_decision - Ðð/aþ
 Supported Scopes: none
 Supported Targets: decision
 
 --------------------
 
-random_doctrine - 
+random_doctrine - Ðð/aþ
 Supported Scopes: none
 Supported Targets: doctrine
 
@@ -3262,7 +3364,7 @@ Supported Targets: landed_title
 
 --------------------
 
-random_government_type - 
+random_government_type - 	¨
 Supported Scopes: none
 Supported Targets: government_type
 
@@ -3383,7 +3485,14 @@ Supported Targets: character
 
 --------------------
 
-random_trait - ÀOq÷
+random_special_building_province - Iterate through all provinces with a special building slot (built or un-built)
+random_special_building_province = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: none
+Supported Targets: province
+
+--------------------
+
+random_trait - Ö
 Supported Scopes: none
 Supported Targets: trait
 
@@ -3397,7 +3506,7 @@ Supported Targets: trait
 
 --------------------
 
-random_vassal_contract - 
+random_vassal_contract - [2023-08-25 20:12:50.212] [Clausewitz Debug] [debug] [pdx_gui_assetfactory.cpp:684] [LoadAssetsGUI] Loading of "gui/interaction_confirmation.gui" is complete
 Supported Scopes: none
 Supported Targets: vassal_contract
 
@@ -3727,6 +3836,12 @@ Supported Scopes: province
 
 --------------------
 
+add_travel_point_of_interest - Add a travel point of interest type to this province.
+add_travel_point_of_interest = point_of_interest_type
+Supported Scopes: province
+
+--------------------
+
 begin_create_holding - Start construction of the specified holding type. By default player won't get anything if manually cancels the construction
 scope:my_province = {
 	begin_create_holding = castle_holding
@@ -3861,6 +3976,12 @@ Supported Scopes: province
 
 remove_province_modifier - Remove a modifier from a province
 remove_province_modifier = name
+Supported Scopes: province
+
+--------------------
+
+remove_travel_point_of_interest - Remove a travel point of interest type in this province.
+remove_travel_point_of_interest = point_of_interest_type
 Supported Scopes: province
 
 --------------------
@@ -4022,7 +4143,19 @@ Supported Targets: landed_title
 
 --------------------
 
+activate_accolade - Activates the scoped Accolade, if there are free slots available else it will be deactivated
+activate_accolade = yes
+Supported Scopes: accolade
+
+--------------------
+
 add_glory - Add this much to the Accolades glory
+Supported Scopes: accolade
+
+--------------------
+
+deactivate_accolade - Deactivates the scoped Accolade, does nothing if it's already inactive
+deactivate_accolade = yes
 Supported Scopes: accolade
 
 --------------------
@@ -4417,11 +4550,13 @@ Supported Targets: scheme
 
 add_trait - Adds a trait to a character (the trait will not be added and no tooltip will be shown if the character isn't eligible for the trait, i.e. when already having the trait, having an opposing trait, not fulfilling the trait's is_potential trigger or being outside of the trait's range)
 Supported Scopes: character
+Supported Targets: trait
 
 --------------------
 
 add_trait_force_tooltip - Adds a trait to a character (if the add_trait effect would not add the trait - i.e. when already having the trait, having an opposing trait, not fulfilling the trait's is_potential trigger or being outside of the trait's range - a tooltip will be shown but the trait will not be added)
 Supported Scopes: character
+Supported Targets: trait
 
 --------------------
 
@@ -4475,6 +4610,12 @@ Supported Targets: character
 
 add_war_chest_gold - Add gold to 'war chest' AI budget category, respecting maximums, overflow goes into Short Term budget. (gold will be created out of nowhere)character, add_war_chest_gold = X
 Supported Scopes: character
+
+--------------------
+
+adopt - Set scoped character as parent ot the targetscope:new_parent = { adopt = scope:offspring }
+Supported Scopes: character
+Supported Targets: character
 
 --------------------
 
@@ -5194,6 +5335,13 @@ Supported Targets: mercenary_company
 
 --------------------
 
+every_home_court_hostage - Iterate through all hostages currently abroad
+every_home_court_hostage = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 every_hooked_character - Iterate through all characters this character has a hook on
 every_hooked_character = { limit = { <triggers> } <effects> }
 Supported Scopes: character
@@ -5649,6 +5797,13 @@ Supported Targets: character
 
 --------------------
 
+every_warden_hostage - Iterate through all hostages having this warden
+every_warden_hostage = { limit = { <triggers> } <effects> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 execute_decision - Execute the specified decision for the scoped character
 Supported Scopes: character
 Supported Targets: decision
@@ -5806,21 +5961,25 @@ Supported Scopes: character
 
 make_trait_active - Activates an inactive trait. Tooltip will not be shown if the character cannot have the trait.
 Supported Scopes: character
+Supported Targets: trait
 
 --------------------
 
 make_trait_active_force_tooltip - Activates an inactive trait. Tooltip will be shown even if the character cannot have the trait.
 Supported Scopes: character
+Supported Targets: trait
 
 --------------------
 
 make_trait_inactive - Makes a current trait of a character inactive. Tooltip will not be shown if the character doesn't have the trait.
 Supported Scopes: character
+Supported Targets: trait
 
 --------------------
 
 make_trait_inactive_force_tooltip - Makes a current trait of a character inactive. Tooltip will be shown even if the character doesn't have the trait.
 Supported Scopes: character
+Supported Targets: trait
 
 --------------------
 
@@ -6564,6 +6723,20 @@ check_range_bounds = no # If you don't want an error logged if the list is small
 <effects> }
 Supported Scopes: character
 Supported Targets: mercenary_company
+
+--------------------
+
+ordered_home_court_hostage - Iterate through all hostages currently abroad
+ordered_home_court_hostage = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: character
 
 --------------------
 
@@ -7470,6 +7643,20 @@ Supported Targets: character
 
 --------------------
 
+ordered_warden_hostage - Iterate through all hostages having this warden
+ordered_warden_hostage = {
+limit = { <triggers> }
+order_by = script_value
+position = int
+min = int
+max = script_value
+check_range_bounds = no # If you don't want an error logged if the list is smaller than the min/max
+<effects> }
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 pay_long_term_gold - the scope character pays gold to the target character, pay_long_term_gold = { target = X gold = Y } (from AI budget category 'long term' first, then rest)
 Supported Scopes: character
 
@@ -7867,6 +8054,13 @@ random_hired_mercenary - Iterate through all hired mercenary companies
 random_hired_mercenary = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: mercenary_company
+
+--------------------
+
+random_home_court_hostage - Iterate through all hostages currently abroad
+random_home_court_hostage = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
+Supported Scopes: character
+Supported Targets: character
 
 --------------------
 
@@ -8325,7 +8519,8 @@ Supported Targets: character
 
 --------------------
 
-recruit_courtier - Recruits the target to become a courtier. Example scope:liege = { recruit_courtier = scope:new_courtier }
+random_warden_hostage - Iterate through all hostages having this warden
+random_warden_hostage = { limit = { <triggers> } (optional) weight = { mtth } <effects> }
 Supported Scopes: character
 Supported Targets: character
 
@@ -8539,6 +8734,12 @@ Supported Targets: character
 
 --------------------
 
+remove_relation_nursed_child - Removes scripted relationship
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 remove_relation_oaf - Removes scripted relationship
 Supported Scopes: character
 Supported Targets: character
@@ -8629,6 +8830,12 @@ Supported Targets: character
 
 --------------------
 
+remove_relation_wet_nurse - Removes scripted relationship
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
 remove_reserved_gold - removes gold from a character (from AI's 'reserved' budget first, then rest)
 Supported Scopes: character
 
@@ -8647,11 +8854,13 @@ Supported Scopes: character
 
 remove_trait - Removes a trait from a character. Tooltip will not be shown if the character doesn't have the trait.
 Supported Scopes: character
+Supported Targets: trait
 
 --------------------
 
 remove_trait_force_tooltip - Removes a trait from a character. Tooltip will be shown even if the character doesn't have the trait.
 Supported Scopes: character
+Supported Targets: trait
 
 --------------------
 
@@ -8670,6 +8879,11 @@ Supported Scopes: character
 --------------------
 
 reset_beneficiary - The target character stops having a beneficiary. reset_beneficiary = yes
+Supported Scopes: character
+
+--------------------
+
+return_hostage - Release scoped character from hostage and return to home court
 Supported Scopes: character
 
 --------------------
@@ -8961,7 +9175,13 @@ Supported Targets: landed_title
 
 --------------------
 
-set_real_father - Changes the real father of the character scope
+set_real_father - Changes the real father of the scoped character 
+Supported Scopes: character
+Supported Targets: character
+
+--------------------
+
+set_real_mother - Changes the real mother of the scoped character 
 Supported Scopes: character
 Supported Targets: character
 
@@ -9039,6 +9259,11 @@ Supported Scopes: character
 
 --------------------
 
+set_relation_nursed_child - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
+Supported Scopes: character
+
+--------------------
+
 set_relation_oaf - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
 Supported Scopes: character
 
@@ -9110,6 +9335,11 @@ Supported Scopes: character
 --------------------
 
 set_relation_wedding_very_good_fertility - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
+Supported Scopes: character
+
+--------------------
+
+set_relation_wet_nurse - Sets scripted relationship, set_relation_xxx = target, set_relation_xxx = { target = target reason = reason_key copy_reason = optional_other_relation province = optional_province involved_character = optional_character }
 Supported Scopes: character
 
 --------------------
@@ -9217,6 +9447,12 @@ Supported Scopes: character
 
 stress_impact - Stress impact according to specified traits (trait = value), use base = value for a base value that's always added
 Supported Scopes: character
+
+--------------------
+
+take_hostage - Take target character as a hostagescope:warden = { take_hostage = scope:hostage }
+Supported Scopes: character
+Supported Targets: character
 
 --------------------
 

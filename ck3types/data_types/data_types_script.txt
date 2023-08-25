@@ -493,6 +493,13 @@ Return type: TravelOption
 
 -----------------------
 
+GetTravelPointOfInterestType( Arg0 )
+Description: Get the TravelPointOfInterestType object with the provided key in their database
+Definition type: Global promote
+Return type: TravelPointOfInterestType
+
+-----------------------
+
 GetVassalContractType( Arg0 )
 Description: Get the VassalContractType object with the provided key in their database
 Definition type: Global promote
@@ -1039,6 +1046,13 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAllTravelPointOfInterestTypes
+Description: Get all TravelPointOfInterestType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetAllVassalContractTypes
 Description: Get all VassalContractType objects in their database
 Definition type: Global function
@@ -1175,7 +1189,7 @@ Return type: [unregistered]
 GetCourtType( Arg0 )
 Description: Get the CourtType object with the provided key in their database
 Definition type: Global function
-Return type: _null_type_
+Return type: [unregistered]
 
 -----------------------
 
@@ -1482,6 +1496,13 @@ GetTravelOption( Arg0 )
 Description: Get the TravelOption object with the provided key in their database
 Definition type: Global function
 Return type: [unregistered]
+
+-----------------------
+
+GetTravelPointOfInterestType( Arg0 )
+Description: Get the TravelPointOfInterestType object with the provided key in their database
+Definition type: Global function
+Return type: _null_type_
 
 -----------------------
 
