@@ -3,7 +3,7 @@
 	parentanchor = right
 	layer = bottom
 	size = { 45 45 }
-	position = { 5 560 }
+	position = { 5 595 }
 	texture = "gfx/interface/skinned/hud_maintab_bg.dds"
 	visible = "[And(And( Not( IsPauseMenuShown ), And(Or(Not(IsObserver), GetPlayer.IsValid), IsDefaultGUIMode)), Not(IsGameViewOpen('struggle')))))]"
 
