@@ -1,7 +1,7 @@
-version="0.11.0"
+version="0.12.0"
 tags={
 	"Fixes"
 }
 name="Gender Bug Fix"
-supported_version="1.12.*"
+supported_version="1.13.*"
 remote_file_id="2218125254"

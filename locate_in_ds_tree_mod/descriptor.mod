@@ -1,7 +1,7 @@
-version="0.12.0"
+version="0.13.0"
 tags={
 	"Character Interactions"
 }
 name="Locate In Dynasty Tree"
-supported_version="1.12.*"
+supported_version="1.13.*"
 remote_file_id="2217916783"
