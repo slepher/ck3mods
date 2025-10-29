@@ -32,6 +32,13 @@ Return type: AccoladeType
 
 -----------------------
 
+GetActivityGroupType( Arg0 )
+Description: Get the ActivityGroupType object with the provided key in their database
+Definition type: Global promote
+Return type: ActivityGroupType
+
+-----------------------
+
 GetActivityGuestInviteRule( Arg0 )
 Description: Get the ActivityGuestInviteRule object with the provided key in their database
 Definition type: Global promote
@@ -64,6 +71,13 @@ GetActivityType( Arg0 )
 Description: Get the ActivityType object with the provided key in their database
 Definition type: Global promote
 Return type: ActivityType
+
+-----------------------
+
+GetAgentSlotType( Arg0 )
+Description: Get the AgentSlotType object with the provided key in their database
+Definition type: Global promote
+Return type: AgentSlotType
 
 -----------------------
 
@@ -123,6 +137,13 @@ Return type: CatalystType
 
 -----------------------
 
+GetChallengeCharacter( Arg0 )
+Description: Get the ChallengeCharacter object with the provided key in their database
+Definition type: Global promote
+Return type: ChallengeCharacter
+
+-----------------------
+
 GetCharacterInteraction( Arg0 )
 Description: Get the CharacterInteraction object with the provided key in their database
 Definition type: Global promote
@@ -144,10 +165,17 @@ Return type: CharacterMemoryType
 
 -----------------------
 
-GetCombatEffect( Arg0 )
-Description: Get the CombatEffect object with the provided key in their database
+GetConfederationType( Arg0 )
+Description: Get the ConfederationType object with the provided key in their database
 Definition type: Global promote
-Return type: CombatEffect
+Return type: ConfederationType
+
+-----------------------
+
+GetConnectionArrowType( Arg0 )
+Description: Get the ConnectionArrowType object with the provided key in their database
+Definition type: Global promote
+Return type: ConnectionArrowType
 
 -----------------------
 
@@ -172,10 +200,10 @@ Return type: CourtAmenitiesSetting
 
 -----------------------
 
-GetCourtPositionCategory( Arg0 )
-Description: Get the CourtPositionCategory object with the provided key in their database
+GetCourtPositionTaskType( Arg0 )
+Description: Get the CourtPositionTaskType object with the provided key in their database
 Definition type: Global promote
-Return type: CourtPositionCategory
+Return type: CourtPositionTaskType
 
 -----------------------
 
@@ -235,10 +263,31 @@ Return type: Decision
 
 -----------------------
 
+GetDecisionGroupType( Arg0 )
+Description: Get the DecisionGroupType object with the provided key in their database
+Definition type: Global promote
+Return type: DecisionGroupType
+
+-----------------------
+
 GetDlc( Arg0 )
 Description: Get the Dlc object with the provided key in their database
 Definition type: Global promote
 Return type: Dlc
+
+-----------------------
+
+GetDomicileBuilding( Arg0 )
+Description: Get the DomicileBuilding object with the provided key in their database
+Definition type: Global promote
+Return type: DomicileBuilding
+
+-----------------------
+
+GetDomicileType( Arg0 )
+Description: Get the DomicileType object with the provided key in their database
+Definition type: Global promote
+Return type: DomicileType
 
 -----------------------
 
@@ -267,6 +316,13 @@ GetDynastyTemplate( Arg0 )
 Description: Get the DynastyTemplate object with the provided key in their database
 Definition type: Global promote
 Return type: DynastyTemplate
+
+-----------------------
+
+GetEpidemicType( Arg0 )
+Description: Get the EpidemicType object with the provided key in their database
+Definition type: Global promote
+Return type: EpidemicType
 
 -----------------------
 
@@ -311,6 +367,20 @@ Return type: GovernmentType
 
 -----------------------
 
+GetGraphicalUnitType( Arg0 )
+Description: Get the GraphicalUnitType object with the provided key in their database
+Definition type: Global promote
+Return type: GraphicalUnitType
+
+-----------------------
+
+GetGreatProjectType( Arg0 )
+Description: Get the GreatProjectType object with the provided key in their database
+Definition type: Global promote
+Return type: GreatProjectType
+
+-----------------------
+
 GetHoldingType( Arg0 )
 Description: Get the HoldingType object with the provided key in their database
 Definition type: Global promote
@@ -322,6 +392,34 @@ GetHolySite( Arg0 )
 Description: Get the HolySite object with the provided key in their database
 Definition type: Global promote
 Return type: HolySite
+
+-----------------------
+
+GetHouseAspiration( Arg0 )
+Description: Get the HouseAspiration object with the provided key in their database
+Definition type: Global promote
+Return type: HouseAspiration
+
+-----------------------
+
+GetHouseRelationLevel( Arg0 )
+Description: Get the HouseRelationLevel object with the provided key in their database
+Definition type: Global promote
+Return type: HouseRelationLevel
+
+-----------------------
+
+GetHouseRelationType( Arg0 )
+Description: Get the HouseRelationType object with the provided key in their database
+Definition type: Global promote
+Return type: HouseRelationType
+
+-----------------------
+
+GetHouseUnityStage( Arg0 )
+Description: Get the HouseUnityStage object with the provided key in their database
+Definition type: Global promote
+Return type: HouseUnityStage
 
 -----------------------
 
@@ -374,6 +472,20 @@ Return type: LawGroup
 
 -----------------------
 
+GetLegendType( Arg0 )
+Description: Get the LegendType object with the provided key in their database
+Definition type: Global promote
+Return type: LegendType
+
+-----------------------
+
+GetLegitimacyType( Arg0 )
+Description: Get the LegitimacyType object with the provided key in their database
+Definition type: Global promote
+Return type: LegitimacyType
+
+-----------------------
+
 GetLifestyle( Arg0 )
 Description: Get the Lifestyle object with the provided key in their database
 Definition type: Global promote
@@ -392,6 +504,20 @@ GetMenAtArmsType( Arg0 )
 Description: Get the MenAtArmsType object with the provided key in their database
 Definition type: Global promote
 Return type: MenAtArmsType
+
+-----------------------
+
+GetMessageFilterType( Arg0 )
+Description: Get the MessageFilterType object with the provided key in their database
+Definition type: Global promote
+Return type: MessageFilterType
+
+-----------------------
+
+GetMessageGroupType( Arg0 )
+Description: Get the MessageGroupType object with the provided key in their database
+Definition type: Global promote
+Return type: MessageGroupType
 
 -----------------------
 
@@ -416,10 +542,31 @@ Return type: Perk
 
 -----------------------
 
+GetRaidIntent( Arg0 )
+Description: Get the RaidIntent object with the provided key in their database
+Definition type: Global promote
+Return type: RaidIntent
+
+-----------------------
+
 GetReligionFamily( Arg0 )
 Description: Get the ReligionFamily object with the provided key in their database
 Definition type: Global promote
 Return type: ReligionFamily
+
+-----------------------
+
+GetSchemeCountermeasureType( Arg0 )
+Description: Get the SchemeCountermeasureType object with the provided key in their database
+Definition type: Global promote
+Return type: SchemeCountermeasureType
+
+-----------------------
+
+GetSchemePulseAction( Arg0 )
+Description: Get the SchemePulseAction object with the provided key in their database
+Definition type: Global promote
+Return type: SchemePulseAction
 
 -----------------------
 
@@ -444,6 +591,27 @@ Return type: SecretType
 
 -----------------------
 
+GetSituationCatalystType( Arg0 )
+Description: Get the SituationCatalystType object with the provided key in their database
+Definition type: Global promote
+Return type: SituationCatalystType
+
+-----------------------
+
+GetSituationGroupType( Arg0 )
+Description: Get the SituationGroupType object with the provided key in their database
+Definition type: Global promote
+Return type: SituationGroupType
+
+-----------------------
+
+GetSituationType( Arg0 )
+Description: Get the SituationType object with the provided key in their database
+Definition type: Global promote
+Return type: SituationType
+
+-----------------------
+
 GetStaticModifier( Arg0 )
 Description: Get the StaticModifier object with the provided key in their database
 Definition type: Global promote
@@ -465,10 +633,45 @@ Return type: StruggleType
 
 -----------------------
 
+GetSubjectContractGroup( Arg0 )
+Description: Get the SubjectContractGroup object with the provided key in their database
+Definition type: Global promote
+Return type: SubjectContractGroup
+
+-----------------------
+
+GetSubjectContractType( Arg0 )
+Description: Get the SubjectContractType object with the provided key in their database
+Definition type: Global promote
+Return type: SubjectContractType
+
+-----------------------
+
 GetSuggestionType( Arg0 )
 Description: Get the SuggestionType object with the provided key in their database
 Definition type: Global promote
 Return type: SuggestionType
+
+-----------------------
+
+GetTaskContractType( Arg0 )
+Description: Get the TaskContractType object with the provided key in their database
+Definition type: Global promote
+Return type: TaskContractType
+
+-----------------------
+
+GetTaxSlotObligation( Arg0 )
+Description: Get the TaxSlotObligation object with the provided key in their database
+Definition type: Global promote
+Return type: TaxSlotObligation
+
+-----------------------
+
+GetTaxSlotType( Arg0 )
+Description: Get the TaxSlotType object with the provided key in their database
+Definition type: Global promote
+Return type: TaxSlotType
 
 -----------------------
 
@@ -500,10 +703,10 @@ Return type: TravelPointOfInterestType
 
 -----------------------
 
-GetVassalContractType( Arg0 )
-Description: Get the VassalContractType object with the provided key in their database
+GetTriggeredLegendSeed( Arg0 )
+Description: Get the TriggeredLegendSeed object with the provided key in their database
 Definition type: Global promote
-Return type: VassalContractType
+Return type: TriggeredLegendSeed
 
 -----------------------
 
@@ -549,6 +752,13 @@ Return type: [unregistered]
 
 -----------------------
 
+GetActivityGroupType( Arg0 )
+Description: Get the ActivityGroupType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetActivityGuestInviteRule( Arg0 )
 Description: Get the ActivityGuestInviteRule object with the provided key in their database
 Definition type: Global function
@@ -584,8 +794,22 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAgentSlotType( Arg0 )
+Description: Get the AgentSlotType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetAllAccoladeTypes
 Description: Get all AccoladeType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllActivityGroupTypes
+Description: Get all ActivityGroupType objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -621,6 +845,13 @@ Return type: [unregistered]
 
 GetAllActivityTypes
 Description: Get all ActivityType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllAgentSlotTypes
+Description: Get all AgentSlotType objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -682,6 +913,13 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAllChallengeCharacters
+Description: Get all ChallengeCharacter objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetAllCharacterInteractionCategorys
 Description: Get all CharacterInteractionCategory objects in their database
 Definition type: Global function
@@ -703,8 +941,15 @@ Return type: [unregistered]
 
 -----------------------
 
-GetAllCombatEffects
-Description: Get all CombatEffect objects in their database
+GetAllConfederationTypes
+Description: Get all ConfederationType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllConnectionArrowTypes
+Description: Get all ConnectionArrowType objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -731,8 +976,8 @@ Return type: [unregistered]
 
 -----------------------
 
-GetAllCourtPositionCategorys
-Description: Get all CourtPositionCategory objects in their database
+GetAllCourtPositionTaskTypes
+Description: Get all CourtPositionTaskType objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -787,6 +1032,13 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAllDecisionGroupTypes
+Description: Get all DecisionGroupType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetAllDecisions
 Description: Get all Decision objects in their database
 Definition type: Global function
@@ -796,6 +1048,20 @@ Return type: [unregistered]
 
 GetAllDlcs
 Description: Get all Dlc objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllDomicileBuildings
+Description: Get all DomicileBuilding objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllDomicileTypes
+Description: Get all DomicileType objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -824,6 +1090,13 @@ Return type: [unregistered]
 
 GetAllDynastyTemplates
 Description: Get all DynastyTemplate objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllEpidemicTypes
+Description: Get all EpidemicType objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -864,6 +1137,20 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAllGraphicalUnitTypes
+Description: Get all GraphicalUnitType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllGreatProjectTypes
+Description: Get all GreatProjectType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetAllHoldingTypes
 Description: Get all HoldingType objects in their database
 Definition type: Global function
@@ -873,6 +1160,34 @@ Return type: [unregistered]
 
 GetAllHolySites
 Description: Get all HolySite objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllHouseAspirations
+Description: Get all HouseAspiration objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllHouseRelationLevels
+Description: Get all HouseRelationLevel objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllHouseRelationTypes
+Description: Get all HouseRelationType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllHouseUnityStages
+Description: Get all HouseUnityStage objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -927,6 +1242,20 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAllLegendTypes
+Description: Get all LegendType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllLegitimacyTypes
+Description: Get all LegitimacyType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetAllLifestyles
 Description: Get all Lifestyle objects in their database
 Definition type: Global function
@@ -943,6 +1272,20 @@ Return type: [unregistered]
 
 GetAllMenAtArmsTypes
 Description: Get all MenAtArmsType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllMessageFilterTypes
+Description: Get all MessageFilterType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllMessageGroupTypes
+Description: Get all MessageGroupType objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -969,8 +1312,29 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAllRaidIntents
+Description: Get all RaidIntent objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetAllReligionFamilys
 Description: Get all ReligionFamily objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllSchemeCountermeasureTypes
+Description: Get all SchemeCountermeasureType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllSchemePulseActions
+Description: Get all SchemePulseAction objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -997,6 +1361,27 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAllSituationCatalystTypes
+Description: Get all SituationCatalystType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllSituationGroupTypes
+Description: Get all SituationGroupType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllSituationTypes
+Description: Get all SituationType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetAllStaticModifiers
 Description: Get all StaticModifier objects in their database
 Definition type: Global function
@@ -1018,8 +1403,43 @@ Return type: [unregistered]
 
 -----------------------
 
+GetAllSubjectContractGroups
+Description: Get all SubjectContractGroup objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllSubjectContractTypes
+Description: Get all SubjectContractType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetAllSuggestionTypes
 Description: Get all SuggestionType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllTaskContractTypes
+Description: Get all TaskContractType objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllTaxSlotObligations
+Description: Get all TaxSlotObligation objects in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetAllTaxSlotTypes
+Description: Get all TaxSlotType objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -1053,8 +1473,8 @@ Return type: [unregistered]
 
 -----------------------
 
-GetAllVassalContractTypes
-Description: Get all VassalContractType objects in their database
+GetAllTriggeredLegendSeeds
+Description: Get all TriggeredLegendSeed objects in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -1123,6 +1543,13 @@ Return type: [unregistered]
 
 -----------------------
 
+GetChallengeCharacter( Arg0 )
+Description: Get the ChallengeCharacter object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetCharacterInteraction( Arg0 )
 Description: Get the CharacterInteraction object with the provided key in their database
 Definition type: Global function
@@ -1144,8 +1571,15 @@ Return type: _null_type_
 
 -----------------------
 
-GetCombatEffect( Arg0 )
-Description: Get the CombatEffect object with the provided key in their database
+GetConfederationType( Arg0 )
+Description: Get the ConfederationType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetConnectionArrowType( Arg0 )
+Description: Get the ConnectionArrowType object with the provided key in their database
 Definition type: Global function
 Return type: _null_type_
 
@@ -1172,8 +1606,8 @@ Return type: [unregistered]
 
 -----------------------
 
-GetCourtPositionCategory( Arg0 )
-Description: Get the CourtPositionCategory object with the provided key in their database
+GetCourtPositionTaskType( Arg0 )
+Description: Get the CourtPositionTaskType object with the provided key in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -1235,8 +1669,29 @@ Return type: [unregistered]
 
 -----------------------
 
+GetDecisionGroupType( Arg0 )
+Description: Get the DecisionGroupType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetDlc( Arg0 )
 Description: Get the Dlc object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetDomicileBuilding( Arg0 )
+Description: Get the DomicileBuilding object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetDomicileType( Arg0 )
+Description: Get the DomicileType object with the provided key in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -1252,7 +1707,7 @@ Return type: _null_type_
 GetDynastyLegacy( Arg0 )
 Description: Get the DynastyLegacy object with the provided key in their database
 Definition type: Global function
-Return type: _null_type_
+Return type: [unregistered]
 
 -----------------------
 
@@ -1267,6 +1722,13 @@ GetDynastyTemplate( Arg0 )
 Description: Get the DynastyTemplate object with the provided key in their database
 Definition type: Global function
 Return type: _null_type_
+
+-----------------------
+
+GetEpidemicType( Arg0 )
+Description: Get the EpidemicType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
 
 -----------------------
 
@@ -1294,7 +1756,7 @@ Return type: [unregistered]
 GetGeographicalRegion( Arg0 )
 Description: Get the GeographicalRegion object with the provided key in their database
 Definition type: Global function
-Return type: _null_type_
+Return type: [unregistered]
 
 -----------------------
 
@@ -1317,6 +1779,20 @@ Return type: [unregistered]
 
 -----------------------
 
+GetGraphicalUnitType( Arg0 )
+Description: Get the GraphicalUnitType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetGreatProjectType( Arg0 )
+Description: Get the GreatProjectType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetHoldingType( Arg0 )
 Description: Get the HoldingType object with the provided key in their database
 Definition type: Global function
@@ -1326,6 +1802,34 @@ Return type: [unregistered]
 
 GetHolySite( Arg0 )
 Description: Get the HolySite object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetHouseAspiration( Arg0 )
+Description: Get the HouseAspiration object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetHouseRelationLevel( Arg0 )
+Description: Get the HouseRelationLevel object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetHouseRelationType( Arg0 )
+Description: Get the HouseRelationType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetHouseUnityStage( Arg0 )
+Description: Get the HouseUnityStage object with the provided key in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -1380,6 +1884,20 @@ Return type: [unregistered]
 
 -----------------------
 
+GetLegendType( Arg0 )
+Description: Get the LegendType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetLegitimacyType( Arg0 )
+Description: Get the LegitimacyType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetLifestyle( Arg0 )
 Description: Get the Lifestyle object with the provided key in their database
 Definition type: Global function
@@ -1396,6 +1914,20 @@ Return type: _null_type_
 
 GetMenAtArmsType( Arg0 )
 Description: Get the MenAtArmsType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetMessageFilterType( Arg0 )
+Description: Get the MessageFilterType object with the provided key in their database
+Definition type: Global function
+Return type: _null_type_
+
+-----------------------
+
+GetMessageGroupType( Arg0 )
+Description: Get the MessageGroupType object with the provided key in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -1422,8 +1954,29 @@ Return type: [unregistered]
 
 -----------------------
 
+GetRaidIntent( Arg0 )
+Description: Get the RaidIntent object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetReligionFamily( Arg0 )
 Description: Get the ReligionFamily object with the provided key in their database
+Definition type: Global function
+Return type: _null_type_
+
+-----------------------
+
+GetSchemeCountermeasureType( Arg0 )
+Description: Get the SchemeCountermeasureType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetSchemePulseAction( Arg0 )
+Description: Get the SchemePulseAction object with the provided key in their database
 Definition type: Global function
 Return type: _null_type_
 
@@ -1450,6 +2003,27 @@ Return type: [unregistered]
 
 -----------------------
 
+GetSituationCatalystType( Arg0 )
+Description: Get the SituationCatalystType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetSituationGroupType( Arg0 )
+Description: Get the SituationGroupType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetSituationType( Arg0 )
+Description: Get the SituationType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetStaticModifier( Arg0 )
 Description: Get the StaticModifier object with the provided key in their database
 Definition type: Global function
@@ -1471,8 +2045,43 @@ Return type: [unregistered]
 
 -----------------------
 
+GetSubjectContractGroup( Arg0 )
+Description: Get the SubjectContractGroup object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetSubjectContractType( Arg0 )
+Description: Get the SubjectContractType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
 GetSuggestionType( Arg0 )
 Description: Get the SuggestionType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetTaskContractType( Arg0 )
+Description: Get the TaskContractType object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetTaxSlotObligation( Arg0 )
+Description: Get the TaxSlotObligation object with the provided key in their database
+Definition type: Global function
+Return type: [unregistered]
+
+-----------------------
+
+GetTaxSlotType( Arg0 )
+Description: Get the TaxSlotType object with the provided key in their database
 Definition type: Global function
 Return type: [unregistered]
 
@@ -1506,16 +2115,16 @@ Return type: _null_type_
 
 -----------------------
 
-GetVarTimeRemaining( Arg0, Arg1 )
+GetTriggeredLegendSeed( Arg0 )
+Description: Get the TriggeredLegendSeed object with the provided key in their database
 Definition type: Global function
-Return type: int32
+Return type: _null_type_
 
 -----------------------
 
-GetVassalContractType( Arg0 )
-Description: Get the VassalContractType object with the provided key in their database
+GetVarTimeRemaining( Arg0, Arg1 )
 Definition type: Global function
-Return type: [unregistered]
+Return type: int32
 
 -----------------------
 
@@ -1652,6 +2261,30 @@ Return type: Scope
 
 -----------------------
 
+Confederation
+Definition type: Type
+
+-----------------------
+
+Confederation.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+ConfederationType
+Definition type: Type
+
+-----------------------
+
+ConfederationType.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 Container
 Definition type: Type
 
@@ -1669,12 +2302,48 @@ Return type: [unregistered]
 
 -----------------------
 
+CourtPosition
+Definition type: Type
+
+-----------------------
+
+CourtPosition.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+CourtPositionType
+Definition type: Type
+
+-----------------------
+
+CourtPositionType.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 Culture
 Definition type: Type
 
 -----------------------
 
 Culture.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+CultureInnovationType
+Definition type: Type
+
+-----------------------
+
+CultureInnovationType.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope
@@ -1717,6 +2386,18 @@ Return type: Scope
 
 -----------------------
 
+Domicile
+Definition type: Type
+
+-----------------------
+
+Domicile.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 Dynasty
 Definition type: Type
 
@@ -1735,6 +2416,30 @@ Definition type: Type
 -----------------------
 
 DynastyHouse.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+Epidemic
+Definition type: Type
+
+-----------------------
+
+Epidemic.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+EpidemicType
+Definition type: Type
+
+-----------------------
+
+EpidemicType.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope
@@ -1777,6 +2482,18 @@ Return type: Scope
 
 -----------------------
 
+GeographicalRegion
+Definition type: Type
+
+-----------------------
+
+GeographicalRegion.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 GovernmentType
 Definition type: Type
 
@@ -1801,6 +2518,30 @@ Return type: Scope
 
 -----------------------
 
+GreatProject
+Definition type: Type
+
+-----------------------
+
+GreatProject.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+GreatProjectContribution
+Definition type: Type
+
+-----------------------
+
+GreatProjectContribution.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 HolyOrder
 Definition type: Type
 
@@ -1813,12 +2554,84 @@ Return type: Scope
 
 -----------------------
 
+HouseAspiration
+Definition type: Type
+
+-----------------------
+
+HouseAspiration.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+HouseRelation
+Definition type: Type
+
+-----------------------
+
+HouseRelation.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+HouseRelationLevel
+Definition type: Type
+
+-----------------------
+
+HouseRelationLevel.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+HouseRelationType
+Definition type: Type
+
+-----------------------
+
+HouseRelationType.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 Inspiration
 Definition type: Type
 
 -----------------------
 
 Inspiration.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+Legend
+Definition type: Type
+
+-----------------------
+
+Legend.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+LegendType
+Definition type: Type
+
+-----------------------
+
+LegendType.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope
@@ -1843,6 +2656,18 @@ Definition type: Type
 -----------------------
 
 Province.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+Regiment
+Definition type: Type
+
+-----------------------
+
+Regiment.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope
@@ -1948,6 +2773,20 @@ Return type: CombatSide
 
 -----------------------
 
+Scope.Confederation
+Description: Jomini Script System
+Definition type: Promote
+Return type: Confederation
+
+-----------------------
+
+Scope.ConfederationType
+Description: Jomini Script System
+Definition type: Promote
+Return type: ConfederationType
+
+-----------------------
+
 Scope.CouncilTask
 Description: Jomini Script System
 Definition type: Promote
@@ -1955,10 +2794,31 @@ Return type: ActiveCouncilTask
 
 -----------------------
 
+Scope.CourtPosition
+Description: Jomini Script System
+Definition type: Promote
+Return type: CourtPosition
+
+-----------------------
+
+Scope.CourtPositionType
+Description: Jomini Script System
+Definition type: Promote
+Return type: CourtPositionType
+
+-----------------------
+
 Scope.Culture
 Description: Jomini Script System
 Definition type: Promote
 Return type: Culture
+
+-----------------------
+
+Scope.CultureInnovationType
+Description: Jomini Script System
+Definition type: Promote
+Return type: CultureInnovationType
 
 -----------------------
 
@@ -1983,10 +2843,31 @@ Return type: Decision
 
 -----------------------
 
+Scope.Domicile
+Description: Jomini Script System
+Definition type: Promote
+Return type: Domicile
+
+-----------------------
+
 Scope.Dynasty
 Description: Jomini Script System
 Definition type: Promote
 Return type: Dynasty
+
+-----------------------
+
+Scope.Epidemic
+Description: Jomini Script System
+Definition type: Promote
+Return type: Epidemic
+
+-----------------------
+
+Scope.EpidemicType
+Description: Jomini Script System
+Definition type: Promote
+Return type: EpidemicType
 
 -----------------------
 
@@ -2008,6 +2889,13 @@ Scope.FaithDoctrine
 Description: Jomini Script System
 Definition type: Promote
 Return type: FaithDoctrine
+
+-----------------------
+
+Scope.GeographicalRegion
+Description: Jomini Script System
+Definition type: Promote
+Return type: GeographicalRegion
 
 -----------------------
 
@@ -2059,6 +2947,20 @@ Return type: GreatHolyWar
 
 -----------------------
 
+Scope.GreatProject
+Description: Jomini Script System
+Definition type: Promote
+Return type: GreatProject
+
+-----------------------
+
+Scope.GreatProjectImprovement
+Description: Jomini Script System
+Definition type: Promote
+Return type: GreatProjectContribution
+
+-----------------------
+
 Scope.HolyOrder
 Description: Jomini Script System
 Definition type: Promote
@@ -2073,10 +2975,52 @@ Return type: DynastyHouse
 
 -----------------------
 
+Scope.HouseAspirationType
+Description: Jomini Script System
+Definition type: Promote
+Return type: HouseAspiration
+
+-----------------------
+
+Scope.HouseRelation
+Description: Jomini Script System
+Definition type: Promote
+Return type: HouseRelation
+
+-----------------------
+
+Scope.HouseRelationLevel
+Description: Jomini Script System
+Definition type: Promote
+Return type: HouseRelationLevel
+
+-----------------------
+
+Scope.HouseRelationType
+Description: Jomini Script System
+Definition type: Promote
+Return type: HouseRelationType
+
+-----------------------
+
 Scope.Inspiration
 Description: Jomini Script System
 Definition type: Promote
 Return type: Inspiration
+
+-----------------------
+
+Scope.Legend
+Description: Jomini Script System
+Definition type: Promote
+Return type: Legend
+
+-----------------------
+
+Scope.LegendType
+Description: Jomini Script System
+Definition type: Promote
+Return type: LegendType
 
 -----------------------
 
@@ -2091,6 +3035,13 @@ Scope.Province
 Description: Jomini Script System
 Definition type: Promote
 Return type: Province
+
+-----------------------
+
+Scope.Regiment
+Description: Jomini Script System
+Definition type: Promote
+Return type: Regiment
 
 -----------------------
 
@@ -2115,6 +3066,27 @@ Return type: Secret
 
 -----------------------
 
+Scope.Situation
+Description: Jomini Script System
+Definition type: Promote
+Return type: Situation
+
+-----------------------
+
+Scope.SituationParticipantGroup
+Description: Jomini Script System
+Definition type: Promote
+Return type: SituationParticipantGroup
+
+-----------------------
+
+Scope.SituationSubRegion
+Description: Jomini Script System
+Definition type: Promote
+Return type: SituationSubRegion
+
+-----------------------
+
 Scope.Story
 Description: Jomini Script System
 Definition type: Promote
@@ -2126,6 +3098,27 @@ Scope.Struggle
 Description: Jomini Script System
 Definition type: Promote
 Return type: Struggle
+
+-----------------------
+
+Scope.SubjectContractType
+Description: Jomini Script System
+Definition type: Promote
+Return type: SubjectContractType
+
+-----------------------
+
+Scope.TaskContract
+Description: Jomini Script System
+Definition type: Promote
+Return type: TaskContract
+
+-----------------------
+
+Scope.TaskContractType
+Description: Jomini Script System
+Definition type: Promote
+Return type: TaskContractType
 
 -----------------------
 
@@ -2153,13 +3146,6 @@ Return type: TravelPlan
 Scope.Var( Arg0 )
 Definition type: Promote
 Return type: Scope
-
------------------------
-
-Scope.VassalContractType
-Description: Jomini Script System
-Definition type: Promote
-Return type: VassalContractType
 
 -----------------------
 
@@ -2246,6 +3232,20 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.Confederation
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.ConfederationType
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.CouncilTask
 Description: Jomini Script System
 Definition type: Function
@@ -2253,7 +3253,28 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.CourtPosition
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.CourtPositionType
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.Culture
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.CultureInnovationType
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -2281,7 +3302,28 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.Domicile
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.Dynasty
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.Epidemic
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.EpidemicType
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -2309,10 +3351,23 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.GeographicalRegion
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.GetCharacter
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+Scope.GetFlagKey
+Definition type: Function
+Return type: CString
 
 -----------------------
 
@@ -2381,6 +3436,26 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.GreatProject
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.GreatProjectImprovement
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.HasFlag( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
 Scope.HolyOrder
 Description: Jomini Script System
 Definition type: Function
@@ -2389,6 +3464,34 @@ Return type: [unregistered]
 -----------------------
 
 Scope.House
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.HouseAspirationType
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.HouseRelation
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.HouseRelationLevel
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.HouseRelationType
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -2408,6 +3511,20 @@ Return type: bool
 
 -----------------------
 
+Scope.Legend
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.LegendType
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.MercenaryCompany
 Description: Jomini Script System
 Definition type: Function
@@ -2416,6 +3533,13 @@ Return type: [unregistered]
 -----------------------
 
 Scope.Province
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.Regiment
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -2455,6 +3579,27 @@ Return type: [unregistered]
 
 -----------------------
 
+Scope.Situation
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.SituationParticipantGroup
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.SituationSubRegion
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Scope.Story
 Description: Jomini Script System
 Definition type: Function
@@ -2463,6 +3608,27 @@ Return type: [unregistered]
 -----------------------
 
 Scope.Struggle
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.SubjectContractType
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.TaskContract
+Description: Jomini Script System
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+Scope.TaskContractType
 Description: Jomini Script System
 Definition type: Function
 Return type: [unregistered]
@@ -2493,13 +3659,6 @@ Return type: [unregistered]
 Scope.VarRemaining( Arg0 )
 Definition type: Function
 Return type: int32
-
------------------------
-
-Scope.VassalContractType
-Description: Jomini Script System
-Definition type: Function
-Return type: [unregistered]
 
 -----------------------
 
@@ -2581,6 +3740,42 @@ Return type: Scope
 
 -----------------------
 
+Situation
+Definition type: Type
+
+-----------------------
+
+Situation.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+SituationParticipantGroup
+Definition type: Type
+
+-----------------------
+
+SituationParticipantGroup.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+SituationSubRegion
+Definition type: Type
+
+-----------------------
+
+SituationSubRegion.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
 Story
 Definition type: Type
 
@@ -2599,6 +3794,42 @@ Definition type: Type
 -----------------------
 
 Struggle.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+SubjectContractType
+Definition type: Type
+
+-----------------------
+
+SubjectContractType.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+TaskContract
+Definition type: Type
+
+-----------------------
+
+TaskContract.MakeScope
+Description: Jomini Script System
+Definition type: Function
+Return type: Scope
+
+-----------------------
+
+TaskContractType
+Definition type: Type
+
+-----------------------
+
+TaskContractType.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope
@@ -2958,18 +4189,6 @@ Definition type: Type
 -----------------------
 
 TravelPlan.MakeScope
-Description: Jomini Script System
-Definition type: Function
-Return type: Scope
-
------------------------
-
-VassalContractType
-Definition type: Type
-
------------------------
-
-VassalContractType.MakeScope
 Description: Jomini Script System
 Definition type: Function
 Return type: Scope

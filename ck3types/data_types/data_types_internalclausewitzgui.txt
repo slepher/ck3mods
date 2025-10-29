@@ -1990,30 +1990,6 @@ Return type: [unregistered]
 
 -----------------------
 
-EthnicityItem
-Description: Portrait Editor - Ethnicity Item
-Definition type: Type
-
------------------------
-
-EthnicityItem.AccessSelf
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
-EthnicityItem.GetName
-Definition type: Function
-Return type: CString
-
------------------------
-
-EthnicityItem.Self
-Definition type: Function
-Return type: [unregistered]
-
------------------------
-
 EventLayerForEntityEditor
 Description: Entity Editor - Entity Event Layer Keyframe
 Definition type: Type
@@ -2272,6 +2248,53 @@ Return type: CString
 -----------------------
 
 EyeDropperPackedSample.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FilterablePropertyList
+Definition type: Type
+
+-----------------------
+
+FilterablePropertyList.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+FilterablePropertyList.ClearSearchText
+Definition type: Function
+Return type: void
+
+-----------------------
+
+FilterablePropertyList.Filter
+Definition type: Function
+Return type: void
+
+-----------------------
+
+FilterablePropertyList.GetPropertiesLabel
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FilterablePropertyList.GetSearchText
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+FilterablePropertyList.Search
+Definition type: Function
+Return type: void
+
+-----------------------
+
+FilterablePropertyList.Self
 Definition type: Function
 Return type: [unregistered]
 
@@ -5859,6 +5882,12 @@ Return type: void
 
 -----------------------
 
+MapEditor.ReloadMaterialFromDisk( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
 MapEditor.Save
 Definition type: Function
 Return type: void
@@ -7170,6 +7199,12 @@ Return type: bool
 
 -----------------------
 
+MaterialPaintingMode.ReloadMaterials
+Definition type: Function
+Return type: void
+
+-----------------------
+
 MaterialPaintingMode.SelectBlur
 Definition type: Function
 Return type: void
@@ -7747,6 +7782,12 @@ Return type: void
 -----------------------
 
 Nudger.SetAllMapObjectsLocked( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+Nudger.SetInstancesRenderPass
 Definition type: Function
 Return type: void
 
@@ -8780,12 +8821,6 @@ Return type: PortraitDataContext
 
 -----------------------
 
-PortraitEditorWindow.GetSelectedEthnicityItem
-Definition type: Promote
-Return type: EthnicityItem
-
------------------------
-
 PortraitEditorWindow.GetSelectedGeneItem
 Definition type: Promote
 Return type: GeneItem
@@ -8801,6 +8836,12 @@ Return type: [unregistered]
 PortraitEditorWindow.CanOptimize
 Definition type: Function
 Return type: bool
+
+-----------------------
+
+PortraitEditorWindow.GetActiveTypes
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -8870,6 +8911,12 @@ Return type: CString
 
 -----------------------
 
+PortraitEditorWindow.GetCurrentPortraitTypeGroupFileDesc
+Definition type: Function
+Return type: CString
+
+-----------------------
+
 PortraitEditorWindow.GetDNA
 Definition type: Function
 Return type: CString
@@ -8925,12 +8972,6 @@ Return type: float
 -----------------------
 
 PortraitEditorWindow.HasAnySliders
-Definition type: Function
-Return type: bool
-
------------------------
-
-PortraitEditorWindow.HasPoses
 Definition type: Function
 Return type: bool
 
@@ -8996,18 +9037,6 @@ Return type: void
 
 -----------------------
 
-PortraitEditorWindow.OnChangeEthnicityLeft
-Definition type: Function
-Return type: void
-
------------------------
-
-PortraitEditorWindow.OnChangeEthnicityRight
-Definition type: Function
-Return type: void
-
------------------------
-
 PortraitEditorWindow.OnChangeGeneLeft
 Definition type: Function
 Return type: void
@@ -9015,18 +9044,6 @@ Return type: void
 -----------------------
 
 PortraitEditorWindow.OnChangeGeneRight
-Definition type: Function
-Return type: void
-
------------------------
-
-PortraitEditorWindow.OnChangePoseItemLeft
-Definition type: Function
-Return type: void
-
------------------------
-
-PortraitEditorWindow.OnChangePoseItemRight
 Definition type: Function
 Return type: void
 
@@ -9051,6 +9068,18 @@ Return type: void
 -----------------------
 
 PortraitEditorWindow.OnCopyPersistentPortraitInfo( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PortraitEditorWindow.OnCycleEthnicity( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PortraitEditorWindow.OnCyclePortraitTypeGroup( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -9182,6 +9211,12 @@ Return type: void
 
 -----------------------
 
+PortraitEditorWindow.OpenCurrentPortraitTypeGroupFile
+Definition type: Function
+Return type: void
+
+-----------------------
+
 PortraitEditorWindow.ResetSliders
 Definition type: Function
 Return type: void
@@ -9249,6 +9284,76 @@ Return type: void
 -----------------------
 
 PreviewMaskTexture.SetOpacityStr
+Definition type: Function
+Return type: void
+
+-----------------------
+
+RandomizableValueFloat
+Definition type: Type
+
+-----------------------
+
+RandomizableValueFloat.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+RandomizableValueFloat.GetValue
+Definition type: Function
+Return type: float
+
+-----------------------
+
+RandomizableValueFloat.Randomize
+Definition type: Function
+Return type: void
+
+-----------------------
+
+RandomizableValueFloat.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+RandomizableValueFloat.SetValue
+Definition type: Function
+Return type: void
+
+-----------------------
+
+RandomizableValueInt
+Definition type: Type
+
+-----------------------
+
+RandomizableValueInt.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+RandomizableValueInt.GetValue
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+RandomizableValueInt.Randomize
+Definition type: Function
+Return type: void
+
+-----------------------
+
+RandomizableValueInt.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+RandomizableValueInt.SetValue
 Definition type: Function
 Return type: void
 
@@ -10039,6 +10144,12 @@ Return type: CString
 -----------------------
 
 ScriptRunnerResult.HasResult
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+ScriptRunnerResult.IsBoolResultTrue
 Definition type: Function
 Return type: bool
 
@@ -12664,6 +12775,12 @@ Definition type: Type
 
 -----------------------
 
+ToolPropertySearchList.GetSelectedText
+Definition type: Promote
+Return type: CUTF8String
+
+-----------------------
+
 ToolPropertySearchList.AccessSelf
 Definition type: Function
 Return type: [unregistered]
@@ -12683,6 +12800,18 @@ Return type: CVector4f
 -----------------------
 
 ToolPropertySearchList.OpenSearchList
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertySearchList.SelectNextEntry
+Definition type: Function
+Return type: void
+
+-----------------------
+
+ToolPropertySearchList.SelectPrevEntry
 Definition type: Function
 Return type: void
 
@@ -12831,6 +12960,12 @@ Return type: void
 
 ToolPropertyUndoableSearchList
 Definition type: Type
+
+-----------------------
+
+ToolPropertyUndoableSearchList.GetSelectedText
+Definition type: Promote
+Return type: CUTF8String
 
 -----------------------
 
@@ -13971,6 +14106,12 @@ Return type: CVector2i
 
 -----------------------
 
+Type.GetRenderPass
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Type.GetTypeIndex
 Definition type: Function
 Return type: CVector2i
@@ -14031,7 +14172,7 @@ Return type: void
 
 -----------------------
 
-Type.SetRenderUnderwater( Arg0 )
+Type.SetRenderPass( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -14044,12 +14185,6 @@ Return type: void
 -----------------------
 
 Type.ShouldClampToWaterLevel
-Definition type: Function
-Return type: bool
-
------------------------
-
-Type.ShouldRenderUnderwater
 Definition type: Function
 Return type: bool
 
@@ -14319,9 +14454,21 @@ Return type: void
 
 -----------------------
 
+VariableListEntry.GetTicksRemaining
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 VariableListEntry.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+VariableListEntry.SetTicksRemaining
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -14389,6 +14536,12 @@ Return type: int32
 
 -----------------------
 
+VariableListStore.GetVariableTicksRemaining
+Definition type: Function
+Return type: int32
+
+-----------------------
+
 VariableListStore.Self
 Definition type: Function
 Return type: [unregistered]
@@ -14396,6 +14549,12 @@ Return type: [unregistered]
 -----------------------
 
 VariableListStore.SetNewVariableListName
+Definition type: Function
+Return type: void
+
+-----------------------
+
+VariableListStore.SetVariableTicksRemaining
 Definition type: Function
 Return type: void
 

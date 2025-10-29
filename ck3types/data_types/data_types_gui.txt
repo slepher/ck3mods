@@ -33,6 +33,13 @@ Return type: void
 
 -----------------------
 
+BindTabsContext
+Description: Add a new PdxGuiTabs data context to a widget.
+Definition type: Global function
+Return type: void
+
+-----------------------
+
 CanEditSettingsAfterHost
 Description: Multiplayer - If you can edit settings after hosting (depends on MP platform)
 Definition type: Global function
@@ -1457,6 +1464,12 @@ Return type: CString
 
 -----------------------
 
+Ethnicity.GetPortraitGroup
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 Ethnicity.IsVisible
 Definition type: Function
 Return type: bool
@@ -1913,12 +1926,6 @@ Return type: CString
 
 -----------------------
 
-GeneCategory.IsOnlyVisibleFemale
-Definition type: Function
-Return type: bool
-
------------------------
-
 GeneCategory.IsType( Arg0 )
 Definition type: Function
 Return type: bool
@@ -1928,12 +1935,6 @@ Return type: bool
 GeneCategory.Self
 Definition type: Function
 Return type: [unregistered]
-
------------------------
-
-GeneCategory.ShowMorphGeneSlider
-Definition type: Function
-Return type: bool
 
 -----------------------
 
@@ -2902,7 +2903,7 @@ Return type: [unregistered]
 
 -----------------------
 
-LobbyView.CanControlSelected
+LobbyView.CanControl( Arg0 )
 Definition type: Function
 Return type: bool
 
@@ -2938,7 +2939,7 @@ Return type: void
 
 -----------------------
 
-LobbyView.ControlSelected
+LobbyView.Control( Arg0 )
 Definition type: Function
 Return type: void
 
@@ -2950,7 +2951,7 @@ Return type: void
 
 -----------------------
 
-LobbyView.GetControlToolTip
+LobbyView.GetControlToolTip( Arg0 )
 Definition type: Function
 Return type: CString
 
@@ -2995,6 +2996,24 @@ Return type: CString
 LobbyView.GetSelectText
 Definition type: Function
 Return type: CString
+
+-----------------------
+
+LobbyView.GetSelectionClickIndex
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+LobbyView.GetTransferSpeedSettingIndex
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+LobbyView.GetTransferSpeedSettingOptions
+Definition type: Function
+Return type: [unregistered]
 
 -----------------------
 
@@ -3083,6 +3102,12 @@ Return type: void
 -----------------------
 
 LobbyView.OnPasswordEdit
+Definition type: Function
+Return type: void
+
+-----------------------
+
+LobbyView.OnTransferSpeedSettingChanged
 Definition type: Function
 Return type: void
 
@@ -3400,6 +3425,191 @@ Return type: bool
 
 -----------------------
 
+MusicPlayer
+Definition type: Type
+
+-----------------------
+
+MusicPlayer.AccessCategories
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayer.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayer.AccessTracksFromSelectedCategory
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayer.GetCategoryEnabledText( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayer.GetCategoryName( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayer.GetMusicDensity
+Definition type: Function
+Return type: float
+
+-----------------------
+
+MusicPlayer.GetMusicDensityString
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayer.GetPlaybackStatusFrameIndex
+Definition type: Function
+Return type: int32
+
+-----------------------
+
+MusicPlayer.GetPlayingTrackElapsedTime
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayer.GetPlayingTrackName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayer.GetSelectedCategory
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayer.GetTrackEnabledText( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayer.GetTrackName( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayer.GetTrackTextColor( Arg0 )
+Definition type: Function
+Return type: CVector4f
+
+-----------------------
+
+MusicPlayer.GetVolume
+Definition type: Function
+Return type: float
+
+-----------------------
+
+MusicPlayer.GetVolumeString
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayer.HasSelectedCategory
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MusicPlayer.IsPlaying
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MusicPlayer.IsPlayingTrackSelectable
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MusicPlayer.IsSelectedCategory( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MusicPlayer.OnNextTrack
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MusicPlayer.OnSelectAndPlayTrack( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MusicPlayer.OnSelectCategory( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MusicPlayer.OnSelectTrack( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MusicPlayer.OnToggleCategoryEnabled( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MusicPlayer.OnTogglePlayPause
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MusicPlayer.OnToggleTrackEnabled( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MusicPlayer.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayer.SetMusicDensity
+Definition type: Function
+Return type: void
+
+-----------------------
+
+MusicPlayer.SetVolume
+Definition type: Function
+Return type: void
+
+-----------------------
+
 MusicPlayerCategory
 Definition type: Type
 
@@ -3408,6 +3618,48 @@ Definition type: Type
 MusicPlayerCategory.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerCategory.GetName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayerCategory.GetNameLocKey
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicPlayerCategory.GetTexture
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerCategory.GetTracks
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicPlayerCategory.HasTexture
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MusicPlayerCategory.IsEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MusicPlayerCategory.IsPlaying
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -3425,6 +3677,30 @@ Definition type: Type
 MusicTrack.AccessSelf
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+MusicTrack.GetCategory
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+MusicTrack.GetName
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+MusicTrack.IsEnabled
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+MusicTrack.IsPlaying
+Definition type: Function
+Return type: bool
 
 -----------------------
 
@@ -3545,6 +3821,18 @@ Return type: void
 OosWindow.IsLocalOos
 Definition type: Function
 Return type: bool
+
+-----------------------
+
+OosWindow.IsMultiplayerHost
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+OosWindow.Resync
+Definition type: Function
+Return type: void
 
 -----------------------
 
@@ -4160,7 +4448,14 @@ Return type: [unregistered]
 
 -----------------------
 
-PdxGuiFoldOut.SetFoldState
+PdxGuiFoldOut.SetFoldState( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiFoldOut.SetShownBehavior( Arg0 )
+Description: Set the behavior when this fold out becomes visible, options are none, folded, and unfolded.
 Definition type: Function
 Return type: void
 
@@ -4237,6 +4532,36 @@ Return type: void
 
 -----------------------
 
+PdxGuiTabItem
+Description: Tab Item
+Definition type: Type
+
+-----------------------
+
+PdxGuiTabItem.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+PdxGuiTabItem.GetKey
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+PdxGuiTabItem.LocalizeTab( Arg0 )
+Definition type: Function
+Return type: CString
+
+-----------------------
+
+PdxGuiTabItem.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
 PdxGuiTableRow
 Description: Generic Tree Table - Row
 Definition type: Type
@@ -4258,6 +4583,104 @@ Return type: int32
 PdxGuiTableRow.Self
 Definition type: Function
 Return type: [unregistered]
+
+-----------------------
+
+PdxGuiTabs
+Description: Tab List
+Definition type: Type
+
+-----------------------
+
+PdxGuiTabs.GetActiveTab
+Definition type: Promote
+Return type: PdxGuiTabItem
+
+-----------------------
+
+PdxGuiTabs.AccessSelf
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+PdxGuiTabs.AddTab( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiTabs.AddTabIf( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiTabs.GetActiveTab
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+PdxGuiTabs.GetTabItems
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+PdxGuiTabs.IsTabItemSet( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+PdxGuiTabs.IsTabSet( Arg0 )
+Definition type: Function
+Return type: bool
+
+-----------------------
+
+PdxGuiTabs.ListenFor( Arg0 )
+Description: Make the tab list listen for any tab changes from their parent widgets with the given ID.
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiTabs.RemoveTab( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiTabs.RemoveTabIf( Arg0, Arg1 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiTabs.Self
+Definition type: Function
+Return type: [unregistered]
+
+-----------------------
+
+PdxGuiTabs.SetResetOnShown( Arg0 )
+Description: Set if the tab list should reset to the default when it becomes visible, defaults to yes.
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiTabs.SetTab( Arg0 )
+Definition type: Function
+Return type: void
+
+-----------------------
+
+PdxGuiTabs.SetTabByKey( Arg0 )
+Definition type: Function
+Return type: void
 
 -----------------------
 
