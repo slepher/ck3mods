@@ -1,2 +1,2 @@
 source_dir = "D:/SteamLibrary/steamapps/common/Crusader Kings III/game"
-mod_dir = "D:/Documents/Paradox Interactive/Crusader Kings III/mod"
+paradox_root = "D:/Documents/Paradox Interactive/Crusader Kings III"

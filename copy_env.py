@@ -21,3 +21,12 @@ EXCLUDE_WHITELIST = {
         "forbes.gui"
     ]
 }
+
+TYPES = [
+    "effects",
+    "event_scopes",
+    "event_targets",
+    "modifiers",
+    "on_actions",
+    "triggers"
+]
