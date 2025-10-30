@@ -208,3 +208,84 @@ special_obligation_title_revocation_rights = {
 		add = 1
 	}
 }
+
+forbes_visible_main_tabs = {
+    value = 0
+
+    # 政府管理类按钮
+    # 原本想用 has_government_rule = noble_families，但不存在
+    # 可以通过判断以下政府类型是否存在 rule noble_families
+    if = {
+        limit = {
+            OR = {
+                has_government = administrative_government
+                has_government = celestial_government
+                has_government = steppe_admin_government
+                has_government = meritocratic_government
+                has_government = japan_feudal_government
+                has_government = japan_administrative_government
+            }
+        }
+        add = 1
+    }
+
+    # 我的领地（固定显示）
+    add = 1
+
+    # 军事（固定显示）
+    add = 1
+
+    # 枢密院（无地冒险者不可见）
+    if = {
+        limit = { NOT = { is_landless_adventurer = yes } }
+        add = 1
+    }
+
+    # 宫廷（始终显示）
+    add = 1
+
+    # 阴谋（固定显示）
+    add = 1
+
+    # 派系（固定显示）
+    add = 1
+    # 如果需要条件判断（如角色在派系、有领地或有封臣），可使用 scripted_value 风格：
+    # if = {
+    #     limit = {
+    #         OR = {
+    #             is_in_faction = yes
+    #             is_landed = yes
+    #             has_liege = yes
+    #         }
+    #     }
+    #     add = 1
+    # }
+
+    # 决策 / 合约（无地冒险者不可见）
+    if = {
+        limit = { NOT = { has_government = landless_adventurer_government } }
+        add = 1
+    }
+
+    # 活动（固定显示）
+    add = 1
+
+    # 情势（固定显示）
+    add = 1
+
+    # 皇家宫廷（需要皇家宫廷 DLC 且非无地冒险者）
+    if = {
+        limit = {
+            has_royal_court = yes
+            has_dlc_feature = court_room_view
+            NOT = { is_landless_adventurer = yes }
+        }
+        add = 1
+    }
+
+    # 税务管辖（氏族制政府可见）
+    if = {
+        limit = { has_government = clan_government }
+        add = 1
+    }
+}
