@@ -8,5 +8,6 @@
  FORBES_OVERHELD_TITLE:0 "内部心腹大患"
  FORBES_INFIDEL_VASSAL:0 "异教封臣"
  FORBES_TITLE_CLAIMER:0 "头衔宣称者"
+ FORBES_TREASURY_TOP:0  "国库富豪榜"
  IS_VASSAL_CONTRACT_BLOCKED_FROM_MODIFICATION_THIRD_1:0 "[Character.GetShortUINamePossessive]的[obligations|E]已变更过"
  I_CAN_PUNISH_DESCRIPTION_1:0 "#T 人尽皆知的罪犯#!\n\n[Character.GetShortUINameNoTooltip]的[criminal|E]人尽皆知，这允许我惩罚[Character.GetHerHim]而不会被视为[tyrant|E]。"

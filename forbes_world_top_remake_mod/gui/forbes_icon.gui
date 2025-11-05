@@ -1,38 +1,47 @@
 ﻿widget = {
 	name = "forbes_gui_icon"
 	parentanchor = right
-	layer = bottom
-	size = { 45 45 }
+	layer = hud_layer
+	size = { 50 45 }
 	position = { 5 665 }
 	texture = "gfx/interface/skinned/hud_maintab_bg.dds"
 	visible = "[And(And( Not( IsPauseMenuShown ), And(Or(Not(IsObserver), GetPlayer.IsValid), IsDefaultGUIMode)), Not(IsGameViewOpen('struggle')))))]"
 
-	widget_hud_main_tab = {
-		name = "forbes_gui_icon_button"
-		visible = "[Not(VariableSystem.Exists('forbes_list_opened'))]"
-		parentanchor = center
-		tooltip="FORBES"
+	allow_outside = yes
+	using = Animation_ShowHide_Quick
 
-		blockoverride "maintab_button"
-		{
-			texture = "gfx/interface/icons/icon_gold.dds"
-			datacontext = "[GetScriptedGui('open_forbes_list')]"
-			onclick = "[GetVariableSystem.Set('icon_to_open_forbes_list', 'true')]"
+	vbox = {
+		alwaystransparent = no
+		filter_mouse = all
+		visible = "[Not(IsGameViewOpen('barbershop'))]"
+		margin = { 5 10 }
 
-			state = {
-				name = "icon_to_open_forbes_list"
-				trigger_on_create = no
-				trigger_when = "[And(GetVariableSystem.Exists('icon_to_open_forbes_list'), Not(GetVariableSystem.Exists('forbes_list_opened')))]"
-				on_start = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-				on_start = "[GetVariableSystem.Set('forbes_list_opened', 'true')]"
-				on_finish = "[GetVariableSystem.Clear('to_open_forbes_list')]"
-			}
-	
-			state = {
-				name = "opened_forbes_list"
-				trigger_on_create = no
-				trigger_when = "[And(GetVariableSystem.Exists('icon_to_open_forbes_list'), GetVariableSystem.Exists('forbes_list_opened'))]"
-				on_finish = "[GetVariableSystem.Clear('icon_to_open_forbes_list')]"
+		widget_hud_main_tab = {
+			name = "forbes_gui_icon_button"
+			visible = "[Not(VariableSystem.Exists('forbes_list_opened'))]"
+			tooltip="FORBES"
+
+			blockoverride "maintab_button"
+			{
+				texture = "gfx/interface/icons/icon_gold.dds"
+				datacontext = "[GetScriptedGui('open_forbes_list')]"
+				onclick = "[GetVariableSystem.Set('icon_to_open_forbes_list', 'true')]"
+
+				state = {
+					name = "icon_to_open_forbes_list"
+					trigger_on_create = no
+					trigger_when = "[And(GetVariableSystem.Exists('icon_to_open_forbes_list'), Not(GetVariableSystem.Exists('forbes_list_opened')))]"
+					on_start = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+					on_start = "[GetVariableSystem.Set('forbes_list_opened', 'true')]"
+					on_finish = "[GetVariableSystem.Clear('to_open_forbes_list')]"
+				}
+		
+				state = {
+					name = "opened_forbes_list"
+					trigger_on_create = no
+					trigger_when = "[And(GetVariableSystem.Exists('icon_to_open_forbes_list'), GetVariableSystem.Exists('forbes_list_opened'))]"
+					on_finish = "[GetVariableSystem.Clear('icon_to_open_forbes_list')]"
+				}
 			}
 		}
 	}

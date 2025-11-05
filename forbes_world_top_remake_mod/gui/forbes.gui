@@ -136,6 +136,22 @@ types FobesTypes {
 							}
 
 							hbox = {
+								tooltip = "[Character.GetTreasuryTooltipWithBalance]"
+								visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)9')]"
+
+								text_single = {
+									text = "[Character.GetTreasury|0]"
+									align = nobaseline|hcenter
+								}
+
+								icon = {
+									name = "treasury"
+									size = { 23 23 }
+									texture = "gfx/interface/icons/icon_imperial_treasury.dds"
+								}						
+							}
+
+							hbox = {
 								tooltip = "[Character.GetGoldTooltipWithBalance]"
 								
 								margin_right = 2
@@ -399,6 +415,10 @@ window = {
 					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)8')]"
 					text = "FORBES_TITLE_CLAIMER"
 				}
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)9')]"
+					text = "FORBES_TREASURY_TOP"
+				}
 			}
 
 			blockoverride "button_close"
@@ -556,6 +576,24 @@ window = {
 			# 		texture = "gfx/interface/icons/event_types/type_faith.dds"
             #     }
 			# }
+
+			button_standard = {
+                name = "filters_treasury"
+                size = { 25 25 }
+                margin_left = 5
+                datacontext = "[GetScriptedGui('generate_treasury_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)9')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "FORBES_TREASURY_TOP"
+                using = tooltip_nw
+    
+                button_icon = {
+                    alwaystransparent = yes
+                    parentanchor = center
+					size = { 20 20 }
+					texture = "gfx/interface/icons/flat_icons/map_modes/government.dds"
+                }
+			}
 
 			expand = {}
         }

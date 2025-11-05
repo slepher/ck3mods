@@ -8,5 +8,6 @@
  FORBES_OVERHELD_TITLE:0 "Overheld Title"
  FORBES_INFIDEL_VASSAL:0 "Infidel Vassals"
  FORBES_TITLE_CLAIMER:0 "Title Claimers"
+ FORBES_TREASURY_TOP:0  "Treasury Top"
  IS_VASSAL_CONTRACT_BLOCKED_FROM_MODIFICATION_THIRD_1:0 "Las [obligations|lE] de [Character.GetShortUIName] ya han sido cambiadas"
  I_CAN_PUNISH_DESCRIPTION_1:0 "#T Criminal conocido#!\n\n[Character.GetShortUINameNoTooltip] es un [criminal|E] conocido, lo que me permite castigar[Character.GetHerHim] sin que se me vea como un [tyrant|E]."

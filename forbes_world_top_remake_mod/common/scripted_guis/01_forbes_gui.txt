@@ -190,6 +190,30 @@ generate_forbes_claim_values_list = {
 	}
 }
 
+generate_treasury_list = {
+	scope = player
+	
+	is_shown = { 
+		always = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		set_variable = {
+			name = forbes_mode
+			value = 9
+		}
+		generate_forbes_list = yes
+	}
+}
+
 
 open_forbes_list = {
 	scope = player

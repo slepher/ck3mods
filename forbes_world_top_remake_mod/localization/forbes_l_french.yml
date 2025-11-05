@@ -8,5 +8,6 @@
  FORBES_OVERHELD_TITLE:0 "Overheld Title"
  FORBES_INFIDEL_VASSAL:0 "Infidel Vassals"
  FORBES_TITLE_CLAIMER:0 "Title Claimers"
+ FORBES_TREASURY_TOP:0  "Treasury Top"
  IS_VASSAL_CONTRACT_BLOCKED_FROM_MODIFICATION_THIRD_1:0 "Les [obligations|El] [Character.Custom('FR_only_du_GetShortUIName')][Character.GetShortUIName] ont déjà été modifiées"
  I_CAN_PUNISH_DESCRIPTION_1:0 "#T Criminel connu#!\n\n[Character.Custom('FR_only_le_GetShortUIName')|U][Character.GetShortUINameNoTooltip] est un[Character.Custom('FR_E')] [Concept( 'crime', 'crimine' )|E][Character.Custom('FR_LLle')|E] connu[Character.Custom('FR_E')], ce qui me permet de [Character.Custom('FR_LeLa')] punir sans être vu comme un [tyrant|El]."
