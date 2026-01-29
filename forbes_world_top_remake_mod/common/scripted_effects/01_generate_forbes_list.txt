@@ -212,18 +212,49 @@
 		limit = {
 			var:forbes_mode = 9
 		}
-		ordered_living_character = {
-			limit = { 
-				treasury > 99
+		situation:dynastic_cycle ?= {
+			ordered_situation_participant = {
+				limit = { 
+					has_treasury = yes
+					treasury > 99
+				}
+				order_by = treasury
+				max = 100
+				check_range_bounds = no
+				save_temporary_scope_as = to_add
+				root = {
+					add_to_variable_list = {
+						name = forbes_list
+						target = scope:to_add
+					}
+				}
 			}
-			order_by = treasury
-			max = 100
-			check_range_bounds = no
-			save_temporary_scope_as = to_add
-			root = {
-				add_to_variable_list = {
-					name = forbes_list
-					target = scope:to_add
+		}
+	}
+	else_if = {
+		limit = {
+			var:forbes_mode = 10
+		}
+		situation:dynastic_cycle ?= {
+			ordered_situation_participant = {
+				limit = {
+					has_treasury = yes
+					treasury < 0
+				}
+				order_by = {
+					value = 0
+					subtract = treasury
+				}
+				max = 100
+				check_range_bounds = no
+
+				save_temporary_scope_as = to_add
+	
+				root = {
+					add_to_variable_list = {
+						name = forbes_list
+						target = scope:to_add
+					}
 				}
 			}
 		}

@@ -152,6 +152,22 @@ types FobesTypes {
 							}
 
 							hbox = {
+								tooltip = "[Character.GetTreasuryTooltipWithBalance]"
+								visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)10')]"
+
+								text_single = {
+									text = "[Character.GetTreasury|0]"
+									align = nobaseline|hcenter
+								}
+
+								icon = {
+									name = "treasury"
+									size = { 23 23 }
+									texture = "gfx/interface/icons/combat_effects/owner_in_debt.dds"
+								}
+							}
+
+							hbox = {
 								tooltip = "[Character.GetGoldTooltipWithBalance]"
 								
 								margin_right = 2
@@ -254,25 +270,25 @@ types FobesTypes {
 									expand = {}
 
 									hbox = {
-										visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)3')]"
+										visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'),'(CFixedPoint)3')]"
 										vbox = {
 											text_single = {
-												visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_blocked_modification').GetValue, '(CFixedPoint)1')]"
+												visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_blocked_modification').GetValue,'(CFixedPoint)1')]"
 												text = "@warning_icon!"
 												tooltip = "IS_VASSAL_CONTRACT_BLOCKED_FROM_MODIFICATION_THIRD_1"
 											}
 											text_single = {
-												visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_has_hook').GetValue, '(CFixedPoint)1')]"
+												visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_has_hook').GetValue,'(CFixedPoint)1')]"
 												text = "@weak_hook_icon!"
 												tooltip = "retract_vassal_interaction_extra_icon"
 											}
 											# text_single = {
-											#     visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_imprisoned').GetValue, '(CFixedPoint)1')]"
+											#     visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_imprisoned').GetValue,'(CFixedPoint)1')]"
 											#     text = "@weak_hook_icon!"
 											#     tooltip = "retract_vassal_interaction_extra_icon"
 											# }
 											text_single = {
-												visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_can_imprison').GetValue, '(CFixedPoint)1')]"
+												visible = "[EqualTo_CFixedPoint(Character.MakeScope.Var('contract_can_imprison').GetValue,'(CFixedPoint)1')]"
 												text = "@crime_icon!"
 												tooltip = "I_CAN_PUNISH_DESCRIPTION_1"
 											}
@@ -592,6 +608,24 @@ window = {
                     parentanchor = center
 					size = { 20 20 }
 					texture = "gfx/interface/icons/flat_icons/map_modes/government.dds"
+                }
+			}
+
+			button_standard = {
+                name = "filters_treasury_debt"
+                size = { 25 25 }
+                margin_left = 5
+                datacontext = "[GetScriptedGui('generate_treasury_debt_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)10')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "FORBES_TREASURY_DEBT_TOP"
+                using = tooltip_nw
+    
+                button_icon = {
+                    alwaystransparent = yes
+                    parentanchor = center
+					size = { 20 20 }
+					texture = "gfx/interface/icons/flat_icons/quality.dds"
                 }
 			}
 
