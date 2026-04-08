@@ -168,6 +168,21 @@ types FobesTypes {
 							}
 
 							hbox = {
+								tooltip = "[Character.GetTreasuryTooltipWithBalance]"
+								visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)11')]"
+
+								text_single = {
+									text = "[Character.GetTreasury|0]"
+									align = nobaseline|hcenter
+								}
+
+								icon = {
+									name = "treasury"
+									size = { 23 23 }
+									texture = "gfx/interface/icons/combat_effects/owner_in_debt.dds"
+								}
+							}
+							hbox = {
 								tooltip = "[Character.GetGoldTooltipWithBalance]"
 								
 								margin_right = 2
@@ -435,6 +450,14 @@ window = {
 					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)9')]"
 					text = "FORBES_TREASURY_TOP"
 				}
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)10')]"
+					text = "CELESTIAL_TREASURY_DEBT_TOP"
+				}
+				header_text_single = {
+					visible = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)11')]"
+					text = "FORBES_TREASURY_DEBT_TOP"
+				}
 			}
 
 			blockoverride "button_close"
@@ -617,6 +640,24 @@ window = {
                 margin_left = 5
                 datacontext = "[GetScriptedGui('generate_treasury_debt_list')]"
 				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)10')]"
+    			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                tooltip = "CELESTIAL_TREASURY_DEBT_TOP"
+                using = tooltip_nw
+    
+                button_icon = {
+                    alwaystransparent = yes
+                    parentanchor = center
+					size = { 20 20 }
+					texture = "gfx/interface/icons/flat_icons/ruined_building.dds"
+                }
+			}
+
+			button_standard = {
+                name = "filters_treasury_global_debt"
+                size = { 25 25 }
+                margin_left = 5
+                datacontext = "[GetScriptedGui('generate_treasury_global_debt_list')]"
+				down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('get_forbes_mode'), '(CFixedPoint)11')]"
     			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
                 tooltip = "FORBES_TREASURY_DEBT_TOP"
                 using = tooltip_nw

@@ -8,6 +8,7 @@
  FORBES_OVERHELD_TITLE:0 "Overheld Title"
  FORBES_INFIDEL_VASSAL:0 "Infidel Vassals"
  FORBES_TITLE_CLAIMER:0 "Title Claimers"
- FORBES_TREASURY_DEBT_TOP:0  "Treasury Debt Top"
+ CELESTIAL_TREASURY_DEBT_TOP:0 "Celestial Situation Debt Top"
+ FORBES_TREASURY_DEBT_TOP:0 "Treasury Debt Top"
  IS_VASSAL_CONTRACT_BLOCKED_FROM_MODIFICATION_THIRD_1:0 "[Character.GetShortUINamePossessive] [obligations|E]는 이미 변경됨"
  I_CAN_PUNISH_DESCRIPTION_1:0 "#T 범죄자 발각#!\n\n[Character.GetShortUINameNoTooltip](이)가 [criminal|E]라는 사실이 알려졌습니다. 이에 따라, [tyrant|E]으로 취급받지 않으면서 [Character.GetHerHim]를 처벌할 수 있게 되었습니다."

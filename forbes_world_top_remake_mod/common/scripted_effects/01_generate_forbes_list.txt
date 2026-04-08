@@ -212,21 +212,19 @@
 		limit = {
 			var:forbes_mode = 9
 		}
-		situation:dynastic_cycle ?= {
-			ordered_situation_participant = {
-				limit = { 
-					has_treasury = yes
-					treasury > 99
-				}
-				order_by = treasury
-				max = 100
-				check_range_bounds = no
-				save_temporary_scope_as = to_add
-				root = {
-					add_to_variable_list = {
-						name = forbes_list
-						target = scope:to_add
-					}
+		ordered_living_character = {
+			limit = { 
+				has_treasury = yes
+				treasury > 99
+			}
+			order_by = treasury
+			max = 100
+			check_range_bounds = no
+			save_temporary_scope_as = to_add
+			root = {
+				add_to_variable_list = {
+					name = forbes_list
+					target = scope:to_add
 				}
 			}
 		}
@@ -239,7 +237,7 @@
 			ordered_situation_participant = {
 				limit = {
 					has_treasury = yes
-					treasury < 0
+					treasury <= 0
 				}
 				order_by = {
 					value = 0
@@ -255,6 +253,33 @@
 						name = forbes_list
 						target = scope:to_add
 					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			var:forbes_mode = 11
+		}
+		ordered_living_character = {
+			limit = { 
+				has_treasury = yes
+				treasury <= 0 # 筛选国库为0或负数的角色
+			}
+			# 排序逻辑：将负数转为正数进行排序
+			# 例如：-1000 变成 1000，-50 变成 50
+			# 结果：亏欠最多的角色（-1000）排在最前面
+			order_by = {
+				value = 0
+				subtract = treasury
+			}
+			max = 100
+			check_range_bounds = no
+			save_temporary_scope_as = to_add
+			root = {
+				add_to_variable_list = {
+					name = forbes_list
+					target = scope:to_add
 				}
 			}
 		}
